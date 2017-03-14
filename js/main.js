@@ -155,9 +155,18 @@ $(document).ready(function(){
 
 
 
+(function($) {
+$(function() {
 
+  $('input, select').styler();
 
+});
+})(jQuery);
 
+$(function() {
 
-
-  
+    $('#checkAll').on('change', function() {
+        $('input:checkbox').prop('checked', this.checked);
+    });
+    
+});
