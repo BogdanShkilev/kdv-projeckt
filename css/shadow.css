@@ -1,0 +1,12 @@
+.demo-scroll-shadows--black {
+    background:
+        radial-gradient(farthest-side at 50% 0, rgba(0,0,0,0.2), rgba(0,0,0,0)) 0 0 / 100% 15px no-repeat scroll,
+        radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,0.2), rgba(0,0,0,0)) 0 100% / 100% 15px no-repeat scroll;
+}
+
+.demo-scroll-shadows--white {
+    padding: 1px 0;
+    background:
+        linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.5) 70%, rgba(255,255,255,0)) 0 0 / 100% 30px no-repeat local,
+        linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5) 30%, rgba(255,255,255,1)) 0 100% / 100% 30px no-repeat local;
+}

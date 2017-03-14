@@ -1,0 +1,7 @@
+@media (min-width: 320px) {
+  div.container {
+    width: 100%; }
+  .footer div.container {
+    max-width: 1440px; }
+  .block-search {
+    width: 100%; } }
