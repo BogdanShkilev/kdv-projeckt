@@ -87,29 +87,30 @@
 
 		<main class="main search">
 			<div class="container">
-			<h1 class="h1 h1-dlv">Расширенный подбор</h1>
+			<h1 class="h1 h1-dlv col-md-9 col-sm-9 col-lg-9 col-xs-9">Расширенный подбор</h1>
 			<form action="#" method="post">
+			<input class="h1 top-reset"  type="reset" value="Сбросить фильтр">
 			<div class="row">
-				<div class="row">
-				<div class="col-md-2">
-					<span>Назначение</span>
-				</div>
-				<div class="col-md-10 appointment">
-				
+				<div class="row appointment-wrap">
+					<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+						<span class="title">Назначение</span>
+					</div>
+					<div class="col-md-10 col-sm-10 col-lg-10 col-xs-10 appointment">
+					
 
-				<label><input name="appointment" type="radio">Ванная</label>
-				<label><input name="appointment" type="radio">Кухня</label>
-				<label><input name="appointment" type="radio">Полы</label>
-				<label><input name="appointment" type="radio">Ступени</label>
-				<label><input name="appointment" type="radio">Фасады</label>
+					<label><input name="appointment" type="radio">Ванная</label>
+					<label><input name="appointment" type="radio">Кухня</label>
+					<label><input name="appointment" type="radio">Полы</label>
+					<label><input name="appointment" type="radio">Ступени</label>
+					<label><input name="appointment" type="radio">Фасады</label>
 
-			</div>
-			</div>
-			<div class="row">
-				<div class="col-md-2">
-					<span>Цвет</span>
 				</div>
-				<div class="col-md-8">
+			</div>
+			<div class="row color">
+				<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+					<span class="title">Цвет</span>
+				</div>
+				<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
 				<form action="#" method="post">
 					<select name="color">
 						<option value="bage_1">Бежевый 1</option>
@@ -124,101 +125,151 @@
 				</form>
 				</div>
 			</div>
-				<div class="row">
-				<div class="col-md-2">
-					<span>Дизайн</span>
+				<div class="row design-wrap">
+				<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+					<span class="title">Дизайн</span>
 				</div>
-				<div class="col-md-7">
-					<div class="col-md-3 left-shift"><label><input type="checkbox" name="design" value="marble">Мрамор</label></div>
-					<div class="col-md-3"><label><input type="checkbox" name="design" value="marble">Под дерево</label></div>
-					<div class="col-md-6"><label><input type="checkbox" name="design" value="marble">Бетон</label></div>
-				<br><br>
-					<div class="col-md-3 left-shift"><label><input type="checkbox" name="design" value="marble">Прованс</label></div>
-					<div class="col-md-3"><label><input type="checkbox" name="design" value="marble">Классика</label></div>
-					<div class="col-md-6"><label><input type="checkbox" name="design" value="marble">Минимализм</label></div>
-				</div>
-				<div class="col-md-3">
-					<input type="button" onclick="selectAll();" value="Любой"></input>
+				<div class="col-md-10 col-sm-10 col-lg-10 col-xs-10">
+					<div>
+						<label class="design"><input type="checkbox" name="design" value="marble">Мрамор</label>
+						<br>
+						<br>
+						<label class="design"><input type="checkbox" name="design" value="marble">Прованс</label>
+					</div>
+					<div>
+						<label class="design"><input type="checkbox" name="design" value="marble">Под дерево</label>
+						<br>
+						<br>
+						<label class="design"><input type="checkbox" name="design" value="marble">Классика</label>
+					</div>
+					<div>
+						<label class="design"><input type="checkbox" name="design" value="marble">Бетон</label>
+						<br>
+						<br>
+						<label class="design"><input type="checkbox" name="design" value="marble">Минимализм</label>
+					</div>
+					
+					<div class="vertical-line">
+						<input type="button" onclick='selectAllDesign();' value="любой"></input>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2">
-					<span>Цена</span>
+			<div class="row price">
+				<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+					<span class="title">Цена</span>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
 					<label><input type="checkbox" name="" value="sale">Распродажа</label>
 					<label><input type="checkbox" name="" value="action">Акции</label>
 					<label><input type="checkbox" name="" value="savings">Эконом</label>
 					<label><input type="checkbox" name="" value="elite">Элитная Италия</label>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2">
-					<span>Поверхность</span>
+			<div class="row manufacturer">
+				<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2"><span class="title">Производители</span></div>
+				<div class="col-md-5 col-sm-5 col-lg-5 col-xs-5 left-shift">
+					<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+						<span><h3>России</h3></span>
+						<!-- <select class="col-md-12 selectable-1" name="russia" id="" multiple> -->
+					<!-- </select> -->
+					</div>
+					<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+						<span><h3>Испании</h3></span>
+						<select class="col-md-12 col-sm-12 col-lg-12 col-xs-12 selectable-1" name="spain" id="" size="6" multiple>
+							<option value="">Absolut Keramika</option>
+							<option value="">Del Conca</option>
+							<option value="">Porselanite Dos</option>
+							<option value="">Stn Ceramica</option>
+						</select>
+					</div>
+					<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+						<span><h3>Италии</h3></span>
+						<select class="col-md-12 col-sm-12 col-lg-12 col-xs-12 selectable-1" name="italy" id="" size="6" multiple>
+						<option value="">Brenero</option>
+						<option value="">Epoca Ceramiche</option>
+						<option value="">Kronos Ceramiche</option>
+						<option value="">Serenissima Capri</option>
+						<option value="">Unicomsarcer</option>
+					</select>
+					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="vertical-line">
+					<input type="button" value="изменить фабрики" onclick="deselectAllSelectOption();">
+				</div>
+			</div>
+			<div class="row surface">
+				<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+					<span class="title">Поверхность</span>
+				</div>
+				<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
 						<label><input type="checkbox" name="" value="sale">Глянцевая</label>
 						<label><input type="checkbox" name="" value="action">Матовая</label>
 						<label><input type="checkbox" name="" value="savings">Противоскользящая</label>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2">
-					<span>Материал</span>
+			<div class="row material">
+				<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+					<span class="title">Материал</span>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
 						<label><input type="checkbox" name="" value="sale">Керамическая Плитка</label>
 						<label><input type="checkbox" name="" value="action">Керамогранит</label>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-2">
-					<span>Формат</span>
+			<div class="row format-wrap">
+				<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+					<span class="title">Формат</span>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-5 col-sm-5 col-lg-5 col-xs-5">
 					<div class="row">
-						<label><input type="checkbox" name="" value="10x10">10x10</label>
-						<label><input type="checkbox" name="" value="10x20">10x20</label>
-						<label><input type="checkbox" name="" value="10x30">10x30</label>
-						<label><input type="checkbox" name="" value="10x70">10x70</label>
+						<label class="format"><input type="checkbox" name="" value="10x10">10x10</label>
+						<label class="format"><input type="checkbox" name="" value="10x20">10x20</label>
+						<label class="format"><input type="checkbox" name="" value="10x30">10x30</label>
+						<label class="format"><input type="checkbox" name="" value="10x40">10x40</label>
+						<label class="format"><input type="checkbox" name="" value="10x70">10x70</label>
 					</div>
 					<div class="row">
-						<label><input type="checkbox" name="" value="15x15">15x15</label>
-						<label><input type="checkbox" name="" value="15x30">15x30</label>
-						<label><input type="checkbox" name="" value="15x40">15x40</label>
-						<label><input type="checkbox" name="" value="15x60">15x60</label>
-						<label><input type="checkbox" name="" value="15x80">15x80</label>
-						<label><input type="checkbox" name="" value="15x90">15x90</label>
+						<label class="format"><input type="checkbox" name="" value="15x15">15x15</label>
+						<label class="format"><input type="checkbox" name="" value="15x30">15x30</label>
+						<label class="format"><input type="checkbox" name="" value="15x40">15x40</label>
+						<label class="format"><input type="checkbox" name="" value="15x60">15x60</label>
+						<label class="format"><input type="checkbox" name="" value="15x80">15x80</label>
+						<label class="format"><input type="checkbox" name="" value="15x90">15x90</label>
 					</div>
 					<div class="row">
-						<label><input type="checkbox" name="" value="20x20">20x20</label>
-						<label><input type="checkbox" name="" value="20x30">20x30</label>
-						<label><input type="checkbox" name="" value="20x40">20x40</label>
-						<label><input type="checkbox" name="" value="20x50">20x50</label>
-						<label><input type="checkbox" name="" value="20x60">20x60</label>
-						<label><input type="checkbox" name="" value="20x80">20x80</label>
+						<label class="format"><input type="checkbox" name="" value="20x20">20x20</label>
+						<label class="format"><input type="checkbox" name="" value="20x30">20x30</label>
+						<label class="format"><input type="checkbox" name="" value="20x40">20x40</label>
+						<label class="format"><input type="checkbox" name="" value="20x50">20x50</label>
+						<label class="format"><input type="checkbox" name="" value="20x60">20x60</label>
+						<label class="format"><input type="checkbox" name="" value="20x80">20x80</label>
 					</div>
 					<div class="row">
-						<label><input type="checkbox" name="" value="30x30">30x30</label>
-						<label><input type="checkbox" name="" value="30x60">30x60</label>
-						<label><input type="checkbox" name="" value="30x90">30x90</label>
+						<label class="format"><input type="checkbox" name="" value="30x30">30x30</label>
+						<label class="format"><input type="checkbox" name="" value="30x60">30x60</label>
+						<label class="format"><input type="checkbox" name="" value="30x90">30x90</label>
 				 	</div>
 				 	<div class="row">
-						<label><input type="checkbox" name="" value="35x35">35x35</label>
-						<label><input type="checkbox" name="" value="35x50">35x50</label>
-						<label><input type="checkbox" name="" value="35x65">35x65</label>
-						<label><input type="checkbox" name="" value="35x90">35x90</label>
+						<label class="format"><input type="checkbox" name="" value="35x35">35x35</label>
+						<label class="format"><input type="checkbox" name="" value="35x50">35x50</label>
+						<label class="format"><input type="checkbox" name="" value="35x65">35x65</label>
+						<label class="format"><input type="checkbox" name="" value="35x90">35x90</label>
 				 	</div>
 				 	<div class="row">
-						<label><input type="checkbox" name="" value="40x40">40x40</label>
-						<label><input type="checkbox" name="" value="45x45">45x45</label>
-						<label><input type="checkbox" name="" value="50x50">50x50</label>
-						<label><input type="checkbox" name="" value="57x57">57x57</label>
-						<label><input type="checkbox" name="" value="60x60">60x60</label>
+						<label class="format"><input type="checkbox" name="" value="40x40">40x40</label>
+						<label class="format"><input type="checkbox" name="" value="45x45">45x45</label>
+						<label class="format"><input type="checkbox" name="" value="50x50">50x50</label>
+						<label class="format"><input type="checkbox" name="" value="57x57">57x57</label>
+						<label class="format"><input type="checkbox" name="" value="60x60">60x60</label>
 				 	</div>
 				</div>
-				<button name="submit">Отправиьт</button>
-				<input type="reset" value="Очистить">
+				<div class="vertical-line">
+					<input type="button" onclick="deselectAllFormat()" value="сбросить">
+				</div>
+				</div>
+				<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2"></div>
+				<button name="submit">Найдется 1462 элемента</button>
+				<input type="reset" value="Сбросить фильтр">
 			</form>
 			</div>
 		
@@ -278,9 +329,7 @@
 	<script src="js/jquery.formstyler.js"></script>
 
 <script type="text/javascript">
-function selectAll(){
-	$(".jq-checkbox").addClass('checked');
-}
+
 </script>
 </body>
 </html>
