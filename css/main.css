@@ -52,6 +52,10 @@ input.nav-input {
   width: 90%;
   float: right; }
 
+.main-search .nav-input:focus + ul {display:block}
+.main-search .tips-block:hover{display: block}
+
+
 .tips-block {
   width: 421px;
   background: #fff;
