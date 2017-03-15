@@ -61,7 +61,7 @@ input.nav-input {
   padding: 12px 0;
   -webkit-box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.34);
           box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.34);
-  z-index: 1;
+  z-index: 110;
   display: none;
   line-height: 24px; }
   .tips-block a {
@@ -721,17 +721,20 @@ div.child {
 .search .color {
   margin-bottom: 43px;
 }
-.search .design-wrap, .search .price, .search .surface {
+.search .design-wrap, .search .price, .search .surface, .search .material {
   margin-bottom: 35px;
 }
-.search .format-wrap {
+.search .format-wrap, .search .manufacturer {
   padding-bottom: 30px;
 }
-.search .design-wrap .title, .search .price .title, .search .surface .title, .search .material .title {
-  padding: 2px 0;
+.search .format-wrap  .row:last-child{
+  margin-bottom: 0;
 }
-.search .format-wrap .title {
-  padding: 22px 0;
+.search .format-wrap  .row:first-child{
+  margin-top: 0;
+}
+.search .design-wrap .title, .search .price .title, .search .surface .title, .search .material .title, .search .format-wrap .title  {
+  padding: 2px 0;
 }
 .search .price {
   margin-bottom: 48px;
@@ -739,19 +742,23 @@ div.child {
 .design-wrap .vertical-line {
   border-left: 1px solid #c1c1c1;
   margin: 3px 0;
+  display: flex;
 }
 .format-wrap .vertical-line {
   border-left: 1px solid #c1c1c1;
-  margin: 3px 0;
-  display: block;
+  display: flex;
   float: left;
 }
 .format-wrap .vertical-line input {
-  margin: 155px 20px;
+  margin: 0 0 0 20px;
   display: block;
+  align-self: center;
 }
 .search .manufacturer .title{
   padding: 7px 0;
+}
+.manufacturer, .format-wrap, .design-wrap {
+  display: flex;
 }
 .search .format-wrap {
   background: url(../images/search-bottom-line.png) repeat-x;
@@ -830,12 +837,12 @@ div.child {
   border-bottom: 1px dotted #e4042a;
   padding: 0;
   font-size: 18px;
+  align-self: center;
 }
 .search input[type='button']:hover {
   border: none;
 }
 .search .design-wrap div div{
-  display: inline-block;
   float: left;
 }
 .search .design-wrap div div div {
@@ -869,7 +876,7 @@ div.child {
 
 }
 .design-wrap input[type='button']{
-  margin: 17px;
+  margin: 0 0 0 17px;
 }
 .manufacturer .jq-select-multiple {
   border-radius: 0;
@@ -898,9 +905,12 @@ div.child {
 }
 .manufacturer .vertical-line {
   float: left;
-  display: block;
+  display: flex;
   border-left: 1px solid #c1c1c1;
 }
 .manufacturer .vertical-line input {
-  margin: 52px 0 52px 20px;
+  margin: 0 0 0 20px;
+}
+.search .format-wrap .row {
+  margin: 0;
 }
