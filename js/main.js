@@ -170,3 +170,14 @@ $(function() {
     });
     
 });
+
+function selectAllDesign(){
+	$(".design").find(".jq-checkbox").addClass('checked');
+}
+function deselectAllFormat(){
+	$(".format").find(".jq-checkbox").removeClass('checked');
+}
+$(".selectable-1").siblings("span").addClass("selectable");
+function deselectAllSelectOption(){
+	$('.selectable-1').find("li").removeClass("selected");
+}
