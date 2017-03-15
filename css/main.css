@@ -712,6 +712,9 @@ div.child {
 .search .row {
   margin: 20px 0;
 }
+.search .col-md-2 {
+  padding: 0;
+}
 .search .appointment-wrap {
   margin-bottom: 35px;
 }
@@ -744,7 +747,7 @@ div.child {
   float: left;
 }
 .format-wrap .vertical-line input {
-  margin: 115px 20px;
+  margin: 155px 20px;
   display: block;
 }
 .search .manufacturer .title{
@@ -753,6 +756,9 @@ div.child {
 .search .format-wrap {
   background: url(../images/search-bottom-line.png) repeat-x;
   background-position: bottom;
+}
+.search .format {
+  margin: 0 13px 15px 0;
 }
 .search label {
   margin: 0 15px 0 0;
@@ -843,7 +849,7 @@ div.child {
   border: none;
   box-shadow: none;
 }
-.manufacturer div .col-md-2 {
+.manufacturer div .col-md-3 {
   padding: 0;
   width: 33%;
 }
