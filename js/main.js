@@ -177,7 +177,17 @@ function selectAllDesign(){
 function deselectAllFormat(){
 	$(".format").find(".jq-checkbox").removeClass('checked');
 }
-$(".selectable-1").siblings("span").addClass("selectable");
 function deselectAllSelectOption(){
 	$('.selectable-1').find("li").removeClass("selected");
+}
+
+// Проверяет наличие класса .checked у input = слассу manufacturer-country +|- класс active
+function changeBG(form){
+	$(".manufacturer-country").click(function(){
+		if ($(this).children('label').children('.checked').is('.checked')){
+			$(this).addClass('active');
+		} else {
+			$(this).removeClass('active');
+		}
+	});
 }
