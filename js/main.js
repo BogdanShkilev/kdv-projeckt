@@ -170,24 +170,39 @@ $(function() {
     });
     
 });
-
+//  Кнопка "любой" на странице расширенного поиска
 function selectAllDesign(){
 	$(".design").find(".jq-checkbox").addClass('checked');
+	$(".design").find("input").prop("checked", true);
 }
+// Кнопка очистки checkbox с форматами плитки
 function deselectAllFormat(){
 	$(".format").find(".jq-checkbox").removeClass('checked');
+	$(".format").find("input").prop('checked', false)
 }
+// сброс заводов производителей
 function deselectAllSelectOption(){
 	$('.selectable-1').find("li").removeClass("selected");
+	$('.selectable-1').find("select").val('');  
 }
 
-// Проверяет наличие класса .checked у input = слассу manufacturer-country +|- класс active
-function changeBG(form){
-	$(".manufacturer-country").click(function(){
-		if ($(this).children('label').children('.checked').is('.checked')){
-			$(this).addClass('active');
+function checkCheckBox(){
+	$('.manufacturer-country').find("input").change(function(){
+		if ($(this).prop('checked')){
+			$(this).closest('span').addClass('active');
 		} else {
-			$(this).removeClass('active');
+			$(this).closest('span').removeClass('active');
 		}
-	});
+	})
+}
+
+
+$(document).ready(
+	checkCheckBox()
+	)
+window.onload= function(){
+	$('.manufacturer-country').find("input").prop('checked', false);
+}
+function resetManufacturerCountry(){
+	$(".manufacturer-country").closest('span').removeClass('active');
 }

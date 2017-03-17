@@ -89,7 +89,7 @@
 			<div class="container">
 				<h1 class="h1 h1-dlv col-md-9 col-sm-9 col-lg-9 col-xs-9">Расширенный подбор</h1>
 				<form action="#" method="post">
-					<input class="h1 top-reset"  type="reset" value="Сбросить фильтр">
+					<input class="h1 top-reset" onclick="resetManufacturerCountry();"  type="reset" value="Сбросить фильтр">
 					<div class="row">
 						<div class="row appointment-wrap">
 							<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
@@ -163,32 +163,32 @@
 							<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2"><span class="title">Производители</span></div>
 							<div class="col-md-5 col-sm-5 col-lg-5 col-xs-5 left-shift">
 								<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-									<span onclick='changeBG();' class="manufacturer-country"><label><input name="" type="checkbox">России</label></span>
+									<span class="manufacturer-country"><label><input name="country-name" type="checkbox" value="russia">России</label></span>
 									<!-- <select class="col-md-12 selectable-1" name="russia" id="" multiple> -->
 									<!-- </select> -->
 								</div>
 								<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-									<span onclick='changeBG();' class="manufacturer-country"><label><input name="" type="checkbox">Испании</label></span>
+									<span class="manufacturer-country"><label><input name="country-name" type="checkbox" value="spain">Испании</label></span>
 									<select class="col-md-12 col-sm-12 col-lg-12 col-xs-12 selectable-1" name="spain" id="" size="5" multiple>
-										<option value="">Absolut Keramika</option>
-										<option value="">Del Conca</option>
-										<option value="">Porselanite Dos</option>
-										<option value="">Stn Ceramica</option>
+										<option value="Absolut Keramika">Absolut Keramika</option>
+										<option value="Del_Conca">Del Conca</option>
+										<option value="Porselanite_Dos">Porselanite Dos</option>
+										<option value="Stn_Ceramica">Stn Ceramica</option>
 									</select>
 								</div>
 								<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-									<span onclick='changeBG();' class="manufacturer-country" ><label><input name="" type="checkbox">Италии</label></span>
+									<span class="manufacturer-country"><label><input name="country-name" type="checkbox">Италии</label></span>
 									<select class="col-md-12 col-sm-12 col-lg-12 col-xs-12 selectable-1" name="italy" id="" size="5" multiple>
-										<option value="">Brenero</option>
-										<option value="">Epoca Ceramiche</option>
-										<option value="">Kronos Ceramiche</option>
-										<option value="">Serenissima Capri</option>
-										<option value="">Unicomsarcer</option>
+										<option value="Brenero">Brenero</option>
+										<option value="Epoca_Ceramiche">Epoca Ceramiche</option>
+										<option value="Kronos_Ceramiche">Kronos Ceramiche</option>
+										<option value="Serenissima_Capri">Serenissima Capri</option>
+										<option value="Unicomsarcer">Unicomsarcer</option>
 									</select>
 								</div>
 							</div>
 							<div class="vertical-line">
-								<input type="button" value="изменить фабрики" onclick="deselectAllSelectOption();">
+								<input type="button" class="select-reset" value="изменить фабрики" onclick="deselectAllSelectOption();">
 							</div>
 						</div>
 						<div class="row surface">
@@ -216,45 +216,45 @@
 							</div>
 							<div class="col-md-5 col-sm-5 col-lg-5 col-xs-5">
 								<div class="row">
-									<label class="format"><input type="checkbox" name="" value="10x10">10x10</label>
-									<label class="format"><input type="checkbox" name="" value="10x20">10x20</label>
-									<label class="format"><input type="checkbox" name="" value="10x30">10x30</label>
-									<label class="format"><input type="checkbox" name="" value="10x40">10x40</label>
-									<label class="format"><input type="checkbox" name="" value="10x70">10x70</label>
+									<label class="format"><input type="checkbox" name="format" value="10x10">10x10</label>
+									<label class="format"><input type="checkbox" name="format" value="10x20">10x20</label>
+									<label class="format"><input type="checkbox" name="format" value="10x30">10x30</label>
+									<label class="format"><input type="checkbox" name="format" value="10x40">10x40</label>
+									<label class="format"><input type="checkbox" name="format" value="10x70">10x70</label>
 								</div>
 								<div class="row">
-									<label class="format"><input type="checkbox" name="" value="15x15">15x15</label>
-									<label class="format"><input type="checkbox" name="" value="15x30">15x30</label>
-									<label class="format"><input type="checkbox" name="" value="15x40">15x40</label>
-									<label class="format"><input type="checkbox" name="" value="15x60">15x60</label>
-									<label class="format"><input type="checkbox" name="" value="15x80">15x80</label>
-									<label class="format"><input type="checkbox" name="" value="15x90">15x90</label>
+									<label class="format"><input type="checkbox" name="format" value="15x15">15x15</label>
+									<label class="format"><input type="checkbox" name="format" value="15x30">15x30</label>
+									<label class="format"><input type="checkbox" name="format" value="15x40">15x40</label>
+									<label class="format"><input type="checkbox" name="format" value="15x60">15x60</label>
+									<label class="format"><input type="checkbox" name="format" value="15x80">15x80</label>
+									<label class="format"><input type="checkbox" name="format" value="15x90">15x90</label>
 								</div>
 								<div class="row">
-									<label class="format"><input type="checkbox" name="" value="20x20">20x20</label>
-									<label class="format"><input type="checkbox" name="" value="20x30">20x30</label>
-									<label class="format"><input type="checkbox" name="" value="20x40">20x40</label>
-									<label class="format"><input type="checkbox" name="" value="20x50">20x50</label>
-									<label class="format"><input type="checkbox" name="" value="20x60">20x60</label>
-									<label class="format"><input type="checkbox" name="" value="20x80">20x80</label>
+									<label class="format"><input type="checkbox" name="format" value="20x20">20x20</label>
+									<label class="format"><input type="checkbox" name="format" value="20x30">20x30</label>
+									<label class="format"><input type="checkbox" name="format" value="20x40">20x40</label>
+									<label class="format"><input type="checkbox" name="format" value="20x50">20x50</label>
+									<label class="format"><input type="checkbox" name="format" value="20x60">20x60</label>
+									<label class="format"><input type="checkbox" name="format" value="20x80">20x80</label>
 								</div>
 								<div class="row">
-									<label class="format"><input type="checkbox" name="" value="30x30">30x30</label>
-									<label class="format"><input type="checkbox" name="" value="30x60">30x60</label>
-									<label class="format"><input type="checkbox" name="" value="30x90">30x90</label>
+									<label class="format"><input type="checkbox" name="format" value="30x30">30x30</label>
+									<label class="format"><input type="checkbox" name="format" value="30x60">30x60</label>
+									<label class="format"><input type="checkbox" name="format" value="30x90">30x90</label>
 								</div>
 								<div class="row">
-									<label class="format"><input type="checkbox" name="" value="35x35">35x35</label>
-									<label class="format"><input type="checkbox" name="" value="35x50">35x50</label>
-									<label class="format"><input type="checkbox" name="" value="35x65">35x65</label>
-									<label class="format"><input type="checkbox" name="" value="35x90">35x90</label>
+									<label class="format"><input type="checkbox" name="format" value="35x35">35x35</label>
+									<label class="format"><input type="checkbox" name="format" value="35x50">35x50</label>
+									<label class="format"><input type="checkbox" name="format" value="35x65">35x65</label>
+									<label class="format"><input type="checkbox" name="format" value="35x90">35x90</label>
 								</div>
 								<div class="row">
-									<label class="format"><input type="checkbox" name="" value="40x40">40x40</label>
-									<label class="format"><input type="checkbox" name="" value="45x45">45x45</label>
-									<label class="format"><input type="checkbox" name="" value="50x50">50x50</label>
-									<label class="format"><input type="checkbox" name="" value="57x57">57x57</label>
-									<label class="format"><input type="checkbox" name="" value="60x60">60x60</label>
+									<label class="format"><input type="checkbox" name="format" value="40x40">40x40</label>
+									<label class="format"><input type="checkbox" name="format" value="45x45">45x45</label>
+									<label class="format"><input type="checkbox" name="format" value="50x50">50x50</label>
+									<label class="format"><input type="checkbox" name="format" value="57x57">57x57</label>
+									<label class="format"><input type="checkbox" name="format" value="60x60">60x60</label>
 								</div>
 							</div>
 							<div class="vertical-line">
@@ -263,7 +263,7 @@
 						</div>
 						<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2"></div>
 						<button name="submit">Найдется 1462 элемента</button>
-						<input type="reset" value="Сбросить фильтр">
+						<input type="reset" onclick="resetManufacturerCountry();" value="Сбросить фильтр">
 					</form>
 				</div>
 
