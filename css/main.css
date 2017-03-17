@@ -25,7 +25,9 @@ h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
   .main .four-icon a:hover {
     text-decoration: none;
     color: #77787B; }
-
+.no-click {
+  pointer-events: none;
+}
 /* header style */
 input.nav-input {
   background: #F8F8F8 url(../images/search.png) no-repeat 98% center;
