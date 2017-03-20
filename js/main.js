@@ -27,6 +27,80 @@ $(document).ready(function(){
 	});
 });
 
+// Bable contacts
+// kyrska
+$(document).ready(function(){
+	$('#kyrska-point').click(function() {
+		$('.kyrska-bable').slideDown('fast');
+	});
+	$('.close-bbl').click(function() {
+		$('.wrap-bable').slideUp('fast');
+	});
+});
+// poveletska
+$(document).ready(function(){
+	$('#paveletska-point').click(function() {
+		$('.paveletska-bable').slideDown('fast');
+	});
+	$('.close-bbl').click(function() {
+		$('.wrap-bable').slideUp('fast');
+	});
+});
+// bobireva
+$(document).ready(function(){
+	$('#babirevo-point').click(function() {
+		$('.babireva-bable').slideDown('fast');
+	});
+	$('.close-bbl').click(function() {
+		$('.wrap-bable').slideUp('fast');
+	});
+});
+// profsoysna
+$(document).ready(function(){
+	$('#prof-point').click(function() {
+		$('.profsousna-bable').slideDown('fast');
+	});
+	$('.close-bbl').click(function() {
+		$('.wrap-bable').slideUp('fast');
+	});
+});
+// rechnoi
+$(document).ready(function(){
+	$('#rechnoi-point').click(function() {
+		$('.rechnoi-bable').slideDown('fast');
+	});
+	$('.close-bbl').click(function() {
+		$('.wrap-bable').slideUp('fast');
+	});
+});
+// strogina
+$(document).ready(function(){
+	$('#strogino-point').click(function() {
+		$('.strogino-bable').slideDown('fast');
+	});
+	$('.close-bbl').click(function() {
+		$('.wrap-bable').slideUp('fast');
+	});
+});
+// profsoysna copy 1
+$(document).ready(function(){
+	$('#prof-point-1').click(function() {
+		$('.profsousna-bable-1').slideDown('fast');
+	});
+	$('.close-bbl').click(function() {
+		$('.wrap-bable').slideUp('fast');
+	});
+});
+// profsoysna copy 2
+$(document).ready(function(){
+	$('#prof-point-2').click(function() {
+		$('.profsousna-bable-2').slideDown('fast');
+	});
+	$('.close-bbl').click(function() {
+		$('.wrap-bable').slideUp('fast');
+	});
+});
+
 
 
 

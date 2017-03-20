@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<!-- <link rel="icon" type="image/vnd.microsoft.icon" href="images/"> -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/media-1400.css">
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.formstyler.css">
+
+</head>
+<body>
+	<div class="wrapper">
+		<!-- header -->
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-ls-3 col-sm-3 col-xs-3">
+						<div class="logo">
+							<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-ls-6 col-sm-6 col-xs-6">
+						<div class="block-search">
+							<form action="#" class="main-search">
+								<input type="text" class="nav-input" placeholder="начните отсюда">
+								<div class=" tips-block fix-input">
+								<p class="grey-list">Идеи интерьеров</p>
+								<ul>
+									<li><a href="#" class="red-link">&#8211; Ванные комнаты</a></li>
+									<li><a href="#" class="red-link">&#8211; Кухни</a></li>
+								</ul>
+								<p class="grey-list">Плитка</p>
+								<ul>
+									<li><a href="#" class="red-link">&#8211; Для пола</a></li> 
+									<li><a href="#" class="red-link">&#8211; Для стен</a></li>
+									<li><a href="#" class="red-link">&#8211; Ступени</a></li> 
+									<li><a href="#" class="red-link">&#8211; Фасады</a></li>
+									<li><a href="search.html" class="red-link active-link-tips no-click">&#8211; Расширенный подбор</a></li>
+								</ul>	
+							</div>
+							</form>
+							<a class="link-close" href="#"> &nbsp;</a>
+						</div>
+					
+					</div>
+					
+
+					<div class="col-md-3 col-ls-3 col-sm-3 col-xs-3">
+						<h1 id="cursor" class="number-h1 h1 pull-right">8 495 767-00-40</h1>
+						<p class="nmb-prg pull-right">ежедневно с 10:00 до 21:00 </p>
+					</div>
+				</div>
+				<div class="row btn-line">
+					<div class="col-md-9 col-sm-9 col-lg-9 col-xs-9 del-pdn-left">
+						<div class="nav">
+							<ul class="nav-ul">
+								<li class="nav-list"><a href="" class="nav-link">Каталог</a></li>
+								<li class="nav-list"><a href="#" class="nav-link">Акции</a></li>
+								<li class="nav-list"><a href="#" class="nav-link">3D дизайн</a></li>
+								<li class="nav-list"><a href="#" class="nav-link">Новости</a></li>
+								<li class="nav-list"><a href="delivery.html" class="nav-link">Оплата и доставка</a></li>
+								<li class="nav-list"><a href="contacts.html" class="nav-link fix-after">Где купить</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 del-pdn-left">
+						<ul class="bascet pull-right">
+							<li class="basget-list"><a class="bsc-icon" href="#">25</a></li>
+							<li class="heart-list"><a class="heart-icon" href="#">4</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main search">
+			<div class="container">
+				<h1 class="h1 h1-dlv col-md-9 col-sm-9 col-lg-9 col-xs-9">Расширенный подбор</h1>
+				<form action="#" method="post">
+					<input class="h1 top-reset" onclick="resetManufacturerCountry();"  type="reset" value="Сбросить фильтр">
+					<div class="row">
+						<div class="row appointment-wrap">
+							<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+								<span class="title">Назначение</span>
+							</div>
+							<div class="col-md-10 col-sm-10 col-lg-10 col-xs-10 appointment">
+
+
+							<label><input name="appointment" type="radio" value="bathroom">Ванная</label>
+								<label><input name="appointment" type="radio" value="kitchen">Кухня</label>
+								<label><input name="appointment" type="radio" value="floors">Полы</label>
+								<label><input name="appointment" type="radio" value="stage">Ступени</label>
+								<label><input name="appointment" type="radio" value="facades">Фасады</label>
+
+							</div>
+						</div>
+						<div class="row color">
+							<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+								<span class="title">Цвет</span>
+							</div>
+							<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+								<form action="#" method="post">
+									<select name="color">
+										<option value="bage_1">Бежевый 1</option>
+										<option value="bage_2">Бежевый 2</option>
+										<option value="bage" selected>Бежевый</option>
+										<option value="bage_3">Бежевый 3</option>
+										<option value="bage_4">Бежевый 4</option>
+										<option value="bage_5">Бежевый 5</option>
+
+
+									</select>
+								</form>
+							</div>
+						</div>
+						<div class="row design-wrap">
+							<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+								<span class="title">Дизайн</span>
+							</div>
+							<div class="col-md-10 col-sm-10 col-lg-10 col-xs-10 design-wrap">
+								<div>
+									<label class="design"><input type="checkbox" name="design" value="marble">Мрамор</label><br><br>
+									<label class="design"><input type="checkbox" name="design" value="Provence">Прованс</label>
+								</div>
+								<div>
+									<label class="design"><input type="checkbox" name="design" value="wood">Под дерево</label><br><br>
+									<label class="design"><input type="checkbox" name="design" value="сlassic">Классика</label>
+								</div>
+								<div>
+									<label class="design"><input type="checkbox" name="design" value="сoncrete">Бетон</label><br><br>
+									<label class="design"><input type="checkbox" name="design" value="minimalism">Минимализм</label>
+								</div>
+
+								<div class="vertical-line">
+									<input type="button" onclick='selectAllDesign();' value="любой"></input>
+								</div>
+							</div>
+						</div>
+						<div class="row price">
+							<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+								<span class="title">Цена</span>
+							</div>
+							<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+								<label><input type="checkbox" name="" value="sale">Распродажа</label>
+								<label><input type="checkbox" name="" value="action">Акции</label>
+								<label><input type="checkbox" name="" value="savings">Эконом</label>
+								<label><input type="checkbox" name="" value="elite">Элитная Италия</label>
+							</div>
+						</div>
+						<div class="row manufacturer">
+							<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2"><span class="title">Производители</span></div>
+							<div class="col-md-5 col-sm-5 col-lg-5 col-xs-5 left-shift">
+								<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+									<span class="manufacturer-country"><label><input name="country-name" type="checkbox" value="russia">России</label></span>
+									<!-- <select class="col-md-12 selectable-1" name="russia" id="" multiple> -->
+									<!-- </select> -->
+								</div>
+								<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+									<span class="manufacturer-country"><label><input name="country-name" type="checkbox" value="spain">Испании</label></span>
+									<select class="col-md-12 col-sm-12 col-lg-12 col-xs-12 selectable-1" name="spain" id="" size="5" multiple>
+										<option value="Absolut Keramika">Absolut Keramika</option>
+										<option value="Del_Conca">Del Conca</option>
+										<option value="Porselanite_Dos">Porselanite Dos</option>
+										<option value="Stn_Ceramica">Stn Ceramica</option>
+									</select>
+								</div>
+								<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+									<span class="manufacturer-country"><label><input name="country-name" type="checkbox">Италии</label></span>
+									<select class="col-md-12 col-sm-12 col-lg-12 col-xs-12 selectable-1" name="italy" id="" size="5" multiple>
+										<option value="Brenero">Brenero</option>
+										<option value="Epoca_Ceramiche">Epoca Ceramiche</option>
+										<option value="Kronos_Ceramiche">Kronos Ceramiche</option>
+										<option value="Serenissima_Capri">Serenissima Capri</option>
+										<option value="Unicomsarcer">Unicomsarcer</option>
+									</select>
+								</div>
+							</div>
+							<div class="vertical-line">
+								<input type="button" class="select-reset" value="изменить фабрики" onclick="deselectAllSelectOption();">
+							</div>
+						</div>
+						<div class="row surface">
+							<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+								<span class="title">Поверхность</span>
+							</div>
+							<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+								<label><input type="checkbox" name="" value="sale">Глянцевая</label>
+								<label><input type="checkbox" name="" value="action">Матовая</label>
+								<label><input type="checkbox" name="" value="savings">Противоскользящая</label>
+							</div>
+						</div>
+						<div class="row material">
+							<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+								<span class="title">Материал</span>
+							</div>
+							<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+								<label><input type="checkbox" name="" value="sale">Керамическая Плитка</label>
+								<label><input type="checkbox" name="" value="action">Керамогранит</label>
+							</div>
+						</div>
+						<div class="row format-wrap">
+							<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+								<span class="title">Формат</span>
+							</div>
+							<div class="col-md-5 col-sm-5 col-lg-5 col-xs-5">
+								<div class="row">
+									<label class="format"><input type="checkbox" name="format" value="10x10">10x10</label>
+									<label class="format"><input type="checkbox" name="format" value="10x20">10x20</label>
+									<label class="format"><input type="checkbox" name="format" value="10x30">10x30</label>
+									<label class="format"><input type="checkbox" name="format" value="10x40">10x40</label>
+									<label class="format"><input type="checkbox" name="format" value="10x70">10x70</label>
+								</div>
+								<div class="row">
+									<label class="format"><input type="checkbox" name="format" value="15x15">15x15</label>
+									<label class="format"><input type="checkbox" name="format" value="15x30">15x30</label>
+									<label class="format"><input type="checkbox" name="format" value="15x40">15x40</label>
+									<label class="format"><input type="checkbox" name="format" value="15x60">15x60</label>
+									<label class="format"><input type="checkbox" name="format" value="15x80">15x80</label>
+									<label class="format"><input type="checkbox" name="format" value="15x90">15x90</label>
+								</div>
+								<div class="row">
+									<label class="format"><input type="checkbox" name="format" value="20x20">20x20</label>
+									<label class="format"><input type="checkbox" name="format" value="20x30">20x30</label>
+									<label class="format"><input type="checkbox" name="format" value="20x40">20x40</label>
+									<label class="format"><input type="checkbox" name="format" value="20x50">20x50</label>
+									<label class="format"><input type="checkbox" name="format" value="20x60">20x60</label>
+									<label class="format"><input type="checkbox" name="format" value="20x80">20x80</label>
+								</div>
+								<div class="row">
+									<label class="format"><input type="checkbox" name="format" value="30x30">30x30</label>
+									<label class="format"><input type="checkbox" name="format" value="30x60">30x60</label>
+									<label class="format"><input type="checkbox" name="format" value="30x90">30x90</label>
+								</div>
+								<div class="row">
+									<label class="format"><input type="checkbox" name="format" value="35x35">35x35</label>
+									<label class="format"><input type="checkbox" name="format" value="35x50">35x50</label>
+									<label class="format"><input type="checkbox" name="format" value="35x65">35x65</label>
+									<label class="format"><input type="checkbox" name="format" value="35x90">35x90</label>
+								</div>
+								<div class="row">
+									<label class="format"><input type="checkbox" name="format" value="40x40">40x40</label>
+									<label class="format"><input type="checkbox" name="format" value="45x45">45x45</label>
+									<label class="format"><input type="checkbox" name="format" value="50x50">50x50</label>
+									<label class="format"><input type="checkbox" name="format" value="57x57">57x57</label>
+									<label class="format"><input type="checkbox" name="format" value="60x60">60x60</label>
+								</div>
+							</div>
+							<div class="vertical-line">
+								<input type="button" onclick="deselectAllFormat()" value="сбросить">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2"></div>
+						<button name="submit">Найдется 1462 элемента</button>
+						<input type="reset" onclick="resetManufacturerCountry();" value="Сбросить фильтр">
+					</form>
+				</div>
+
+			</main>
+
+
+				<!-- footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2 col-md-2 col-lg-2 col-xs-2">
+						<!-- left list -->
+						<ul class="footer-ul">
+							<li class="footer-list"><a href="#">Каталог</a></li>
+							<li class="footer-list"><a href="#">Акции</a></li>
+							<li class="footer-list"><a href="#">3д-дизайн</a></li>
+							<li class="footer-list"><a href="#">Новости</a></li>
+							<li class="footer-list"><a href="#">Оплата и доставка</a></li>
+							<li class="footer-list"><a href="#">Магазины</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+						<!-- center list -->
+						<ul class="footer-ul second-footer-ul">
+							<li class="footer-list"><a href="#">Плитка для ванной</a></li>
+							<li class="footer-list"><a href="#">Плита для кухни</a></li>
+							<li class="footer-list"><a href="#">Плитка для пола</a></li>
+							<li class="footer-list"><a href="#">Керамогранит</a></li>
+							<li class="footer-list"><a href="#">Ступени</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+						<!-- right list -->
+						<ul class="footer-ul third-ul-ftr pull-right">
+							<li class="footer-list">тел.: 8 495 767-00-40</li>
+							<li class="footer-list">факс: 8 495 767-00-40</li>
+							<li class="footer-list add-png-btn">email: info@kdv.ru</li>
+							<li class="footer-list add-png-btn">&nbsp;</li>
+							<li class="footer-list">адресс: Флотская, 5А</li>
+						</ul>
+					</div>
+				</div>
+				<!-- copyright -->
+				<div class="copyright">
+					<p>Все права защищены &copy; &#171;Ватра Керамика&#187;</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- scripts -->
+	<script src="js/jquery-3.1.1.min.js" ></script>
+	<script src="js/jquery.zoom.js"></script>
+	<script src="slick/slick.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/main.js" ></script>
+	<script src="js/jquery.formstyler.js"></script>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
