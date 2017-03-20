@@ -17,6 +17,126 @@
 	<link rel="stylesheet" href="css/media-1400.css">
 	<link rel="stylesheet" href="css/media.css">
 	<link rel="stylesheet" href="css/shadow.css">
+	<script src="js/jquery-3.1.1.min.js" ></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script type="text/javascript">
+		ymaps.ready(init);
+		var myMap, 
+		myPlacemark;
+
+		function init(){ 
+			myMap = new ymaps.Map("map", {
+				center: [55.76444787352817,37.58964899975587],
+				zoom: 11
+			}); 
+
+			// стиль метки
+
+
+			// Эту группу не будем добавлять на карту, чтобы помещенные в нее геообъекты были не видны.
+			hidden = new ymaps.GeoObjectCollection(),
+			// Эту группу добавим на карту.
+            visible = new ymaps.GeoObjectCollection(),
+            // Упорядоченные коллекции с геообъектами.
+            group1 = new ymaps.GeoObjectCollection({
+                properties: {
+                    id: 'group-1',
+                    name: 'Известные памятники'
+                }
+            }, {
+                preset: 'twirl#redIcon'
+            });
+
+            group1
+                .add(new ymaps.Placemark([55.75155530, 37.67013699], { id: 'group-1-1', balloonContent: '<h3 class="h3 metro brown">Курская</h3><h3 class="h3 metro white-green">Чкаловская</h3><p class="street">Россия, Москва, Нижняя Сыромятническая улица, 10с3</p><p class="number pull-left">+7 965 162-66-56</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
+                .add(new ymaps.Placemark([55.72206103, 37.63279094], { id: 'group-1-2', balloonContent: '<h3 class="h3 metro brown">Павелецкая</h3><h3 class="h3 metro grey">Серпуховская</h3><p class="street">1-й Щипковый переулок д. 4, А-26</p><p class="number pull-left">+7 985 360-36-65</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
+                .add(new ymaps.Placemark([55.88477579, 37.60374416], { id: 'group-1-3', balloonContent: '<h3 class="h3 metro grey">Бабирево</h3><p class="street">ул. Пришвина, д. 26/3, ТВК "Миллион мелочей", 1 этаж, стенд С29 </p><p class="number pull-left">+7 965 162-66-56</p><span class="work-time pull-left clearfix">с 09:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
+                .add(new ymaps.Placemark([55.67192837, 37.58368089], { id: 'group-1-4', balloonContent: '<h3 class="h3 metro orange">Профсоюзная</h3><p class="street">Нахимовский пр-т, с. 24, ВК «Экспострой на Нахимовском», павильон №3, сектор В, место 350</p><p class="number pull-left">+7 985 162-66-56</p><span class="work-time pull-left clearfix">с 09:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
+                .add(new ymaps.Placemark([55.80768430, 37.38829868], { id: 'group-1-5', balloonContent: '<h3 class="h3 metro blue">Строгино</h3><p class="street">5-й км МКАД (внешняя сторона), МТВК Синдика, пав. В403 и В409</p><p class="number pull-left">+7 495 779-69-77</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
+                .add(new ymaps.Placemark([55.85505975, 37.47666065], { id: 'group-1-6', balloonContent: '<h3 class="h3 metro green">Речной Вокзал</h3><p class="street">Нахимовский пр-т, с. 24, Ленинградское шоссе, Химки-Центр, вл. 5, ТЦ «Лига», цокольный этаж</p><p class="number pull-left">+7 495 779-69-77</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
+                .add(new ymaps.Placemark([55.80768430, 37.38829868], { id: 'group-1-7', balloonContent: '<h3 class="h3 metro blue">Строгино</h3><p class="street">5-й км МКАД (внешняя сторона), МТВК Синдика, пав. В403 и В409</p><p class="number pull-left">+7 495 779-69-77</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}));
+             // Добавляем все группы в одну коллекцию.
+            visible
+                .add(group1);
+
+            // Добавляем все группы на карту.
+            myMap.geoObjects.add(visible);
+
+            // Выставляем масштаб карты чтобы были видны все группы.
+            myMap.setBounds(visible.getBounds());
+
+             // Обрабатываем клики на пунктах меню.
+
+
+            // Обрабатываем клики на пунктах меню эелементов группы.
+            $('.adress-point').on('click', function (e) {
+                // Отменяем основное поведение (переход по ссылке)
+                e.preventDefault();
+
+                $(this)
+                    .toggleClass('active')
+                    .siblings('.active')
+                    .removeClass('active');
+
+                itemToggle(this.id);
+            });
+
+            // Ищем нужную группу и добавляем/удаляем ее с карты.
+            function groupToggle(id) {
+                // Все группы лежат внутри одной коллекции, которую мы получили из YMapsML.
+                var it, group;
+
+                // Сначала ищем в видимой на карте коллекции.
+                it = visible.getIterator();
+                while(group = it.getNext()) {
+                    if(group.properties.get('id') === id) {
+                        hidden.add(group);
+                        return;
+                    }
+                }
+
+                // Если мы сюда попали, значит коллекция уже удалена и надо искать в удаленных.
+                it = hidden.getIterator();
+                while(group = it.getNext()) {
+                    if(group.properties.get('id') === id) {
+                        visible.add(group);
+                        return;
+                    }
+                }
+            }
+
+            // Ищем нужную метку и открываем/закрываем ее балун.
+            function itemToggle(id) {
+                var it = visible.getIterator(),
+                    group;
+
+                while(group = it.getNext()) {
+                    for(var i = 0, len = group.getLength(); i < len; i++) {
+                        var placemark = group.get(i);
+
+                        if(placemark.properties.get('id') === id) {
+                        	placemark.balloon.open();
+                            if(placemark.balloon.isOpen()) {
+                                placemark.balloon.open();
+                            }
+                            else {
+                                myMap.panTo(placemark.geometry.getCoordinates(), {
+                                    delay: 0,
+                                    callback: function () {
+                                        placemark.balloon.open();
+                                    }
+                                });
+                            }
+                            return;
+                        }
+                    }
+                }
+            }
+
+
+		};
+
+</script>
 </head>
 <body>
 	<div class="wrapper">
@@ -88,117 +208,15 @@
 			<div class="container">
 			<h1 class="h1 h1-dlv">Где купить</h1>
 				<div class="row">
-					<div style="padding-right: 0" class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+					<div style="padding-right: 0" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
 						<div class=" map-contact">
-							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=xWiECe_HQtsw0tfmXhyROqFyb5pNwbgF&amp;width=100%&amp;height=900px&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
-						</div>
-						<!-- Kyrska str -->
-						<div class="wrap-bable kyrska-bable">
-							<div class="bable">
-								<a onclick="event.preventDefault()" class="close-bbl" href="#"></a>
-								<h3 class="h3 metro brown">Курская</h3>
-									<h3 class="h3 metro white-green">Чкаловская</h3>
-									<p class="street fix-street">ул. Нижняя Сыромятническая, д. 10с3, 
-										1 этаж, стенд 111.1/2 </p>
-									<p class="number pull-left clearfix">+7 985 360-36-65</p>
-									<span class="work-time pull-left clearfix">с 10:00 до 20:00</span>
-							</div>
-						</div>
-
-						<!-- Paveletska str -->
-						<div class="wrap-bable paveletska-bable">
-							<div class="bable">
-								<a onclick="event.preventDefault()" class="close-bbl" href="#"></a>
-								<h3 class="h3 metro brown">Павелецкая</h3>
-									<h3 ch3 lass="h3 metro grey">Серпуховская</h3>
-									<p class="street">1-й Щипковый переулок д. 4, А-26</p>
-									<p class="number pull-left">+7 965 162-66-56</p>
-									<span class="work-time pull-left">с 10:00 до 20:00</span>
-							</div>
-						</div>
-
-						<!-- babireva str -->
-						<div class="wrap-bable babireva-bable">
-							<div class="bable">
-								<a onclick="event.preventDefault()" class="close-bbl" href="#"></a>
-								<h3 class="h3 metro grey">Бабирево</h3>
-									<p class="street">ул. Пришвина, д. 26/3, ТВК "Миллион 
-										мелочей", 1 этаж, стенд С29 </p>
-									<p class="number pull-left">+7 965 162-66-56</p>
-									<span class="work-time pull-left">с 09:00 до 20:00</span>
-							</div>
-						</div>
-					</div>	
-
-					<!-- profsousna str -->
-					<div class="wrap-bable profsousna-bable">
-							<div class="bable">
-								<a onclick="event.preventDefault()" class="close-bbl" href="#"></a>
-								<h3 class="h3 metro orange">Профсоюзная</h3>
-								<p class="street">Нахимовский пр-т, с. 24, 
-									ВК «Экспострой на Нахимовском», 
-									павильон №3, сектор В, место 350</p>
-									<p class="number pull-left">+7 985 162-66-56</p>
-									<span class="work-time pull-left">с 09:00 до 20:00</span>
-							</div>
-						</div>
-
-						<!-- rechnoi vokzal str -->
-						<div class="wrap-bable rechnoi-bable">
-							<div class="bable">
-								<a onclick="event.preventDefault()" class="close-bbl" href="#"></a>
-								<h3 class="h3 metro green">Речной вокзал</h3>
-									<p class="street">Нахимовский пр-т, с. 24, 
-										Ленинградское шоссе, Химки-Центр, 
-										вл. 5, ТЦ «Лига», цокольный этаж</p>
-									<p class="number pull-left">+7 495 779-69-77</p>
-									<span class="work-time pull-left">с 10:00 до 20:00</span>
-							</div>
-						</div>
-
-						<!-- strogino str -->
-						<div class="wrap-bable strogino-bable">
-							<div class="bable">
-								<a onclick="event.preventDefault()" class="close-bbl" href="#"></a>
-								<h3 class="h3 metro blue">Строгино</h3>
-									<p class="street">5-й км МКАД (внешняя сторона), 
-										МТВК Синдика, пав. В403 и В409</p>
-									<p class="number pull-left">+7 495 779-69-77</p>
-									<span class="work-time pull-left">с 10:00 до 20:00</span>
-							</div>
-						</div>
-
-						<!-- profsousna str -->
-						<div class="wrap-bable profsousna-bable-1">
-							<div class="bable">
-								<a onclick="event.preventDefault()" class="close-bbl" href="#"></a>
-								<h3 class="h3 metro orange">Профсоюзная</h3>
-									<p class="street">Нахимовский пр-т, с. 24, 
-										ВК «Экспострой на Нахимовском», 
-										павильон №3, сектор В, место 350</p>
-									<p class="number pull-left">+7 985 162-66-56</p>
-									<span class="work-time pull-left">с 09:00 до 20:00</span>
-							</div>
-						</div>
-
-						<!-- profsousna str -->
-						<div class="wrap-bable profsousna-bable-2">
-							<div class="bable">
-								<a onclick="event.preventDefault()" class="close-bbl" href="#"></a>
-									<h3 class="h3 metro orange">Профсоюзная</h3>
-									<p class="street">Нахимовский пр-т, с. 24, 
-										ВК «Экспострой на Нахимовском», 
-										павильон №3, сектор В, место 350</p>
-									<p class="number pull-left">+7 985 162-66-56</p>
-									<span class="work-time pull-left">с 09:00 до 20:00</span>
-							</div>
-						</div>
-
+							<div id="map" class="col-md-8 col-sm-8 col-lg-8 col-xs-8" style="padding: 0;"></div>
+						
 					<div style="padding-left: 0" class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
 						<div class="parent demo-scroll-shadows demo-scroll-shadows--black">
-							<div class="sidebar-list child demo-scroll-shadows--white">
+							<div class="sidebar-list child demo-scroll-shadows--white nav nav-list" >
 									<!-- kyrska -->
-									<div class="adress1 adress-point clearfix">
+									<div class="adress1 adress-point clearfix"  id="group-1-1">
 										<a id="kyrska-point" onclick="event.preventDefault()" class="adr-link" href="#">
 										<h3 class="h3 metro brown">Курская</h3>
 										<h3 class="h3 metro white-green">Чкаловская</h3>
@@ -209,7 +227,7 @@
 										</a>
 									</div>
 									<!-- povel -->
-									<div class="adress2 adress-point clearfix">
+									<div class="adress2 adress-point clearfix" id="group-1-2">
 										<a id="paveletska-point" onclick="event.preventDefault()" class="adr-link" href="#">
 										<h3 class="h3 metro brown">Павелецкая</h3>
 										<h3 ch3 lass="h3 metro grey">Серпуховская</h3>
@@ -219,7 +237,7 @@
 										</a>
 									</div>
 									<!-- babireva -->
-									<div class="adress3 adress-point clearfix">
+									<div class="adress3 adress-point clearfix" id="group-1-3">
 										<a id="babirevo-point" onclick="event.preventDefault()" class="adr-link" href="#">
 										<h3 class="h3 metro grey">Бабирево</h3>
 										<p class="street">ул. Пришвина, д. 26/3, ТВК "Миллион 
@@ -229,7 +247,7 @@
 										</a>
 									</div>
 									<!-- Profs -->
-									<div class="adress4 adress-point clearfix">
+									<div class="adress4 adress-point clearfix" id="group-1-4">
 										<a id="prof-point" onclick="event.preventDefault()" class="adr-link" href="#">
 										<h3 class="h3 metro orange">Профсоюзная</h3>
 										<p class="street">Нахимовский пр-т, с. 24, 
@@ -240,7 +258,7 @@
 										</a>
 									</div>
 									<!-- rechnoi -->
-									<div class="adress5 adress-point clearfix">
+									<div class="adress5 adress-point clearfix" id="group-1-5">
 										<a id="rechnoi-point" onclick="event.preventDefault()" class="adr-link" href="#">
 										<h3 class="h3 metro green">Речной вокзал</h3>
 										<p class="street">Нахимовский пр-т, с. 24, 
@@ -251,7 +269,7 @@
 										</a>
 									</div>
 									<!-- strogino -->
-									<div class="adress6 adress-point clearfix">
+									<div class="adress6 adress-point clearfix" id="group-1-6">
 										<a id="strogino-point" onclick="event.preventDefault()" class="adr-link" href="#">
 										<h3 class="h3 metro blue">Строгино</h3>
 										<p class="street">5-й км МКАД (внешняя сторона), 
@@ -260,27 +278,6 @@
 										<span class="work-time pull-left">с 10:00 до 20:00</span>
 										</a>
 									</div>
-									<!-- prof -->
-									<div class="adress4 adress-point clearfix">
-										<a id="prof-point-1" onclick="event.preventDefault()" class="adr-link" href="#">
-										<h3 class="h3 metro orange">Профсоюзная</h3>
-										<p class="street">Нахимовский пр-т, с. 24, 
-											ВК «Экспострой на Нахимовском», 
-											павильон №3, сектор В, место 350</p>
-										<p class="number pull-left">+7 985 162-66-56</p>
-										<span class="work-time pull-left">с 09:00 до 20:00</span>
-										</a>
-									</div>
-									<!-- prof -->
-									<div class="adress4 adress-point clearfix">
-										<a id="prof-point-2" onclick="event.preventDefault()" class="adr-link" href="#">
-										<h3 class="h3 metro orange">Профсоюзная</h3>
-										<p class="street">Нахимовский пр-т, с. 24, 
-											ВК «Экспострой на Нахимовском», 
-											павильон №3, сектор В, место 350</p>
-										<p class="number pull-left">+7 985 162-66-56</p>
-										<span class="work-time pull-left">с 09:00 до 20:00</span>
-										</a>
 									</div>
 									
 							</div>
@@ -335,7 +332,7 @@
 	</div>
 
 	<!-- scripts -->
-	<script src="js/jquery-3.1.1.min.js" ></script>
+
 	<script src="js/jquery.zoom.js"></script>
 	<script src="slick/slick.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
