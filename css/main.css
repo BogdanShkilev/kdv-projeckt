@@ -557,6 +557,9 @@ a span.red-text-dlv {
   padding-bottom: 15px; }
 
 /* contacts */
+.ymaps-2-1-48-balloon__layout, .ymaps-2-1-48-balloon {
+  border-radius: 10px;
+}
 div.child {
   width: 400px;
   height: 900px;
@@ -580,9 +583,12 @@ div.child {
 .sidebar-list {
   line-height: 22px;
   font-family: arial, sans-serif; }
-
+.sidebar-list .active {
+  background: #f2f2f2;
+}
 .h3.metro {
   padding-left: 20px;
+  margin-top: 5px;
   font-size: 16px;
   padding-bottom: 8px;
   position: relative; }
@@ -598,7 +604,8 @@ div.child {
   top: 3px; }
 
 .street {
-  padding-bottom: 8px; }
+  padding-bottom: 8px;
+  color: #7c7c7b; }
 
 .number {
   font-size: 18px;
@@ -606,8 +613,12 @@ div.child {
   color: #474746; }
 
 .work-time {
-  font-size: 12px; }
+  font-size: 12px;
+  color: #7c7c7b; }
 
+.active .work-time, .active .street  {
+  color: #000;
+}
 .white-green::before {
   background: url("../images/metro2.png") no-repeat; }
 
@@ -656,7 +667,8 @@ div.child {
     color: #000; }
 
 .map-contact {
-  margin-bottom: 90px; }
+  margin-bottom: 90px;
+  display: flex }
 
 .fix-street {
   width: 90%; }
