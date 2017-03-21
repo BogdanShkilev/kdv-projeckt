@@ -132,3 +132,6 @@ window.onload= function(){
 function resetManufacturerCountry(){
 	$(".manufacturer-country").closest('span').removeClass('active');
 }
+
+
+var header = new Headhesive('.header');

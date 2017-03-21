@@ -1,0 +1,25 @@
+.jq-selectbox li.any-color{
+	padding-left: 10px;
+}
+.any-color .jq-selectbox__select .jq-selectbox__select-text{
+	padding-left: 10px;
+}
+.jq-selectbox li.any-color::before {
+  display: none;
+}
+.any-color .jq-selectbox__select .jq-selectbox__select-text:before {
+  display: none;
+}
+
+.jq-selectbox li.green::before {
+  background: green;
+}
+.green .jq-selectbox__select .jq-selectbox__select-text:before {
+  background: green;
+}
+.jq-selectbox li.blue::before { 
+  background: blue;
+}
+.blue .jq-selectbox__select .jq-selectbox__select-text:before {
+  background: blue;
+}
