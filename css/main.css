@@ -28,6 +28,9 @@ h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
 .no-click {
   pointer-events: none;
 }
+.no-margin {
+  margin: 0!important;
+}
 /* header style */
 input.nav-input {
   background: #F8F8F8 url(../images/search.png) no-repeat 98% center;
@@ -727,23 +730,46 @@ div.child {
 
 
 /* search page */
+.search {
+  overflow: hidden;
+}
+.search:afetr {
+  display: block;
+  content: '';
+  clear: both;
+}
 .search .row {
   margin: 20px 0;
+}
+.search .container {
+  float: left;
+}
+.search .row {
+    max-width: 900px;
 }
 .search .col-md-2 {
   padding: 0;
 }
 .search .appointment-wrap {
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 .search .color {
-  margin-bottom: 43px;
+  margin-bottom: 53px;
 }
-.search .design-wrap, .search .price, .search .surface, .search .material {
-  margin-bottom: 35px;
+.search .price, .search .surface {
+  margin-bottom: 45px;
 }
-.search .format-wrap, .search .manufacturer {
-  padding-bottom: 30px;
+.search .material {
+  margin-bottom: 62px;
+}
+.search .design-wrap {
+  margin-bottom: 14px;
+}
+.search .manufacturer {
+  padding-bottom: 20px;
+}
+.format-wrap{
+  margin-bottom: 37px;
 }
 .search .format-wrap  .row:last-child{
   margin-bottom: 0;
@@ -766,6 +792,7 @@ div.child {
   border-left: 1px solid #c1c1c1;
   display: flex;
   float: left;
+  margin-bottom: 19px;
 }
 .format-wrap .vertical-line input {
   margin: 0 0 0 20px;
@@ -778,15 +805,17 @@ div.child {
 .manufacturer, .format-wrap, .design-wrap {
   display: flex;
 }
-.search .format-wrap {
-  background: url(../images/search-bottom-line.png) repeat-x;
-  background-position: bottom;
-}
 .search .format {
-  margin: 0 13px 15px 0;
+  margin: 0 7px 18px 0;
+}
+.search label:hover .jq-checkbox {
+  border-color: #1183c6;
+}
+.search .jq-checkbox {
+  cursor: default;
 }
 .search label {
-  margin: 0 15px 0 0;
+  margin: 0 27px 0 0;
 }
 .search .left-shift {
   margin-left: -15px;
@@ -797,6 +826,7 @@ div.child {
   margin: 0;
   color: #7c7c7b;
   float: left;
+  margin-right: -1px;
 }
 .search .appointment label:first-child {
   border-radius: 2px 0 0 2px;
@@ -807,7 +837,8 @@ div.child {
 .search .appointment .active {
   background: #e0ded8;
   border-color: #848484;
-  box-shadow: inset 0 0 3px #848484; 
+  box-shadow: inset 0 0 3px #848484;
+  color: #000; 
 }
 .search .appointment label:hover {
   border-color: #1183c6;
@@ -828,8 +859,8 @@ div.child {
   font-size: 18px;
 }
 .search input[type='reset']:hover {
-  border: none;
-  margin-bottom: 1px;
+  border-color: #000;
+  color: #000;
 }
 .search button[name='submit'] {
   border: none;
@@ -839,6 +870,7 @@ div.child {
   padding: 10px 20px;
   margin: 0 33px 65px 15px;
   border-radius: 4px;
+  cursor: default;
 }
 .search button[name='submit']:hover {
   background: #e4042a;
@@ -858,8 +890,8 @@ div.child {
   align-self: center;
 }
 .search input[type='button']:hover {
-  border: none;
-  margin-bottom: 1px;
+  border-color: #000;
+  color: #000;
 }
 .search .design-wrap div div{
   float: left;
@@ -868,8 +900,10 @@ div.child {
   float: none;
 }
 .search .design {
-  width: 27%;
-  display: inline;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 28px;
 }
 .manufacturer .jq-select-multiple {
   border: none;
@@ -878,6 +912,9 @@ div.child {
 .manufacturer div .col-md-3 {
   padding: 0;
   width: 33%;
+}
+.manufacturer .left-shift {
+  width: 40%;
 }
 .manufacturer .jq-select-multiple.focused {
   border: none;
@@ -919,6 +956,10 @@ div.child {
   margin: 0 7px 5px;
   cursor: pointer;
 }
+.manufacturer .manufacturer-country:hover label {
+  color: #000;
+  border-color: #000;
+}
 .manufacturer span.active label {
   color: #fff;
   border-color: #fff;
@@ -948,4 +989,10 @@ div.child {
 }
 .search .format-wrap .row {
   margin: 0;
+}
+.horizontal-line {
+  display: block;
+  height: 5px;
+  background: url(../images/search-bottom-line.png) repeat-x;
+  width: 100%;
 }

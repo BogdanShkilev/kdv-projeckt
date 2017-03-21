@@ -98,8 +98,8 @@ $(function() {
 });
 //  Кнопка "любой" на странице расширенного поиска
 function selectAllDesign(){
-	$(".design").find(".jq-checkbox").addClass('checked');
-	$(".design").find("input").prop("checked", true);
+	$(".design").find(".jq-checkbox").removeClass('checked');
+	$(".design").find("input").prop("checked", false);
 }
 // Кнопка очистки checkbox с форматами плитки
 function deselectAllFormat(){

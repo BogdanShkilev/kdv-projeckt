@@ -240,6 +240,7 @@
 	color: #333;
 	text-shadow: 1px 1px #FFF;
 	width: 190px;
+	cursor: default;
 }
 .jq-selectbox__select:hover {
 	border-color: #1183c6;
@@ -309,6 +310,7 @@
 	box-shadow: 0 2px 10px rgba(0,0,0,.2);
 	font: 14px/18px Arial, sans-serif;
 	width: 190px;
+	cursor: default;
 }
 .jq-selectbox__search {
 	margin: 5px;
@@ -339,6 +341,7 @@
 .jq-selectbox ul {
 	margin: 0;
 	padding: 0;
+	cursor: default;
 }
 .jq-selectbox li {
 	min-height: 18px;
@@ -365,7 +368,7 @@
 	top: 0px;
 	left: 2px;
 }
-.jq-selectbox li.selected {
+.jq-selectbox li.sel {
 	color: #c7c7c7;
 }
 .jq-selectbox li:hover {
