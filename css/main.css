@@ -1008,12 +1008,13 @@ div.child {
 /* Фиксированное меню */
 .headhesive {
   position: fixed;
-  transform: translateY(-300%);
+  transform: translateY(-500%);
   transition: .5s;
   background: #fff;
   width: 100%;
   z-index: 110;
   box-shadow: 0 0 25px -5px #000;
+  font-family: Arial;
 }
 .headhesive .btn-line {
    float: right;
@@ -1032,7 +1033,9 @@ div.child {
 .headhesive--stick {
   transform: translateY(0);
 }
-
+.headhesive .sort-two-item, .headhesive .sort-one-item {
+  margin-bottom: -4px;
+}
 
 
 .fix-menu-param {
@@ -1157,6 +1160,9 @@ div.child {
 .headhesive .search-options-2 {
   padding-top: 15px;
   margin: 0;
+}
+.headhesive .search-options-2 .d-flex {
+  padding: 0;
 }
 .headhesive .btn-line {
   margin-bottom: 0;

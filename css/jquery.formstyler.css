@@ -261,7 +261,7 @@
 .jq-selectbox__select-text {
 	display: block;
 	overflow: hidden;
-	width: 100%;
+	width: 115%;
 	padding: 0 0 0 60px;
 	color: #7c7c7b;
 	font-size: 16px;

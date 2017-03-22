@@ -1,3 +1,5 @@
+/* There are two options added color block to select option */
+
 .jq-selectbox li.any-color{
 	padding-left: 10px;
 }
@@ -22,4 +24,10 @@
 }
 .blue .jq-selectbox__select .jq-selectbox__select-text:before {
   background: blue;
+}
+.jq-selectbox li.c960f69::before { 
+  background: #960f69;
+}
+.c960f69 .jq-selectbox__select .jq-selectbox__select-text:before{
+	background: #960f69;
 }

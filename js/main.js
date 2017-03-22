@@ -133,5 +133,14 @@ function resetManufacturerCountry(){
 	$(".manufacturer-country").closest('span').removeClass('active');
 }
 
-
+var options = {
+  offset: 100
+}
 var header = new Headhesive('.header');
+
+// $(document).ready(
+// 		$(".headhesive").find("b").text("Интерьеры")
+// 	)
+// $(document).ready(
+// 		$(".headhesive").find("p").text("Элементы")
+// 	)
