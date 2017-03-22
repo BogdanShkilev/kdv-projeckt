@@ -134,7 +134,7 @@ function resetManufacturerCountry(){
 }
 
 var options = {
-  offset: 100
+  offset: 450
 }
 var header = new Headhesive('.header');
 
