@@ -641,7 +641,7 @@ div.child {
   background: url("../images/metro8.png") no-repeat; }
 
 .adress-point {
-  padding: 30px 20px;
+  padding: 30px 35px 30px 20px;
   -webkit-transition: .2s;
   transition: .2s;
   border-bottom: 1px solid #E6E7E8; }
@@ -674,15 +674,20 @@ div.child {
 
 .map-contact {
   margin-bottom: 90px;
-  display: flex;
+  display: block;
   align-items: stretch; }
 .map-contact .nav-map {
-  flex-basis: 450px;
-  width: 450px;
+  width: 328px;
+
+}
+#map-wrap {
+  width: 100%;
+  float: left;
+  height: 900px;
 }
 #map {
-  flex-basis: 100%;
-  width: 100%;
+  width:calc(100% - 328px);
+  height: 900px;
 }
 .fix-street {
   width: 90%; }
@@ -1105,6 +1110,9 @@ div.child {
 }
 .search-options-2 .count-elem:hover {
   color: #000;
+}
+.search-options-2 .count-elem:focus {
+  text-decoration: none;
 }
 .sort-two-item {
   display: inline-block;
