@@ -18,7 +18,9 @@ h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
   overflow: auto;
   color: #77787B;
   font-size: 16px;
-  font-family: arial, sans-serif; }
+  font-family: arial, sans-serif;
+  overflow: hidden;
+}
 
 .main .four-icon a {
   color: #77787B; }
@@ -672,8 +674,16 @@ div.child {
 
 .map-contact {
   margin-bottom: 90px;
-  display: flex }
-
+  display: flex;
+  align-items: stretch; }
+.map-contact .nav-map {
+  flex-basis: 450px;
+  width: 450px;
+}
+#map {
+  flex-basis: 100%;
+  width: 100%;
+}
 .fix-street {
   width: 90%; }
 
@@ -1061,6 +1071,10 @@ div.child {
 .headhesive b {
   font-size: 16px;
 }
+.search-options label:hover {
+  color: #000;
+  border-color: #aaaaaa;
+}
 .search-options .d-flex {
   display: flex;
   justify-content: space-between;
@@ -1083,11 +1097,14 @@ div.child {
   color: #000;
   margin-right: 7px;
 }
-.search-options-2 p {
+.search-options-2 .count-elem {
   display: inline-block;
    font-size: 25px;
   color: #7c7c7b;
   padding-left: 15px;
+}
+.search-options-2 .count-elem:hover {
+  color: #000;
 }
 .sort-two-item {
   display: inline-block;
@@ -1122,6 +1139,17 @@ div.child {
 .search-options-2 .search-link:hover {
   color: #000;
 }
+.search-options-2 .search-link i {
+  float: right;
+  display: block;
+  width: 18px;
+  height: 16px;
+  margin-left: 5px;
+  background: url(../images/arrow-22.png) no-repeat 0 4px;
+}
+.search-options-2 .search-link:hover i {
+  background: url(../images/arrow-23.png) no-repeat 0 4px;
+}
 .design .jq-selectbox li, .price .jq-selectbox li {
   padding-left: 10px;
 }
@@ -1145,7 +1173,7 @@ div.child {
 }
 
 
-.headhesive b, .headhesive p {
+.headhesive b, .headhesive .count-elem {
   font-size: 16px;
 }
 .headhesive .order-wrap {
@@ -1185,7 +1213,9 @@ div.child {
 }
 .catalog-page .col-md-6, .catalog-page .col-md-4 {
   padding: 0 10px;
+  position: relative;
 }
+
 .catalog-page img {
   width: 100%;
   vertical-align: bottom;
@@ -1226,17 +1256,18 @@ div.child {
 .catalog-page .product-item{
   position: relative;
 }
-.catalog-page span.heart {
+.heart-red {
   position: absolute;
   width: 10%;
-  bottom: 0;
-  right: 10px;
+  bottom: 2px;
+  right: 18px;
   top: auto;
   width: 25px;
   float: right;
+  height: 38px;
   background: url(../images/heart3.png) no-repeat 0 9px;
 }
-.catalog-page .heart:hover {
+.heart-red:hover {
   background: url(../images/heart4.png) no-repeat 0 9px;
 }
 .more-btn {
@@ -1257,3 +1288,56 @@ div.child {
   background: #c20021;
   color: #000;
 } 
+
+
+
+/* result-element стили */
+.result-element a:hover {
+  text-decoration: none;
+}
+.result-element .row {
+  margin-right: -40px;
+}
+.result-element .tile-item {
+  display: block;
+  font-size: 13px;
+  color: #7c7c7b;
+  margin-right: 24px;
+  margin-bottom: 23px;
+  overflow: hidden;
+}
+.result-element .tile-item:hover strong{
+  color: #000;
+}
+.result-element .d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.result-element img {
+  margin-bottom: 5px;
+}
+.result-element strong {
+  display: block;
+  width: 100%;
+  margin-bottom: 6px;
+}
+.result-element span {
+  float: left;
+  margin-right: 5px;
+}
+.result-element .heart-red {
+  position: relative;
+  height: 16px;
+  background-position: 0;
+  background-size: 70%;
+  float: left;
+  right: 0;
+  bottom: 0;
+}
+.result-element .heart-red:hover .tile-item{
+  color: none;
+  background-size: 70%;
+}
+.result-element .more-btn {
+  margin-top: 20px;
+}

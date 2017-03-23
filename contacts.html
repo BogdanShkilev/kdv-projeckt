@@ -108,7 +108,7 @@
             function itemToggle(id) {
                 var it = visible.getIterator(),
                     group;
-
+                    console.log(it);
                 while(group = it.getNext()) {
                     for(var i = 0, len = group.getLength(); i < len; i++) {
                         var placemark = group.get(i);
@@ -131,6 +131,9 @@
                     }
                 }
             }
+            placemark.events.add('click', function () {
+            	$("body").css("backgound","yellow")
+            })
 
 
 		};
@@ -211,7 +214,7 @@
 						<div class=" map-contact">
 							<div id="map" class="col-md-8 col-sm-8 col-lg-8 col-xs-8" style="padding: 0;"></div>
 						
-					<div style="padding-left: 0" class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+					<div style="padding-left: 0" class="col-md-4 col-sm-4 col-lg-4 col-xs-4 nav-map">
 						<div class="parent demo-scroll-shadows demo-scroll-shadows--black">
 							<div class="sidebar-list child demo-scroll-shadows--white nav nav-list" >
 									<!-- kyrska -->
