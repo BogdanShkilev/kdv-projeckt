@@ -47,15 +47,19 @@
             }, {
                 preset: 'twirl#redIcon'
             });
-
+            one = new ymaps.Placemark([55.75155530, 37.67013699], { id: 'group-1-1', balloonContent: '<h3 class="h3 metro brown">Курская</h3><h3 class="h3 metro white-green">Чкаловская</h3><p class="street">Россия, Москва, Нижняя Сыромятническая улица, 10с3</p><p class="number pull-left">+7 965 162-66-56</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'})
+            two = new ymaps.Placemark([55.72206103, 37.63279094], { id: 'group-1-2', balloonContent: '<h3 class="h3 metro brown">Павелецкая</h3><h3 class="h3 metro grey">Серпуховская</h3><p class="street">1-й Щипковый переулок д. 4, А-26</p><p class="number pull-left">+7 985 360-36-65</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'})
+            three = new ymaps.Placemark([55.88477579, 37.60374416], { id: 'group-1-3', balloonContent: '<h3 class="h3 metro grey">Бабирево</h3><p class="street">ул. Пришвина, д. 26/3, ТВК "Миллион мелочей", 1 этаж, стенд С29 </p><p class="number pull-left">+7 965 162-66-56</p><span class="work-time pull-left clearfix">с 09:00 до 20:00</span>' },{preset: 'islands#redDotIcon'})
+            four = new ymaps.Placemark([55.67192837, 37.58368089], { id: 'group-1-4', balloonContent: '<h3 class="h3 metro orange">Профсоюзная</h3><p class="street">Нахимовский пр-т, с. 24, ВК «Экспострой на Нахимовском», павильон №3, сектор В, место 350</p><p class="number pull-left">+7 985 162-66-56</p><span class="work-time pull-left clearfix">с 09:00 до 20:00</span>' },{preset: 'islands#redDotIcon'})
+            six = new ymaps.Placemark([55.80768430, 37.38829868], { id: 'group-1-6', balloonContent: '<h3 class="h3 metro blue">Строгино</h3><p class="street">5-й км МКАД (внешняя сторона), МТВК Синдика, пав. В403 и В409</p><p class="number pull-left">+7 495 779-69-77</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'})
+            five = new ymaps.Placemark([55.85505975, 37.47666065], { id: 'group-1-5', balloonContent: '<h3 class="h3 metro green">Речной Вокзал</h3><p class="street">Нахимовский пр-т, с. 24, Ленинградское шоссе, Химки-Центр, вл. 5, ТЦ «Лига», цокольный этаж</p><p class="number pull-left">+7 495 779-69-77</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'})
             group1
-                .add(new ymaps.Placemark([55.75155530, 37.67013699], { id: 'group-1-1', balloonContent: '<h3 class="h3 metro brown">Курская</h3><h3 class="h3 metro white-green">Чкаловская</h3><p class="street">Россия, Москва, Нижняя Сыромятническая улица, 10с3</p><p class="number pull-left">+7 965 162-66-56</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
-                .add(new ymaps.Placemark([55.72206103, 37.63279094], { id: 'group-1-2', balloonContent: '<h3 class="h3 metro brown">Павелецкая</h3><h3 class="h3 metro grey">Серпуховская</h3><p class="street">1-й Щипковый переулок д. 4, А-26</p><p class="number pull-left">+7 985 360-36-65</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
-                .add(new ymaps.Placemark([55.88477579, 37.60374416], { id: 'group-1-3', balloonContent: '<h3 class="h3 metro grey">Бабирево</h3><p class="street">ул. Пришвина, д. 26/3, ТВК "Миллион мелочей", 1 этаж, стенд С29 </p><p class="number pull-left">+7 965 162-66-56</p><span class="work-time pull-left clearfix">с 09:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
-                .add(new ymaps.Placemark([55.67192837, 37.58368089], { id: 'group-1-4', balloonContent: '<h3 class="h3 metro orange">Профсоюзная</h3><p class="street">Нахимовский пр-т, с. 24, ВК «Экспострой на Нахимовском», павильон №3, сектор В, место 350</p><p class="number pull-left">+7 985 162-66-56</p><span class="work-time pull-left clearfix">с 09:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
-                .add(new ymaps.Placemark([55.80768430, 37.38829868], { id: 'group-1-5', balloonContent: '<h3 class="h3 metro blue">Строгино</h3><p class="street">5-й км МКАД (внешняя сторона), МТВК Синдика, пав. В403 и В409</p><p class="number pull-left">+7 495 779-69-77</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
-                .add(new ymaps.Placemark([55.85505975, 37.47666065], { id: 'group-1-6', balloonContent: '<h3 class="h3 metro green">Речной Вокзал</h3><p class="street">Нахимовский пр-т, с. 24, Ленинградское шоссе, Химки-Центр, вл. 5, ТЦ «Лига», цокольный этаж</p><p class="number pull-left">+7 495 779-69-77</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}))
-                .add(new ymaps.Placemark([55.80768430, 37.38829868], { id: 'group-1-7', balloonContent: '<h3 class="h3 metro blue">Строгино</h3><p class="street">5-й км МКАД (внешняя сторона), МТВК Синдика, пав. В403 и В409</p><p class="number pull-left">+7 495 779-69-77</p><span class="work-time pull-left clearfix">с 10:00 до 20:00</span>' },{preset: 'islands#redDotIcon'}));
+                .add(one)
+                .add(two)
+                .add(three)
+                .add(four)
+                .add(five)
+                .add(six);
              // Добавляем все группы в одну коллекцию.
             visible
                 .add(group1);
@@ -131,8 +135,35 @@
                     }
                 }
             }
-            placemark.events.add('click', function () {
-            	$("body").css("backgound","yellow")
+            one.events.add('click', function (e) {
+            		$(".adress-point").removeClass("active")
+            		$("#group-1-1").change().addClass("active")
+   
+            })
+            two.events.add('click', function (e) {
+            		$(".adress-point").removeClass("active")
+            		$("#group-1-2").change().addClass("active")
+   
+            })
+            three.events.add('click', function (e) {
+            		$(".adress-point").removeClass("active")
+            		$("#group-1-3").change().addClass("active")
+   
+            })
+            four.events.add('click', function (e) {
+            		$(".adress-point").removeClass("active")
+            		$("#group-1-4").change().addClass("active")
+   
+            })
+            five.events.add('click', function (e) {
+            		$(".adress-point").removeClass("active")
+            		$("#group-1-5").change().addClass("active")
+   
+            })
+            six.events.add('click', function (e) {
+            		$(".adress-point").removeClass("active")
+            		$("#group-1-6").change().addClass("active")
+   
             })
 
 
@@ -232,7 +263,7 @@
 									<div class="adress2 adress-point clearfix" id="group-1-2">
 										<a id="paveletska-point" onclick="event.preventDefault()" class="adr-link" href="#">
 										<h3 class="h3 metro brown">Павелецкая</h3>
-										<h3 ch3 lass="h3 metro grey">Серпуховская</h3>
+										<h3 class="h3 metro grey">Серпуховская</h3>
 										<p class="street">1-й Щипковый переулок д. 4, А-26</p>
 										<p class="number pull-left">+7 965 162-66-56</p>
 										<span class="work-time pull-left">с 10:00 до 20:00</span>
