@@ -12,6 +12,9 @@ h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
   margin: 0;
   padding: 0; }
 
+body {
+  overflow-x: hidden;
+}
 .wrapper {
   min-width: 1000px;
   margin: 0 auto;
@@ -1135,7 +1138,7 @@ div.child {
   background: url(../images/order-one.png) no-repeat;
 }
 .sort-one-item.active {
-  display: block;
+  display: inline-block;
   width: 20px;
   height: 15px;
   background: url(../images/order-one-active.png) no-repeat;
@@ -1352,4 +1355,92 @@ div.child {
 }
 .result-element .more-btn {
   margin-top: 20px;
+}
+
+
+/* catalog-2.html style */
+.catalog-page-2 a {
+  display: inline-block;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 3px;
+  color: #e4042a;
+}
+.catalog-page-2 .row {
+  border-bottom: 1px solid #e6e7e8;
+  margin-bottom: 30px;
+}
+.catalog-page-2 .row:nth-last-child(2), .catalog-page-2 .row:last-child {
+  border-bottom: none;
+}
+.catalog-page-2 .design-item a {
+  
+}
+.catalog-page-2 a:hover h2 {
+  color: #000;
+}
+.catalog-page-2 h2 {
+  margin-right: 5px;
+  margin-bottom: 40px;
+}
+.catalog-page-2 .design-item img {
+  width: 100%;
+}
+.catalog-page-2 .design-item span {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.catalog-page-2 .design-item strong {
+  float: left;
+  margin-bottom: 20px;
+}
+.catalog-page-2 .five-more {
+  text-decoration: underline dotted;
+  margin-top: 40px;
+  position: relative;
+  overflow: visible;
+}
+.catalog-page-2 .five-more:hover {
+  text-decoration: underline dotted;
+  color: #000;
+}
+.catalog-page-2 .five-more:focus {
+  color: #e4042a;
+}
+
+.five-more.text-center.active::before {
+    background: rgba(0, 0, 0, 0) url("../images/arrow-down.png") no-repeat 0 0;
+    content: "";
+    display: block;
+    height: 20px;
+    position: absolute;
+    top: 135%;
+    left: 46%;
+    width: 12px;
+}
+.catalog-page-2 .five-more.active:after {
+  display: block;
+  content: "";
+  width: 0;
+  position: absolute;
+  left: 50%;
+  height: 200px;
+  top: 200%;
+  border-left: 1px dashed #b2b2b2;
+}
+.catalog-page-2 .more-five-section {
+  display: none;  
+  border: 1px dashed #b2b2b2;
+  padding-top: 14px;
+  background: #fff;
+  margin-bottom: 30px;
+}
+.more-five-section .tile-item {
+  margin-bottom: 0;
+  margin-right: 39px;
+}
+.more-five-section .d-flex {
+  margin-right: -39px;
+  background: none;
 }

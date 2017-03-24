@@ -157,3 +157,14 @@ $('.heart-red').hover(
 			)
 	}
 	)
+
+$(".five-more").click(function(){
+	if ($(this).hasClass("active")){
+		$(this).removeClass("active")
+	} else {
+		$(this).addClass("active")
+	}
+	$(this).closest(".row").find(".more-five-section").slideToggle("slow")
+},
+
+)
