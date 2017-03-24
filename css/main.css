@@ -61,7 +61,8 @@ input.nav-input {
 
 .block-search {
   width: 90%;
-  float: right; }
+  float: right;
+  position: relative; }
 
 .main-search .nav-input:focus + ul {display:block}
 .main-search .tips-block:hover{display: block}
@@ -71,8 +72,9 @@ input.nav-input {
   width: 421px;
   background: #fff;
   position: absolute;
+  width: 100%;
   top: 62px;
-  left: 63px;
+  left: 0;
   padding: 12px 0;
   -webkit-box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.34);
           box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.34);
