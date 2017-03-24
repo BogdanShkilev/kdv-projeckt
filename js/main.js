@@ -138,9 +138,22 @@ var options = {
 }
 var header = new Headhesive('.header');
 
-// $(document).ready(
-// 		$(".headhesive").find("b").text("Интерьеры")
-// 	)
-// $(document).ready(
-// 		$(".headhesive").find("p").text("Элементы")
-// 	)
+
+// Ховер сердечек на странице result-element.html
+$('.heart-red').hover(
+	function(){
+		$(this).closest(".about").find("strong").css("color","#7c7c7b")
+	}
+	,
+	function(){
+		$(this).closest(".about").find("strong").css("color","#000");
+		$(this).closest(".tile-item").hover(
+				function(){
+					$(this).find("strong").css("color","#000");
+				},
+				function(){
+					$(this).find("strong").css("color","#7c7c7b");
+				}
+			)
+	}
+	)
