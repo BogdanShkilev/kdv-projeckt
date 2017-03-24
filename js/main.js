@@ -61,10 +61,10 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$(".nav-input").focus(function(){
-		$(".nav-input").css('background', '#F8F8F8 url(../images/close-tips.png) no-repeat 98% center');
+		$(".nav-input").css('background', '#F8F8F8 url(images/close-tips.png) no-repeat 98% center');
 
 	}).blur(function(){
-		$(".nav-input").css('background', '#F8F8F8 url(../images/search.png) no-repeat 98% center');
+		$(".nav-input").css('background', '#F8F8F8 url(images/search.png) no-repeat 98% center');
 	});
 });
 
