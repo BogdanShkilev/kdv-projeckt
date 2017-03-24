@@ -165,6 +165,4 @@ $(".five-more").click(function(){
 		$(this).addClass("active")
 	}
 	$(this).closest(".row").find(".more-five-section").slideToggle("slow")
-},
-
-)
+})
