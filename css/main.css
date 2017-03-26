@@ -1108,14 +1108,20 @@ div.child {
 }
 .search-options-2 b {
   font-size: 25px;
-  color: #000;
+  color: #7c7c7b;
   margin-right: 7px;
+}
+.search-options-2 b.active {
+  color: #000;
 }
 .search-options-2 .count-elem {
   display: inline-block;
    font-size: 25px;
   color: #7c7c7b;
   padding-left: 15px;
+}
+.search-options-2 .count-elem.active {
+  color: #000;
 }
 .search-options-2 .count-elem:hover {
   color: #000;
