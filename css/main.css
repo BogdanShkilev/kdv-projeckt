@@ -1045,6 +1045,15 @@ div.child {
     border: none;
     margin-bottom: 15px;
 }
+.headhesive .bascet li a {
+  padding-right: 0;
+}
+.headhesive .bascet li:last-child  a {
+  padding-right: 15px;
+}
+.headhesive .search-options-2 .count-elem {
+  padding: 0;
+}
 .headhesive .search-options, .headhesive .search-link, .headhesive .nav {
   display: none;
 }
@@ -1064,7 +1073,7 @@ div.child {
 }
 .headhesive .fix-menu-param {
   display: block;
-  width: 60%;
+  width: 62.5%;
   float: left;
 }
 .headhesive .fix-menu-param span {
@@ -1203,7 +1212,7 @@ div.child {
   padding: 0;
 }
 .headhesive .col-md-12 {
-  width: 89%;
+  width: 91%;
 }
 .headhesive .bascet {
   margin-top: 10px;
