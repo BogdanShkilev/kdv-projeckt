@@ -7,8 +7,24 @@ $(document).ready(function(){
 		autolaySpeed: 3000
 	});
 });
-
-
+$(document).ready(function(){
+	$('.favorite-slider').slick({
+		arrows: true,
+		dots: false,
+		infinite: true,
+		// autoplay: true,
+		autolaySpeed: 3000
+	});
+});
+$(document).ready(function(){
+	$('.favorite-slider2').slick({
+		arrows: true,
+		dots: false,
+		infinite: true,
+		// autoplay: true,
+		autolaySpeed: 3000
+	});
+});
 
 $(document).ready(function(){
 	$('#ex1').zoom({ on:'click' });
@@ -165,4 +181,10 @@ $(".five-more").click(function(){
 		$(this).addClass("active")
 	}
 	$(this).closest(".row").find(".more-five-section").slideToggle("slow")
+})
+
+
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
 })
