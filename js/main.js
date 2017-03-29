@@ -8,10 +8,10 @@ $(document).ready(function(){
 	});
 });
 $(document).ready(function(){
-	$('.favorite-slider').slick({
-		arrows: true,
-		dots: false,
-		infinite: true,
+	$('.modul-slider').slick({
+		infinite: false,
+		slidesToShow: 3,
+		slidesToScroll: 3,
 		// autoplay: true,
 		autolaySpeed: 3000
 	});
@@ -188,3 +188,18 @@ $('#myTabs a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+
+var evt = new Event(),
+    m = new Magnifier(evt);
+
+
+m.attach({
+    thumb: '#thumb',
+    large: 'http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/1200px-Starry_Night_Over_the_Rhone.jpg',
+    largeWrapper: 'preview_12',
+    zoom: 3
+});

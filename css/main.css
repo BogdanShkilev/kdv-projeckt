@@ -26,7 +26,6 @@ body {
   font-family: arial, sans-serif;
   overflow: hidden;
 }
-
 .main .four-icon a {
   color: #77787B; }
   .main .four-icon a:hover {
@@ -1785,4 +1784,99 @@ border-color: #e7f2f9;
   }
 .similar-collections {
   margin-bottom: 10px;
+}
+
+
+/* modal */
+.modal-dialog .modal-content {
+  border-radius: 0;
+}
+.modal-dialog.big {
+  width: 96%;
+  min-width: 960px;
+}
+.modal-content button.close {
+  opacity: 1;
+  margin-top: 22px;
+}
+button.close:hover {
+  opacity: 1;
+}
+button.close span {
+  background: url(../images/modal-close.png) no-repeat;
+  display: block;
+  width: 19px
+}
+button.close:hover span {
+  background-image: url(../images/modal-close-black.png);
+}
+.modal-content h4 {
+  font-size: 30px;
+  line-height: 1.2em
+}
+.modal-content h5{
+  margin-bottom: 15px;
+}
+.modal-content .modal-header {
+  padding-bottom: 0;
+  padding-top: 0;
+  border-bottom: 0;
+}
+#thumbnail {
+  margin-bottom: 14px;
+}
+.modal-dialog table {
+  margin-bottom: 15px;
+}
+.modal-dialog tr {
+    padding: 2.5px 0;
+    display: block;
+}
+.modal-dialog td {
+  font-size: 13px;
+  display: inline-block;
+}
+.modal-dialog td:first-child {
+  width: 112px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.modal-dialog .slick-slide:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+.modal-dialog .slick-list {
+  width: 92%;
+}
+.modal-dialog button.slick-prev {
+  width: 40px;
+  left: -50px;
+}
+.modal-dialog button.slick-prev:before {
+  background-image: url(../images/slider-arrow-red.png);
+  transform: rotate(180deg);
+  height: 73px;
+  width: 40px;
+}
+.modal-dialog button.slick-next::before {
+  background-image: url(../images/slider-arrow-red.png);
+  height: 73px;
+}
+.modal-dialog button.slick-disabled {
+  opacity: 0;
+}
+.modal-dialog .tile-item {
+  overflow: hidden;
+}
+.modal-dialog .slick-slide {
+  overflow: hidden;
+  min-width: 100px;
+}
+.modal-dialog .slick-track {
+  width: 100%;
+}
+.modal-dialog .slick-track a {
+  display: block;
+  overflow: hidden;
 }
