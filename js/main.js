@@ -183,5 +183,9 @@ $('#myTabs a').click(function (e) {
 
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').focus()
+  $('body').css('background','yellow')
 })
 
+function foo(){
+	$('.slick-prev').click()
+}
