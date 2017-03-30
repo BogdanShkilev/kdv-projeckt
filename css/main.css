@@ -1875,6 +1875,7 @@ button.close:hover span {
 }
 .modal-dialog .slick-slide {
   overflow: hidden;
+  margin-right: 5px;
 }
 .modal-dialog .slick-slide.slick-active {
   
