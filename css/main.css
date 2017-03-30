@@ -1848,6 +1848,10 @@ button.close:hover span {
 }
 .modal-dialog .slick-list {
   width: 92%;
+  margin-bottom: 15px;
+}
+.modal-dialog .slick-prev, .modal-dialog .slick-next {
+  top: 38%;
 }
 .modal-dialog button.slick-prev {
   width: 40px;
@@ -1871,12 +1875,23 @@ button.close:hover span {
 }
 .modal-dialog .slick-slide {
   overflow: hidden;
-  min-width: 100px;
+  width: auto!important;
+  display: inline-block!important;
+  margin-right: 34px;
 }
 .modal-dialog .slick-track {
-  width: 100%;
+  width: 1000%!important;
 }
 .modal-dialog .slick-track a {
   display: block;
   overflow: hidden;
 }
+.zoomer-wrap {
+  display: block;
+  height: 625px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 75px;
+}
+.drift-demo-trigger-wrap {}

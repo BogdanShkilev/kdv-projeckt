@@ -17,7 +17,9 @@
 	<link rel="stylesheet" type="text/css" href="css/media-1400.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.formstyler.css">
 	<link rel="stylesheet" href="css/color-palette.css">
-	<link rel="stylesheet" type="text/css" href="css/magnifier.css">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/drift-basic.css">
+
 
 	
 
@@ -25,11 +27,10 @@
 </head>
 <body>
 <div>
-
-
-
-
 	<div class="wrapper">
+
+
+
 		<!-- header -->
 		<header class="header">
 			<div class="container">
@@ -176,7 +177,7 @@
 				<div class="row">
 					<div class="col-md-12 col-ls-12 col-sm-12 col-xs-12 d-flex">
 						<div>
-							<a href="#" class="tile-item" id="myModal" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+							<a href="#" class="tile-item " id="myModal" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
 							<img src="images/tile_1.jpg" alt="">
 							<div class="about">
 								<strong>Для пола, 60×60</strong>
@@ -489,7 +490,9 @@
 					      <div class="modal-body">
 					      	<div class="row">
 					      		<div class="col-sm-3 col-md-3 col-lg-3 col-xs-3">
-					      			<img src="images/tile_35.jpg" id="thumbnail" alt=""/>
+					      			<div class="drift-demo-trigger-wrap">
+					      			<img class="drift-demo-trigger" data-zoom="images/tile_35.jpg?w=1200&amp;ch=DPR&amp;dpr=2" src="images/tile_35.jpg?w=400&amp;ch=DPR&amp;dpr=2">
+					      			</div>
 					      			<h5>4900 р/м²</h5>
 					      			<a href="#" class="add-to-cart">В корзину</a>
 					      			<table>
@@ -555,17 +558,20 @@
 					      			<a href="images/diploma-min-1.jpg" target="_blank"><img src="images/diploma-min-1.jpg" alt=""></a>
 					      		</div>
 					      		<div class="col-sm-9 col-md-9 col-lg-9 col-xs-9">
-					      			<div>
-									    <div>
-    <a class="magnifier-thumb-wrapper" href="http://en.wikipedia.org/wiki/File:Starry_Night_Over_the_Rhone.jpg">
-        <img id="thumb" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/200px-Starry_Night_Over_the_Rhone.jpg"
-        data-large-img-url="http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/400px-Starry_Night_Over_the_Rhone.jpg"
-        data-large-img-wrapper="preview">
-    </a>
-    <div class="magnifier-preview" id="preview_12" style="width: 200px; height: 133px">Starry Night Over The Rhone<br>by Vincent van Gogh</div>
-</div>
+										 <div class="zoomer-wrap">
+										 	<div class="detail">
+										        <section>
+										          
+										        </section>
 
-									</div>
+										       
+										      </div>
+										 </div>
+										 <div class="row">
+										 	<div class="col-md-12">
+										 		<h5>Похожие</h5>
+										 	</div>
+										 </div>
 										<div class="modul-slider">
 											<div class="slide">
 													<a href="" class="tile-item">
@@ -627,11 +633,71 @@
 												</div>
 											</a>
 											</div>
-
+											<div class="slide">
+												<a href="" class="tile-item">
+												<img src="images/tile_22.jpg" alt="">
+												<div class="about">
+													<strong>Для пола, 60×60</strong>
+													<span><b>4900</b> р/м²</span>
+													<object><a href="#" class="heart-red"></a></object>
+												</div>
+											</a>
+											</div>
+											<div class="slide">
+												<a href="" class="tile-item">
+												<img src="images/tile_22.jpg" alt="">
+												<div class="about">
+													<strong>Для пола, 60×60</strong>
+													<span><b>4900</b> р/м²</span>
+													<object><a href="#" class="heart-red"></a></object>
+												</div>
+											</a>
+											</div>
+											<div class="slide">
+												<a href="" class="tile-item">
+												<img src="images/tile_37.jpg" alt="">
+												<div class="about">
+													<strong>Для пола, 60×60</strong>
+													<span><b>4900</b> р/м²</span>
+													<object><a href="#" class="heart-red"></a></object>
+												</div>
+											</a>
+											</div>
+											<div class="slide">
+												<a href="" class="tile-item">
+												<img src="images/tile_37.jpg" alt="">
+												<div class="about">
+													<strong>Для пола, 60×60</strong>
+													<span><b>4900</b> р/м²</span>
+													<object><a href="#" class="heart-red"></a></object>
+												</div>
+											</a>
+											</div>
+											<div class="slide">
+												<a href="" class="tile-item">
+												<img src="images/tile_37.jpg" alt="">
+												<div class="about">
+													<strong>Для пола, 60×60</strong>
+													<span><b>4900</b> р/м²</span>
+													<object><a href="#" class="heart-red"></a></object>
+												</div>
+											</a>
+											</div>
+											<div class="slide">
+												<a href="" class="tile-item">
+												<img src="images/tile_37.jpg" alt="">
+												<div class="about">
+													<strong>Для пола, 60×60</strong>
+													<span><b>4900</b> р/м²</span>
+													<object><a href="#" class="heart-red"></a></object>
+												</div>
+											</a>
+											</div>
 									</div>
 					      		</div>
 					      	</div>
 					      </div>
+					      
 					    </div>
 					  </div>
 					</div>
@@ -647,12 +713,23 @@
 				<script src="bootstrap/js/bootstrap.min.js"></script>
 				<script src="js/jquery.formstyler.js"></script>
 				<script src="js/headhesive.min.js"></script>
-<script type="text/javascript" src="js/Event.js"></script>
-<script type="text/javascript" src="js/Magnifier.js"></script>
+
 				<script src="js/main.js" ></script>
-
-
-
+			<script src="js/Drift.js"></script>
+			    <script>
+			      new Drift(document.querySelector('.drift-demo-trigger'), {
+			        paneContainer: document.querySelector('.detail'),
+			        inlinePane: 900,
+			        containInline: false,
+			        inlineOffsetX: 0,
+			        inlineOffsetY: 0,
+			        hoverBoundingBox: true,
+			        zoomFactor: 7,
+			        hoverBoundingBox: true,
+			        touchBoundingBox: true,
+			        showWhitespaceAtEdges: false
+			      });
+			    </script>
 
 			</body>
 			</html>
