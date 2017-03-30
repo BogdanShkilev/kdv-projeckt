@@ -1852,10 +1852,16 @@ button.close:hover span {
 }
 .modal-dialog .slick-prev, .modal-dialog .slick-next {
   top: 38%;
+  box-shadow: 0 0 45px 17px #fff;
 }
 .modal-dialog button.slick-prev {
-  width: 40px;
+  width: 50px;
   left: -50px;
+}
+.modal-dialog button.slick-next {
+  width: 70px;
+  right: 19px;
+  width: 50px;
 }
 .modal-dialog button.slick-prev:before {
   background-image: url(../images/slider-arrow-red.png);
@@ -1866,6 +1872,7 @@ button.close:hover span {
 .modal-dialog button.slick-next::before {
   background-image: url(../images/slider-arrow-red.png);
   height: 73px;
+  width: 55px;
 }
 .modal-dialog button.slick-disabled {
   opacity: 0;
@@ -1880,9 +1887,7 @@ button.close:hover span {
 .modal-dialog .slick-slide.slick-active {
   
 }
-.modal-dialog .slick-track {
-  width: 1000%!important;
-}
+
 .modal-dialog .slick-track a {
   display: block;
   overflow: hidden;
@@ -1896,3 +1901,7 @@ button.close:hover span {
   margin-bottom: 75px;
 }
 .drift-demo-trigger-wrap {}
+
+.drift-demo-trigger {
+  cursor: move;
+}

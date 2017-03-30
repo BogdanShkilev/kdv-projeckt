@@ -183,9 +183,20 @@ $('#myTabs a').click(function (e) {
 
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').focus()
-  $('body').css('background','yellow')
+})
+$('#myModal-2').on('shown.bs.modal', function () {
+  $('#myInput').focus()
 })
 
 function foo(){
 	$('.slick-prev').click()
 }
+function clickf(){
+	$('#myModal').click()
+}
+
+// setTimeout(clickf, 0)
+$('.modal-body').find('.tile-item').click(function(){
+	$('.modal').modal('hide')
+	$('body').css('padding','0')
+})
