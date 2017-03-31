@@ -177,7 +177,7 @@
 				<div class="row">
 					<div class="col-md-12 col-ls-12 col-sm-12 col-xs-12 d-flex">
 						<div>
-							<a href="#" class="tile-item " onclick="setTimeout(foo, 0);" id="myModal" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+							<a href="#" class="tile-item " id="myModal" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
 							<img src="images/tile_1.jpg" alt="">
 							<div class="about">
 								<strong>Для пола, 60×60</strong>
@@ -188,7 +188,7 @@
 						
 						</div>
 						<div>
-							<a href="" class="tile-item" onclick="setTimeout(foo, 0);" id="myModal" data-toggle="modal" data-target="#exampleModal-2" data-whatever="@mdo">
+							<a href="" class="tile-item" id="myModal" data-toggle="modal" data-target="#exampleModal-2" data-whatever="@mdo">
 							<img src="images/tile_2.jpg" alt="">
 							<div class="about">
 								<strong>Для пола, 60×60</strong>
@@ -198,7 +198,7 @@
 						</a>
 						</div>
 						<div>
-							<a  href="" class="tile-item" onclick="setTimeout(foo, 0);" id="myModal" data-toggle="modal" data-target="#exampleModal-3" data-whatever="@mdo">
+							<a  href="" class="tile-item" id="myModal" data-toggle="modal" data-target="#exampleModal-3" data-whatever="@mdo">
 							<img src="images/tile_3.jpg" alt="">
 							<div class="about">
 								<strong>Для пола, 60×60</strong>
@@ -490,6 +490,7 @@
 					      <div class="modal-body">
 					      	<div class="row">
 					      		<div class="col-sm-3 col-md-3 col-lg-3 col-xs-3">
+
 					      			<div class="drift-demo-trigger-wrap">
 					      			<img class="drift-demo-trigger" data-zoom="images/tile_35.jpg?w=1200&amp;ch=DPR&amp;dpr=2" src="images/tile_35.jpg?w=400&amp;ch=DPR&amp;dpr=2">
 					      			</div>
@@ -711,7 +712,8 @@
 					      	<div class="row">
 					      		<div class="col-sm-3 col-md-3 col-lg-3 col-xs-3">
 					      			<div class="drift-demo-trigger-wrap">
-					      			<img class="drift-demo-trigger-1" data-zoom="images/tile_2.jpg?w=1200&amp;ch=DPR&amp;dpr=2" src="images/tile_2.jpg?w=400&amp;ch=DPR&amp;dpr=2">
+					      				<div class="wrapper">
+					      			<img class="drift-demo-trigger-1" data-zoom="images/tile_2.jpg?w=1200&amp;ch=DPR&amp;dpr=2" src="images/tile_2.jpg?w=400&amp;ch=DPR&amp;dpr=2"></div>
 					      			</div>
 					      			<h5>4900 р/м²</h5>
 					      			<a href="#" class="add-to-cart">В корзину</a>
@@ -1232,7 +1234,7 @@
 										 </div>
 										<div class="modul-slider">
 											<div class="slide">
-													<a href="" class="tile-item" >
+													<a href="" class="tile-item">
 													<img src="images/tile_15.jpg" alt="">
 													<div class="about">
 														<strong>Для пола, 60×60</strong>
@@ -1382,15 +1384,15 @@
 			        paneContainer: document.querySelector('.detail'),
 			        inlinePane: 900,
 			        containInline: false,
-			        inlineOffsetX: 0,
-			        inlineOffsetY: 0,
+			        inlineOffsetX: 500,
+			        inlineOffsetY: 500,
 			        hoverBoundingBox: true,
 			        zoomFactor: 6,
 			        hoverBoundingBox: true,
 			        hoverBoundingBox: true,
 			        touchBoundingBox: true,
 			        showWhitespaceAtEdges: false, 
-			        inlineContainer: document.body.modal
+			        inlineContainer: document.querySelector('.drift-demo-trigger-wrap'),
 			      });
 			      new Drift(document.querySelector('.drift-demo-trigger-1'), {
 			        paneContainer: document.querySelector('.detail-2'),

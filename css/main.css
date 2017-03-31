@@ -1908,9 +1908,31 @@ button.close:hover span {
 }
 .drift-demo-trigger-wrap {
   margin-bottom: 15px;
+  position: relative;
 }
 
 .drift-demo-trigger {
   cursor: move;
 }
 .tab-content > .tab-pane {}
+.wrapper {
+  position: relative;
+}
+/* bootstrap hack: fix content width inside hidden tabs */
+.tab-content > .tab-pane, .pill-content > .pill-pane {
+    display: block!important;    /* undo display:none          */
+    height: 0!important;         /* height:0 is also invisible */
+    overflow: hidden!important;  /* no-overflow                */
+}
+.tab-content > .active, .pill-content > .active {
+    height: auto!important;      /* let the content decide it  */
+} /* bootstrap hack end */
+
+.modal {
+  display: block!important;
+  height: 0!important;
+  overflow: hidden;
+}
+.modal.in {
+  height: auto!important;
+}

@@ -219,3 +219,7 @@ $('.modal').on('hide.bs.modal', function (e) {
   $('body').css({padding: '0',
 				   overflowY: 'auto'})
 })
+
+function clickSl(){
+	$(".favorite-slider").slick('reinit')
+}
