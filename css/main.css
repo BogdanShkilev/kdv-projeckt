@@ -1846,6 +1846,12 @@ button.close:hover span {
   clear: both;
   content: '';
 }
+.modal-dialog .about {
+  color: #7c7c7b;
+}
+.modal-dialog .tile-item:hover{
+  text-decoration: none;
+}
 .modal-dialog .slick-list {
   width: 92%;
   margin-bottom: 15px;
