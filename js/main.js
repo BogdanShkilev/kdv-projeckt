@@ -16,6 +16,14 @@ $(document).ready(function(){
 		autolaySpeed: 3000
 	});
 });
+$(document).ready(function(){
+	$('.favorite-slider').slick({
+		infinite: false,
+		slidesToShow: 1,
+		// autoplay: true,
+		autolaySpeed: 3000
+	});
+});
 
 
 $(document).ready(function(){
@@ -197,6 +205,17 @@ function clickf(){
 
 // setTimeout(clickf, 0)
 $('.modal-body').find('.tile-item').click(function(){
-	$('.modal').modal('hide')
-	$('body').css('padding','0')
+	$('.modal').find('.close').click()
+	$('body').css({padding: '0',
+				   overflow: 'hidden'})
+	$('.modal').css({padding: '0',
+				   overflowY: 'auto'})
+})
+$('.modal').on('show.bs.modal', function (e) {
+  $('body').css({padding: '0',
+				   overflow: 'hidden'})
+})
+$('.modal').on('hide.bs.modal', function (e) {
+  $('body').css({padding: '0',
+				   overflowY: 'auto'})
 })

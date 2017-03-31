@@ -1797,7 +1797,7 @@ border-color: #e7f2f9;
 }
 .modal-content button.close {
   opacity: 1;
-  margin-top: 22px;
+  margin-top: 15px;
 }
 button.close:hover {
   opacity: 1;
@@ -1819,7 +1819,7 @@ button.close:hover span {
 }
 .modal-content .modal-header {
   padding-bottom: 0;
-  padding-top: 0;
+  padding-top: 5px;
   border-bottom: 0;
 }
 #thumbnail {
@@ -1900,8 +1900,11 @@ button.close:hover span {
   position: relative;
   margin-bottom: 75px;
 }
-.drift-demo-trigger-wrap {}
+.drift-demo-trigger-wrap {
+  margin-bottom: 15px;
+}
 
 .drift-demo-trigger {
   cursor: move;
 }
+.tab-content > .tab-pane {}
