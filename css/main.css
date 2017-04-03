@@ -1336,6 +1336,7 @@ div.child {
 .more-btn:hover, .catalog-page-2 .more-btn:hover {
   background: #e4042a;
   color: #000;
+  text-decoration: none;
 }
 .more-btn:active,.catalog-page-2 .more-btn:active {
   background: #c20021;
@@ -1957,7 +1958,7 @@ button.close:hover span {
   display: block;
   width: 440px;
   padding: 10px 0;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 .re-call label input {
   float: right;
@@ -1974,22 +1975,32 @@ button.close:hover span {
   color: #fff;
   border: none;
   border-radius: 4px;
+  margin-left: 132px;
+}
+.cart-item {
+  display: block;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 37px;
 }
 .cart-item div {
   float: left;
+  letter-spacing: 0.6px;
 }
 .cart-item div:first-child {
   width: 111px;
 }
 .cart-item img {
   width: 100%;
+  max-height: 150px;
 }
 .cart-item div:nth-child(2){
-  width: 195px;
-  padding-left: 20px;
+  width: 215px;
+  padding-left: 14px;
 }
 .cart-item span {
   display: block;
+  line-height: 1.5em;
 }
 .cart-item i {
   color: #e4042a;
@@ -1997,18 +2008,67 @@ button.close:hover span {
   font-weight: bold;
 }
 .cart-item div:nth-child(3){
-  width: 350px;
+  width: 452px;
 }
 .cart-item input {
   float: left;
   width: 63px;
   border: 1px solid #9fc5dc;
   border-top-color: #83a8bc; 
-  padding: 14px 5px;
+  padding: 11px 5px;
+  box-shadow: 0 8px 22px -24px #000 inset;
 }
-.cart-item strong {
+.cart strong {
   float: left;
+  padding: 5px 25px 5px 3px;
+  position: relative;
+  font-size: 20px;
+  margin-right: 10px;
+  font-size: 29px;
+}
+.cart .amount {
+  background: url(../images/rub-icon.png) no-repeat right center;
+}
+.cart .discount {
+  left: 0;
+  position: absolute;
+  top: -15px;
+  color: #e4042a;
+  font-size: 11px;
+  font-weight: bold;
 }
 .cart-item p {
   float: left;
+  padding: 14px 6px;
+}
+.cart-item sup {
+  font-size: 11px;
+}
+.cart-item small {
+  font-size: 12px;
+  margin: 0 4px;
+}
+.cart-item .old-amount {
+  padding: 14px 3px;
+  display: block;
+  white-space: nowrap;
+}
+.cart-item .delate{
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;  
+  background: url(../images/delate-product-cart.png)no-repeat;
+}
+.cart h2 {
+  font-size: 23px;
+  float: left;
+  padding: 10px 15px 5px 3px;
+  letter-spacing: 0.9px;
+}
+.cart .more-btn {
+  float: right;
+  margin-right: 70px;
+  border-radius: 3px;
+  margin-top: 11px;
 }
