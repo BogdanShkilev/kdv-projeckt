@@ -1936,3 +1936,79 @@ button.close:hover span {
 .modal.in {
   height: auto!important;
 }
+
+
+
+
+/* Cart page style */
+.re-call {
+  background: #e6e7e8;
+  margin-bottom: 70px;
+  padding: 20px 0;
+}
+.re-call h4 {
+  margin-bottom: 5px;
+}
+.re-call p {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+.re-call label {
+  display: block;
+  width: 440px;
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+.re-call label input {
+  float: right;
+  padding: 10px 15px;
+  width: 305px;
+  border: 1px solid #c7d7e2;
+  margin-top: -10px;
+  border-top-color: #a3b3b9;
+  box-shadow: 0 8px 22px -24px #000 inset;
+}
+.re-call button {
+  background: #7c7c7b;
+  padding: 12px 50px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+.cart-item div {
+  float: left;
+}
+.cart-item div:first-child {
+  width: 111px;
+}
+.cart-item img {
+  width: 100%;
+}
+.cart-item div:nth-child(2){
+  width: 195px;
+  padding-left: 20px;
+}
+.cart-item span {
+  display: block;
+}
+.cart-item i {
+  color: #e4042a;
+  font-size: 12px;
+  font-weight: bold;
+}
+.cart-item div:nth-child(3){
+  width: 350px;
+}
+.cart-item input {
+  float: left;
+  width: 63px;
+  border: 1px solid #9fc5dc;
+  border-top-color: #83a8bc; 
+  padding: 14px 5px;
+}
+.cart-item strong {
+  float: left;
+}
+.cart-item p {
+  float: left;
+}
