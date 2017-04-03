@@ -1979,7 +1979,6 @@ button.close:hover span {
 }
 .cart-item {
   display: block;
-  overflow: hidden;
   float: left;
   margin-bottom: 37px;
 }
@@ -2072,4 +2071,15 @@ button.close:hover span {
   margin-right: 70px;
   border-radius: 3px;
   margin-top: 11px;
+}
+.cart .old-amount {
+  position: relative;
+  overflow: hidden;
+}
+.cart svg {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    height: 36%;
+    left: 0;
+    position: absolute;
+    width: 74%;
 }
