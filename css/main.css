@@ -2065,6 +2065,7 @@ button.close:hover span {
   float: left;
   padding: 10px 15px 5px 3px;
   letter-spacing: 0.9px;
+  margin-left: -26px;
 }
 .cart .more-btn {
   float: right;
