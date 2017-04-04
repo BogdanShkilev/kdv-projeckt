@@ -2084,3 +2084,146 @@ button.close:hover span {
     position: absolute;
     width: 74%;
 }
+
+/* request delivery page style */
+.delivery {
+  
+}
+.delivery .col-md-3 {
+    width: 145px;
+}
+.delivery .col-md-9 {
+    width: 900px;
+    margin-bottom: 30px;
+}
+.bread_crumbs {
+  margin-bottom: 50px;
+}
+.bread_crumbs li {
+  display: inline-block;
+  padding-right: 28px;
+  margin-right: 8px;
+  background: url(../images/arrow-24.png) no-repeat right center;
+}
+.bread_crumbs li:last-child {
+  background: none;
+}
+.bread_crumbs a {
+  color: #e4042a;
+}
+.bread_crumbs a:hover {
+  color: #000;
+  text-decoration: none;
+}
+.bread_crumbs a.no-click {
+  color: #77787b;
+}
+.delivery h3 {
+  font-size: 18px;
+}
+.delivery label {
+  display: block;
+  width: 100%;
+  padding-left: 30px;
+  font-size: 18px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.delivery label:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e8e8e8;
+  border-radius: 20px;
+}
+.delivery label.active:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  border: 3px solid #bfbfbf;
+  background: #7c7c7b;
+  border-radius: 3px;
+}
+.delivery label small {
+  font-size: 12px;
+  padding-left: 10px;
+}
+.delivery input[type='text'] {
+  border: 1px solid #c7d7e2;
+  border-top-color: #a3b3b9;
+  padding: 12px;
+  box-shadow: 0 8px 38px -39px #000 inset;
+}
+.delivery input[type='text']:invalid {
+  border-color: #f00;
+}
+.delivery .address {
+  width: 530px;
+  margin-top: -12px;
+}
+.delivery .ask-distance-1 .jq-selectbox__select, .delivery .ask-distance-1 .jq-selectbox__dropdown {
+  width: 350px;
+}
+.delivery .custom  {
+  margin-top: -12px;
+}
+.custom .jq-selectbox__select-text {
+  padding-left: 10px;
+}
+.custom .jq-selectbox__select-text:before {
+  content: none;
+}
+.custom .jq-selectbox__dropdown li:before {
+  content: none!important;
+}
+.custom .jq-selectbox__dropdown li {
+  padding-left: 10px!important;
+}
+.ask-distance-2 input {
+  text-align: right;
+  width: 165px;
+  margin-right: 10px
+}
+.ask-distance-2 span {
+    font-size: 14px;
+}
+.ask-distance-2 b {
+  font-size: 18px;
+}
+.ask-floor .jq-selectbox__select, .ask-floor .jq-selectbox__dropdown {
+  width: 165px;
+}
+.ask-floor label:before {
+  content: '';
+}
+.ask-floor label {
+  padding-left: 0;
+}
+.ask-floor .custom {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.delivery .coast-delivery-wrap {
+  background: #f2f2f2;
+}
+.delivery .coast-delivery-wrap {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.coast-delivery-wrap span {
+  font-size: 24px;
+}
+.coast-delivery-wrap .col-md-9 {
+  margin: 0;
+}
+.coast-delivery-wrap i, .coast-delivery-wrap b {
+  font-size: 30px;
+}

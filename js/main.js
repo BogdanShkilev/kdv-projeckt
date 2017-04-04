@@ -47,7 +47,35 @@ $(document).ready(function(){
 
 
 
+// cart script 
 
+$( document ).ready(calculateСost())
+
+function calculateСost() {
+	var total = 0;
+	$('.cart-item').each(function(index){
+		var discount = (parseFloat($(this).find('.discount i').text())) ? (parseFloat($(this).find('.discount i').text())) : 0;
+		// расчет по количества (введенного пользователем) и цены 
+		var quantity = parseFloat($(this).find('.quantity').val())
+		var price = parseFloat($(this).find('.price').text())
+		var totalThis = quantity * (price - discount);
+		$(this).find('.amount b').text(totalThis.toFixed(3))
+
+		// tace value of amount price and add it to total
+		var amItem = $(this).find('.amount b').text()
+		amItem = amItem.replace(" ", '')
+		amItem = parseFloat(amItem)
+		total += amItem;
+	})
+	$('.total').text(total)
+	// var quantity = $(this).val();
+ //    alert('hello ' + quantity)
+}
+$('.delate').click(function(){
+	$(this).closest('.cart-item').remove()
+	calculateСost()
+
+})
 
 
 
@@ -219,7 +247,6 @@ $('.modal').on('hide.bs.modal', function (e) {
   $('body').css({padding: '0',
 				   overflowY: 'auto'})
 })
-
 
 
 

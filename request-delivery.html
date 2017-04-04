@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/media-1400.css">
 	<link rel="stylesheet" href="css/shadow.css">
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -83,118 +84,148 @@
 			</div>
 		</header>
 		<!-- main -->
-		<main class="main cart">
-			<div class="container">
-			<h1 class="h1 h1-dlv">Корзина</h1>
-			<div class="row">
-				<div class="col-md-12">
-					<ul>
-						<li class="cart-item">
-							<div>
-								<img src="images/tile_11.jpg" alt="">
-							</div>
-							<div>
-								<span>Для стен <br> 60x90</span>
-								<i>временно нет в наличии</i>
-							</div>
-							<div>
-								<input type="text" id="quantity" class="quantity" value="1900.6" onchange="calculateСost();">
-								<p>m<sup>2</sup> <small>x</small> <b class="price">250</b> р/m<sup>2</sup> = </p>
-								<strong class="amount"><b>668 000</b> <span class="discount">Скидка <i>28 000</i> Р</span></strong>
-								<b class="old-amount">415 550 Р
-								<svg xmlns="http://www.w3.org/2000/svg" style="stroke: rgba(255,0,0,0.9); stroke-width: 1.5" ><line x1="0" y1="100%" x2="100%" y2="0"    /></svg>
-								</b>
-							</div>
-							<div>
-								<a href="#" class="delate"></a>
-							</div>
-						</li>
-						<li class="cart-item">
-							<div>
-								<img src="images/tile_12.jpg" alt="">
-							</div>
-							<div>
-								<span>Для стен <br> 60x90</span>
-								<i>временно нет в наличии</i>
-							</div>
-							<div>
-								<input type="text" name="" class="quantity" value="2700.5" onchange="calculateСost();">
-								<p>m<sup>2</sup> <small>x</small> <b class="price">4870</b> р/m<sup>2</sup> = </p>
-								<strong class="amount"><b>388 550</b> <span class="discount"></span></strong>
-								<b class="old-amount">415 550 Р <svg xmlns="http://www.w3.org/2000/svg" style="stroke: rgba(255,0,0,0.9); stroke-width: 1.5" ><line x1="0" y1="100%" x2="100%" y2="0"    /></svg></b>
-							</div>
-							<div>
-								<a href="#" class="delate"></a>
-							</div>
-						</li>
-						<li class="cart-item">
-							<div>
-								<img src="images/tile_30.jpg" alt="">
-							</div>
-							<div>
-								<span>Для стен <br> 60x90</span>
-								<i>временно нет в наличии</i>
-							</div>
-							<div>
-								<input type="text" name="" class="quantity" value="889" onchange="calculateСost();">
-								<p>m<sup>2</sup> <small>x</small> <b class="price">4870</b> р/m<sup>2</sup> = </p>
-								<strong class="amount"><b>75 000</b> <span class="discount">Скидка <i>28 000</i> Р</span></strong>
-								<b class="old-amount">415 550 Р <svg xmlns="http://www.w3.org/2000/svg" style="stroke: rgba(255,0,0,0.9); stroke-width: 1.5" ><line x1="0" y1="100%" x2="100%" y2="0"    /></svg></b>
-							</div>
-							<div>
-								<a href="#" class="delate"></a>
-							</div>
-						</li>
-						<li class="cart-item">
-							<div>
-								<img src="images/tile_38.jpg" alt="">
-							</div>
-							<div>
-								<span>Для стен <br> 60x90</span>
-								<i>временно нет в наличии</i>
-							</div>
-							<div>
-								<input type="text" name="" class="quantity" value="3500.7" onchange="calculateСost();">
-								<p>m<sup>2</sup> <small>x</small> <b class="price">4870</b> р/m<sup>2</sup> = </p>
-								<strong class="amount"><b>822 000</b> <span class="discount">Скидка <i>28 000</i> Р</span></strong>
-								<b class="old-amount">415 550 Р <svg xmlns="http://www.w3.org/2000/svg" style="stroke: rgba(255,0,0,0.9); stroke-width: 1.5" ><line x1="0" y1="100%" x2="100%" y2="0"    /></svg></b>
-							</div>
-							<div>
-								<a href="#" class="delate"></a>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="row">
-						<div class="col-md-2"></div>
-						<div class="col-md-8">
-							<h2>Общая стоимость со скидкой </h2><strong class="amount"><b class="total" >2 345 098</b> <span class="discount">Общая cкидка 28 000 </span></strong>
+		<main class="main delivery">
+			<form action="#">
+				<div class="container">
+					<h1 class="h1 h1-dlv">Оформление заказа</h1>
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="bread_crumbs">
+								<li><a href="#">Заказ</a></li>
+								<li><a href="#" class="no-click">Доставка и подробности</a></li>
+								<li><a href="#">Подтверждение</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-3">
+							<h3>Доставка</h3>
+						</div>
+						<div class="col-md-9">
+							<label class="active"><input type="radio" name="delivery" value="not_urgent" checked>До адреса, 2–3 дня<small>2100 р за 1625 кг</small></label>
+							<label><input type="radio" name="delivery" value="urgently">До адреса, завтра<small>3300 р за 1625 кг</small></label>
+							<label><input type="radio" name="delivery" value='pickup'>Самовывоз, 3–4 дня<small>бесплатно</small></label>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-2"></div>
-						<div class="col-md-6">
-							<a href="#" class="more-btn">Оформить заказ ...</a>
+						<div class="col-md-3">
+							<h3>Адрес</h3>
+						</div>
+						<div class="col-md-9">
+							<input type="text" name="address" class="address" required="required">
 						</div>
 					</div>
-			</div>
-			</div>
-			<div class="container re-call">
-				<div class="row">
-					<div class="col-md-2"></div>
-					<div class="col-md-8">
-						<h4>Предварительный заказ</h4>
-						<p>Если вы не уверены в заказе или у вас есть вопросы - мы перезвоним и ответим на них</p>
-						<form action="#">
-							<label>Телефон <input type="tel" name="phone"></label>
-							<label>Имя <input type="text" name="name"></label>
-							<button name="submit">Отправить</button>
-						</form>
+					<div class="row ask-distance-1">
+						<div class="col-md-3">
+							<h3>Удаленность</h3>
+						</div>
+						<div class="col-md-9">
+							<select name="distance" id="" class="custom">
+								<option value="0"> &nbsp;</option>
+								<option value="1">Подмосковье. За МКАД (+40 р/км)</option>
+								<option value="2">Подмосковье. За МКАД (+40 р/км)</option>
+								<option value="3">Подмосковье. За МКАД (+40 р/км)</option>
+							</select>
+						</div>
 					</div>
-					<div class="col-md-2"></div>
+					<div class="row ask-distance-2">
+						<div class="col-md-3">
+							<h3>Расстояние от МКАД</h3>
+						</div>
+						<div class="col-md-9">
+							<input type="text">
+							<span><b>км</b> + 40 * 18 = 72 <i class="fa fa-rub" aria-hidden="true"></i>
+</span>
+						</div>
+					</div>
+					<div class="row ask-floor">
+						<div class="col-md-3">
+							<h3>Подъем на этаж</h3>
+						</div>
+						<div class="col-md-9">
+							<select name="floor" id="" class="custom">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="12">13</option>
+								<option value="12">14</option>
+								<option value="12">15</option>
+								<option value="12">16</option>
+								<option value="12">17</option>
+								<option value="12">18</option>
+								<option value="12">19</option>
+								<option value="12">20</option>
+								<option value="12">21</option>
+								<option value="12">22</option>
+								<option value="12">23</option>
+								<option value="12">24</option>
+								<option value="12">25</option>
+								<option value="12">26</option>
+								<option value="12">27</option>
+								<option value="12">28</option>
+								<option value="12">29</option>
+								<option value="12">30</option>
+							</select>
+							<span>+ 1000 р</span>
+							<label><input type="checkbox">Нет лифта</label>
+						</div>
+					</div>
+
 				</div>
-			</div>
-		
+				<div class="container coast-delivery-wrap">
+					<div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-md-9">
+							<span>Всего за доставку</span>
+							<b class="total-Delivery">3172 </b>
+							<i class="fa fa-rub" aria-hidden="true"></i>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<h3>Оплата</h3>
+						</div>
+						<div class="col-md-9">
+							<label><input type="radio" name="payment">Наличными, при получении</label>
+							<label><input type="radio" name="payment">Заранее в салоне</label>
+							<label><input type="radio" name="payment">Картой сейчас</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<h3>Телефон</h3>
+						</div>
+						<div class="col-md-9">
+							<input type="text">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<h3>Комментарий</h3>
+						</div>
+						<div class="col-md-9">
+							<input type="text">
+							<div class="row">
+								<div class="col-md-12">
+									<button value="submit">К подтверждению</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
 		</main>
 		<!-- footer -->
 		<footer class="footer">
@@ -242,11 +273,22 @@
 	<!-- scripts -->
 	<script src="js/jquery-3.1.1.min.js" ></script>
 	<script src="js/jquery.zoom.js"></script>
+	<script src="js/jquery.formstyler.js"></script>
 	<script src="slick/slick.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/main.js" ></script>
 	<script type="text/javascript">
-
+	$("input[name='delivery']").change(function(){
+		if ($("input[value='pickup']").prop("checked")){
+			$('.address').addClass('no-click')
+			$('.address').val('Москва')
+			$('.ask-distance-1, .ask-distance-2, .ask-floor').css('display','none')
+		} else {
+			$('.address').removeClass('no-click')
+			$('.address').val('')
+			$('.ask-distance-1, .ask-distance-2, .ask-floor').css('display','block')
+		}
+	})
 	</script>
 
 </body>
