@@ -98,9 +98,9 @@
 								<i>временно нет в наличии</i>
 							</div>
 							<div>
-								<input type="text" name="" class="quantity" value="1900.6">
-								<p>m<sup>2</sup> <small>x</small> <b class="price">4870 р/m</b><sup>2</sup> = </p>
-								<strong class="amount">668 000 <span class="discount">Скидка 28 000 Р</span></strong>
+								<input type="text" id="quantity" class="quantity" value="1900.6" onchange="calculateСost();">
+								<p>m<sup>2</sup> <small>x</small> <b class="price">250</b> р/m<sup>2</sup> = </p>
+								<strong class="amount"><b>668 000</b> <span class="discount">Скидка <i>28 000</i> Р</span></strong>
 								<b class="old-amount">415 550 Р
 								<svg xmlns="http://www.w3.org/2000/svg" style="stroke: rgba(255,0,0,0.9); stroke-width: 1.5" ><line x1="0" y1="100%" x2="100%" y2="0"    /></svg>
 								</b>
@@ -118,9 +118,9 @@
 								<i>временно нет в наличии</i>
 							</div>
 							<div>
-								<input type="text" name="" class="quantity" value="1900.6">
-								<p>m<sup>2</sup> <small>x</small> <b class="price">4870 р/m</b><sup>2</sup> = </p>
-								<strong class="amount">668 000 <span class="discount">Скидка 28 000 Р</span></strong>
+								<input type="text" name="" class="quantity" value="2700.5" onchange="calculateСost();">
+								<p>m<sup>2</sup> <small>x</small> <b class="price">4870</b> р/m<sup>2</sup> = </p>
+								<strong class="amount"><b>388 550</b> <span class="discount"></span></strong>
 								<b class="old-amount">415 550 Р <svg xmlns="http://www.w3.org/2000/svg" style="stroke: rgba(255,0,0,0.9); stroke-width: 1.5" ><line x1="0" y1="100%" x2="100%" y2="0"    /></svg></b>
 							</div>
 							<div>
@@ -136,9 +136,9 @@
 								<i>временно нет в наличии</i>
 							</div>
 							<div>
-								<input type="text" name="" class="quantity" value="1900.6">
-								<p>m<sup>2</sup> <small>x</small> <b class="price">4870 р/m</b><sup>2</sup> = </p>
-								<strong class="amount">668 000 <span class="discount">Скидка 28 000 Р</span></strong>
+								<input type="text" name="" class="quantity" value="889" onchange="calculateСost();">
+								<p>m<sup>2</sup> <small>x</small> <b class="price">4870</b> р/m<sup>2</sup> = </p>
+								<strong class="amount"><b>75 000</b> <span class="discount">Скидка <i>28 000</i> Р</span></strong>
 								<b class="old-amount">415 550 Р <svg xmlns="http://www.w3.org/2000/svg" style="stroke: rgba(255,0,0,0.9); stroke-width: 1.5" ><line x1="0" y1="100%" x2="100%" y2="0"    /></svg></b>
 							</div>
 							<div>
@@ -154,9 +154,9 @@
 								<i>временно нет в наличии</i>
 							</div>
 							<div>
-								<input type="text" name="" class="quantity" value="1900.6">
-								<p>m<sup>2</sup> <small>x</small> <b class="price">4870 р/m</b><sup>2</sup> = </p>
-								<strong class="amount">668 000 <span class="discount">Скидка 28 000 Р</span></strong>
+								<input type="text" name="" class="quantity" value="3500.7" onchange="calculateСost();">
+								<p>m<sup>2</sup> <small>x</small> <b class="price">4870</b> р/m<sup>2</sup> = </p>
+								<strong class="amount"><b>822 000</b> <span class="discount">Скидка <i>28 000</i> Р</span></strong>
 								<b class="old-amount">415 550 Р <svg xmlns="http://www.w3.org/2000/svg" style="stroke: rgba(255,0,0,0.9); stroke-width: 1.5" ><line x1="0" y1="100%" x2="100%" y2="0"    /></svg></b>
 							</div>
 							<div>
@@ -168,7 +168,7 @@
 				<div class="row">
 						<div class="col-md-2"></div>
 						<div class="col-md-8">
-							<h2>Общая стоимость со скидкой </h2><strong class="amount">2 345 098 <span class="discount">Общая cкидка 28 000 </span></strong>
+							<h2>Общая стоимость со скидкой </h2><strong class="amount"><b class="total" >2 345 098</b> <span class="discount">Общая cкидка 28 000 </span></strong>
 						</div>
 					</div>
 					<div class="row">
@@ -239,15 +239,41 @@
 			</div>
 		</footer>
 	</div>
-
 	<!-- scripts -->
 	<script src="js/jquery-3.1.1.min.js" ></script>
 	<script src="js/jquery.zoom.js"></script>
 	<script src="slick/slick.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/main.js" ></script>
+	<script type="text/javascript">
+		$( document ).ready(calculateСost())
 
+function calculateСost() {
+	var total = 0;
+	$('.cart-item').each(function(index){
+		var discount = (parseFloat($(this).find('.discount i').text())) ? (parseFloat($(this).find('.discount i').text())) : 0;
+		// расчет по количества (введенного пользователем) и цены 
+		var quantity = parseFloat($(this).find('.quantity').val())
+		var price = parseFloat($(this).find('.price').text())
+		var totalThis = quantity * (price - discount);
+		$(this).find('.amount b').text(totalThis.toFixed(3))
 
+		// tace value of amount price and add it to total
+		var amItem = $(this).find('.amount b').text()
+		amItem = amItem.replace(" ", '')
+		amItem = parseFloat(amItem)
+		total += amItem;
+	})
+	$('.total').text(total)
+	// var quantity = $(this).val();
+ //    alert('hello ' + quantity)
+}
+$('.delate').click(function(){
+	$(this).closest('.cart-item').remove()
+	calculateСost()
+
+})
+	</script>
 
 </body>
 </html>

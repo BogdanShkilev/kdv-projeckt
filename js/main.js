@@ -220,6 +220,6 @@ $('.modal').on('hide.bs.modal', function (e) {
 				   overflowY: 'auto'})
 })
 
-function clickSl(){
-	$(".favorite-slider").slick('reinit')
-}
+
+
+
