@@ -82,6 +82,8 @@ $('.delate').click(function(){
 
 
 
+
+
 $(document).ready(function() {
 	var elem = $(".zoom");
 	elem.on("click", function() {

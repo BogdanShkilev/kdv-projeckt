@@ -1326,12 +1326,15 @@ div.child {
 .more-btn, .catalog-page-2 .more-btn {
   background: #e4042a none repeat scroll 0 0;
     border: medium none;
-    border-radius: 4px;
+    border-radius: 3px;
     color: #fff;
+    cursor: default;
     font-size: 18px;
     display: inline-block;
     margin: 0 33px 45px 15px;
     padding: 10px 20px;
+    border-top: 1px solid #f8bcc6;
+    border-right: 1px solid #f17a8e;
 }
 .more-btn:hover, .catalog-page-2 .more-btn:hover {
   background: #e4042a;
@@ -1341,6 +1344,8 @@ div.child {
 .more-btn:active,.catalog-page-2 .more-btn:active {
   background: #c20021;
   color: #000;
+  border-top-color: #efbbc4;
+  border-right-color: #db697c;
 } 
 
 
@@ -1981,6 +1986,7 @@ button.close:hover span {
   display: block;
   float: left;
   margin-bottom: 37px;
+  width: 100%;
 }
 .cart-item div {
   float: left;
@@ -2161,9 +2167,20 @@ button.close:hover span {
   border-top-color: #a3b3b9;
   padding: 12px;
   box-shadow: 0 8px 38px -39px #000 inset;
+  position: relative;
 }
 .delivery input[type='text']:invalid {
   border-color: #f00;
+}
+.delivery input:after {
+  content: '';
+  display: block;
+  height: 50px;
+  width: 50px;
+  background: #000;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 .delivery .address {
   width: 530px;
@@ -2206,6 +2223,7 @@ button.close:hover span {
 }
 .ask-floor label {
   padding-left: 0;
+  margin-bottom: 0;
 }
 .ask-floor .custom {
   margin-top: 0;
@@ -2217,6 +2235,8 @@ button.close:hover span {
 .delivery .coast-delivery-wrap {
   padding-top: 18px;
   padding-bottom: 18px;
+  max-width: 1440px;
+  margin-bottom: 50px;
 }
 .coast-delivery-wrap span {
   font-size: 24px;
@@ -2226,4 +2246,65 @@ button.close:hover span {
 }
 .coast-delivery-wrap i, .coast-delivery-wrap b {
   font-size: 30px;
+}
+.number-wrap input, .user-name-wrap input  {
+  width: 165px;
+  margin-top: -15px;
+}
+.user-comment-wrap textarea {
+  border: 1px solid #c7d7e2;
+  border-top-color: #a3b3b9;
+  padding: 12px;
+  box-shadow: 0 8px 38px -39px #000 inset;
+  resize: none;
+  width: 530px;
+  height: 123px;
+  margin-bottom: 20px;
+}
+.user-comment-wrap .more-btn {
+  margin-left: 0;
+}
+
+
+
+
+/* request-confirmation page style */
+.confirmation {
+  font-weight: bolder;
+  line-height: 1.5em;
+}
+.confirmation .row {
+  margin-bottom: 12px;
+}
+.confirmation .cart-item div {
+  display: block;
+  float: left;
+  overflow: hidden;
+}
+.confirmation .quantity {
+  display: block;
+  padding: 15px 7px;
+}
+.confirmation .cart-item div:nth-child(3) {
+  width: 160px;
+}
+.cart-item div:nth-child(4) strong {
+    display: block;
+    font-size: 30px;
+    padding: 5px 0;
+}
+.confirmation .result-cost {
+  font-size: 23px;
+}
+.confirmation .result-cost strong {
+  display: inline-block;
+    font-size: 30px;
+    padding-top: 10px;
+}
+.confirmation .more-btn {
+  margin-left: 0;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  padding: 8px 43px;
+  font-weight: normal;
 }
