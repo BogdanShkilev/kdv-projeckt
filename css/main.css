@@ -2181,15 +2181,20 @@ button.close:hover span {
 .delivery input[type='text']:invalid {
   border-color: #f00;
 }
-.delivery input:after {
-  content: '';
+.delivery label.required:after {
+  content: attr(data-content);
   display: block;
-  height: 50px;
-  width: 50px;
-  background: #000;
+  color: #e4042a;
+  font: 13px/1.2em arial;
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
+}
+.delivery label.required {
+  padding-left: 0;
+}
+.delivery label.required:before {
+  content: none;
 }
 .delivery .address {
   width: 530px;
@@ -2234,6 +2239,11 @@ button.close:hover span {
   padding-left: 0;
   margin-bottom: 0;
 }
+.ask-floor span {
+  display: inline-block;
+  margin-top: 15px;
+  vertical-align: top;
+}
 .ask-floor .custom {
   margin-top: 0;
   margin-bottom: 12px;
@@ -2249,6 +2259,7 @@ button.close:hover span {
 }
 .coast-delivery-wrap span {
   font-size: 24px;
+  margin-left: -27px;
 }
 .coast-delivery-wrap .col-md-9 {
   margin: 0;
@@ -2275,6 +2286,9 @@ button.close:hover span {
   background: #ccc;
   border-color: #ccc;
   color: #fff;
+}
+.delivery .valid-red .jq-selectbox__select {
+  border-color: #e4042a;
 }
 
 

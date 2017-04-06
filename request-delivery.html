@@ -85,7 +85,7 @@
 		</header>
 		<!-- main -->
 		<main class="main delivery">
-			<form action="#" method="post">
+			<form action="#" method="post" id="delivery" name='delivery'>
 				<div class="container">
 					<h1 class="h1 h1-dlv">Оформление заказа</h1>
 					<div class="row">
@@ -113,7 +113,7 @@
 							<h3>Адрес</h3>
 						</div>
 						<div class="col-md-9">
-							<input type="text" name="address" class="address">
+							<label class="required"><input type="text" name="address" class="address" ></label>
 						</div>
 					</div>
 					<div class="row ask-distance-1">
@@ -121,7 +121,7 @@
 							<h3>Удаленность</h3>
 						</div>
 						<div class="col-md-9">
-							<select name="distance" id="" class="custom">
+							<select name="distance" id="distance" class="custom">
 								<option value="0"> &nbsp;</option>
 								<option value="1">Подмосковье. За МКАД (+40 р/км)</option>
 								<option value="2">Подмосковье. За МКАД (+40 р/км)</option>
@@ -134,8 +134,8 @@
 							<h3>Расстояние от МКАД</h3>
 						</div>
 						<div class="col-md-9">
-							<input type="text" >
-							<span><b>км</b> + 40 * 18 = 72 &#8381;</span>
+							<label class="required"><input type="text"><span><b>км</b> + 40 * 18 = 72 &#8381;</span></label>
+							
 						</div>
 					</div>
 					<div class="row ask-floor">
@@ -215,7 +215,7 @@
 							<h3>Имя</h3>
 						</div>
 						<div class="col-md-9">
-							<input type="text">
+							<label class="required"><input type="text" name="name"></label>
 						</div>
 					</div>
 					<div class="row user-comment-wrap">
@@ -226,7 +226,7 @@
 							<textarea name="user_comment"></textarea>
 							<div class="row">
 								<div class="col-md-12">
-									<button class='more-btn' value="submit" onclick="checkForms()">К подтверждению</button>
+									<button class='more-btn' id="send-form" value="submit" type="submit">К подтверждению</button>
 								</div>
 							</div>
 						</div>
@@ -287,11 +287,11 @@
 	<script type="text/javascript">
 	$("input[name='delivery']").change(function(){
 		if ($("input[value='pickup']").prop("checked")){
-			$('.address').addClass('no-click')
+			$('.address').attr('disabled','1')
 			$('.address').val('Москва')
 			$('.ask-distance-1, .ask-distance-2, .ask-floor').css('display','none')
 		} else {
-			$('.address').removeClass('no-click')
+			$('.address').removeAttr('disabled','1')
 			$('.address').val('')
 			$('.ask-distance-1, .ask-distance-2, .ask-floor').css('display','block')
 		}

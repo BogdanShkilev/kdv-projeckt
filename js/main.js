@@ -78,19 +78,73 @@ $('.delate').click(function(){
 })
 
 
-// function checkForms() {
-// 	$('.delivery').find('input[type="text"]').each(function(index){
-// 		$('body').css('background')
-// 	})
-// 	if (allFill){
-// 		focus
+function requiredColor() {
+	
+	
+}
 
-// 	}
-// }
+function checkName(name){
+	if (name.value == 0){
+		name.valid = false;
+		// document.forms['delivery']['name'].focus();
+		document.forms['delivery']['name'].parentNode.setAttribute('data-content','Необходимо заполнить');
+		document.forms['delivery']['name'].style.borderColor = '#e4042a';
+		isValid = false;
+	} else {
+		name.valid = true;
+		document.forms['delivery']['name'].parentNode.setAttribute('data-content','');
+		document.forms['delivery']['name'].style.borderColor = '#c7d7e2 ';
+	}
+}
+function checkAddress(address){
+	if (address.value == 0){
+		address.valid = false;
+		// document.forms['delivery']['address'].focus();
+		document.forms['delivery']['address'].parentNode.setAttribute('data-content','Необходимо заполнить');
+		document.forms['delivery']['address'].style.borderColor = '#e4042a';
+		
+	} else {
+		address.valid = true;
+		document.forms['delivery']['address'].parentNode.setAttribute('data-content','');
+		document.forms['delivery']['address'].style.borderColor = '#c7d7e2 ';
+	}
+}
+function checkDistance(distance){
+	if (distance.value == 0){
+		distance.valid = false;
 
+		// document.forms['delivery']['distance'].style.borderColor = '#e4042a';
+		document.getElementById('distance-styler').className += " valid-red";;
+		
+	} else {
+		distance.valid = true;
 
+		document.forms['delivery']['distance'].style.borderColor = '#c7d7e2 ';
+	}
+}
+function FormField(obj){
+	this.obj = obj;
+	this.value = obj.value;
+	this.valid = false;
+}
+$('#delivery').submit(function(){
+	let isValid = false;
+	let name = new FormField(document.forms['delivery']['name']);
+	let address = new FormField(document.forms['delivery']['address']);
+	let distance = new FormField(document.forms['delivery']['distance']);
+	checkAddress(address);
+	checkDistance(distance);
+	checkName(name);
+	// var isFormValid = true;
+	// if (checkAddress() === false && checkName() === false){
+	// 	isFormValid = false;
+	// }
+	// return isFormValid;
+	return false;
 
+})
 
+document.forms['delivery']['address'].setAttribute('data-content','bar');
 
 $(document).ready(function() {
 	var elem = $(".zoom");
