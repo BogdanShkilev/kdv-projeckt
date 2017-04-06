@@ -193,7 +193,12 @@ a.fix-after::after {
   background: url("../images/bascet.png") no-repeat;
   left: 5px;
   top: 0px; }
-
+.bascet li a.active {
+  color: #000;
+}
+.bascet li a.active::before {
+  background: url("../images/bascet-black.png") no-repeat;
+}
 .bascet li .heart-icon::before {
   background: url("../images/heart.png") no-repeat; }
 
@@ -1949,8 +1954,11 @@ button.close:hover span {
 /* Cart page style */
 .re-call {
   background: #e6e7e8;
-  margin-bottom: 70px;
+  margin-bottom: 120px;
   padding: 20px 0;
+}
+.container.re-call {
+  max-width: 1450px;
 }
 .re-call h4 {
   margin-bottom: 5px;
@@ -1996,8 +2004,9 @@ button.close:hover span {
   width: 111px;
 }
 .cart-item img {
-  width: 100%;
+  max-width: 100%;
   max-height: 150px;
+  float: right;
 }
 .cart-item div:nth-child(2){
   width: 215px;
@@ -2013,7 +2022,7 @@ button.close:hover span {
   font-weight: bold;
 }
 .cart-item div:nth-child(3){
-  width: 452px;
+  width: 480px;
 }
 .cart-item input {
   float: left;
@@ -2035,7 +2044,7 @@ button.close:hover span {
   background: url(../images/rub-icon.png) no-repeat right center;
 }
 .cart .discount {
-  left: 0;
+  left: 3px;
   position: absolute;
   top: -15px;
   color: #e4042a;
@@ -2055,7 +2064,7 @@ button.close:hover span {
   margin: 0 4px;
 }
 .cart-item .old-amount {
-  padding: 14px 3px;
+  margin: 14px 3px;
   display: inline-block;
   white-space: nowrap;
 }
@@ -2085,10 +2094,10 @@ button.close:hover span {
 }
 .cart svg {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    height: 36%;
+    height: 90%;
     left: 0;
     position: absolute;
-    width: 74%;
+    width: 84%;
 }
 
 /* request delivery page style */
@@ -2235,7 +2244,7 @@ button.close:hover span {
 .delivery .coast-delivery-wrap {
   padding-top: 18px;
   padding-bottom: 18px;
-  max-width: 1440px;
+  max-width: 1450px;
   margin-bottom: 50px;
 }
 .coast-delivery-wrap span {
@@ -2263,6 +2272,9 @@ button.close:hover span {
 }
 .user-comment-wrap .more-btn {
   margin-left: 0;
+  background: #ccc;
+  border-color: #ccc;
+  color: #fff;
 }
 
 

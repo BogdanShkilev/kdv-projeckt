@@ -76,7 +76,7 @@
 					</div>
 					<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3 del-pdn-left">
 						<ul class="bascet pull-right">
-							<li class="basget-list"><a class="bsc-icon" href="#">25</a></li>
+							<li class="basget-list"><a class="bsc-icon" href="cart.html">25</a></li>
 							<li class="heart-list"><a class="heart-icon" href="favorite.html">4</a></li>
 						</ul>
 					</div>
@@ -92,8 +92,8 @@
 						<div class="col-md-12">
 							<ul class="bread_crumbs">
 								<li><a href="#">Заказ</a></li>
-								<li><a href="#" class="no-click">Доставка и подробности</a></li>
-								<li><a href="#">Подтверждение</a></li>
+								<li><a href="request-delivery.html" class="no-click">Доставка и подробности</a></li>
+								<li><a href="request-confirmation.html" class="">Подтверждение</a></li>
 							</ul>
 						</div>
 					</div>
@@ -103,8 +103,8 @@
 							<h3>Доставка</h3>
 						</div>
 						<div class="col-md-9">
-							<label class="active"><input type="radio" name="delivery" value="not_urgent" checked>До адреса, 2–3 дня<small>2100 р за 1625 кг</small></label>
-							<label><input type="radio" name="delivery" value="urgently">До адреса, завтра<small>3300 р за 1625 кг</small></label>
+							<label class="active"><input type="radio" name="delivery" value="not_urgent" checked>До адреса, 2–3 дня<small>2100 &#8381; за 1625 кг</small></label>
+							<label><input type="radio" name="delivery" value="urgently">До адреса, завтра<small>3300 &#8381; за 1625 кг</small></label>
 							<label><input type="radio" name="delivery" value='pickup'>Самовывоз, 3–4 дня<small>бесплатно</small></label>
 						</div>
 					</div>
@@ -113,7 +113,7 @@
 							<h3>Адрес</h3>
 						</div>
 						<div class="col-md-9">
-							<input type="text" name="address" class="address" required="required">
+							<input type="text" name="address" class="address">
 						</div>
 					</div>
 					<div class="row ask-distance-1">
@@ -134,9 +134,8 @@
 							<h3>Расстояние от МКАД</h3>
 						</div>
 						<div class="col-md-9">
-							<input type="text" required="required">
-							<span><b>км</b> + 40 * 18 = 72 <i class="fa fa-rub" aria-hidden="true"></i>
-</span>
+							<input type="text" >
+							<span><b>км</b> + 40 * 18 = 72 &#8381;</span>
 						</div>
 					</div>
 					<div class="row ask-floor">
@@ -177,7 +176,7 @@
 								<option value="12">29</option>
 								<option value="12">30</option>
 							</select>
-							<span>+ 1000 р</span>
+							<span>+ 1000 &#8381;</span>
 							<label><input type="checkbox">Нет лифта</label>
 						</div>
 					</div>
@@ -188,8 +187,7 @@
 						<div class="col-md-3"></div>
 						<div class="col-md-9">
 							<span>Всего за доставку</span>
-							<b class="total-Delivery">3172 </b>
-							<i class="fa fa-rub" aria-hidden="true"></i>
+							<b class="total-Delivery">3172 &#8381;</b>
 						</div>
 					</div>
 				</div>
@@ -209,7 +207,7 @@
 							<h3>Телефон</h3>
 						</div>
 						<div class="col-md-9">
-							<input type="text" required="required">
+							<input type="text">
 						</div>
 					</div>
 					<div class="row user-name-wrap">
@@ -228,7 +226,7 @@
 							<textarea name="user_comment"></textarea>
 							<div class="row">
 								<div class="col-md-12">
-									<button class='more-btn' value="submit">К подтверждению</button>
+									<button class='more-btn' value="submit" onclick="checkForms()">К подтверждению</button>
 								</div>
 							</div>
 						</div>

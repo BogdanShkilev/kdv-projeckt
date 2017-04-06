@@ -59,7 +59,7 @@ function calculateСost() {
 		var quantity = parseFloat($(this).find('.quantity').val())
 		var price = parseFloat($(this).find('.price').text())
 		var totalThis = quantity * (price - discount);
-		$(this).find('.amount b').text(totalThis.toFixed(3))
+		$(this).find('.amount b').text(totalThis.toFixed(0))
 
 		// tace value of amount price and add it to total
 		var amItem = $(this).find('.amount b').text()
@@ -78,7 +78,15 @@ $('.delate').click(function(){
 })
 
 
+// function checkForms() {
+// 	$('.delivery').find('input[type="text"]').each(function(index){
+// 		$('body').css('background')
+// 	})
+// 	if (allFill){
+// 		focus
 
+// 	}
+// }
 
 
 
