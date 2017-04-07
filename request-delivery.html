@@ -103,9 +103,9 @@
 							<h3>Доставка</h3>
 						</div>
 						<div class="col-md-9">
-							<label class="active"><input type="radio" name="delivery" value="not_urgent" checked>До адреса, 2–3 дня<small>2100 &#8381; за 1625 кг</small></label>
-							<label><input type="radio" name="delivery" value="urgently">До адреса, завтра<small>3300 &#8381; за 1625 кг</small></label>
-							<label><input type="radio" name="delivery" value='pickup'>Самовывоз, 3–4 дня<small>бесплатно</small></label>
+							<label class="active"><input type="radio" name="method_delivery" value="not_urgent" checked>До адреса, 2–3 дня<small>2100 &#8381; за 1625 кг</small></label>
+							<label><input type="radio" name="method_delivery" value="urgently">До адреса, завтра<small>3300 &#8381; за 1625 кг</small></label>
+							<label><input type="radio" name="method_delivery" value='pickup'>Самовывоз, 3–4 дня<small>бесплатно</small></label>
 						</div>
 					</div>
 					<div class="row">
@@ -121,12 +121,14 @@
 							<h3>Удаленность</h3>
 						</div>
 						<div class="col-md-9">
+							<label class="required">
 							<select name="distance" id="distance" class="custom">
 								<option value="0"> &nbsp;</option>
 								<option value="1">Подмосковье. За МКАД (+40 р/км)</option>
 								<option value="2">Подмосковье. За МКАД (+40 р/км)</option>
 								<option value="3">Подмосковье. За МКАД (+40 р/км)</option>
 							</select>
+							</label>
 						</div>
 					</div>
 					<div class="row ask-distance-2">
@@ -134,7 +136,7 @@
 							<h3>Расстояние от МКАД</h3>
 						</div>
 						<div class="col-md-9">
-							<label class="required"><input type="text"><span><b>км</b> + 40 * 18 = 72 &#8381;</span></label>
+							<label class="required"><input type="text" name="from_mkad"><span><b>км</b> + 40 * 18 = 72 &#8381;</span></label>
 							
 						</div>
 					</div>
@@ -144,7 +146,7 @@
 						</div>
 						<div class="col-md-9">
 							<select name="floor" id="" class="custom">
-								<option value="none" checked>Нет</option>
+								<option value="0" checked>Нет</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -207,7 +209,9 @@
 							<h3>Телефон</h3>
 						</div>
 						<div class="col-md-9">
-							<input type="text">
+							<label class="required">
+							<input type="text" name="number">
+							</label>
 						</div>
 					</div>
 					<div class="row user-name-wrap">
@@ -285,7 +289,7 @@
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/main.js" ></script>
 	<script type="text/javascript">
-	$("input[name='delivery']").change(function(){
+	$("input[name='method_delivery']").change(function(){
 		if ($("input[value='pickup']").prop("checked")){
 			$('.address').attr('disabled','1')
 			$('.address').val('Москва')

@@ -61,7 +61,7 @@ function calculateСost() {
 		var totalThis = quantity * (price - discount);
 		$(this).find('.amount b').text(totalThis.toFixed(0))
 
-		// tace value of amount price and add it to total
+		// take value of amount price and add it to total
 		var amItem = $(this).find('.amount b').text()
 		amItem = amItem.replace(" ", '')
 		amItem = parseFloat(amItem)
@@ -78,35 +78,31 @@ $('.delate').click(function(){
 })
 
 
-function requiredColor() {
-	
-	
-}
 
-function checkName(name){
-	if (name.value == 0){
-		name.valid = false;
+function checkNumber(number){
+	if (number.value == 0){
+		number.valid = false;
 		// document.forms['delivery']['name'].focus();
-		document.forms['delivery']['name'].parentNode.setAttribute('data-content','Необходимо заполнить');
-		document.forms['delivery']['name'].style.borderColor = '#e4042a';
+		number.obj.parentNode.setAttribute('data-content','Необходимо заполнить');
+		number.obj.style.borderColor = '#e4042a';
 		isValid = false;
 	} else {
-		name.valid = true;
-		document.forms['delivery']['name'].parentNode.setAttribute('data-content','');
-		document.forms['delivery']['name'].style.borderColor = '#c7d7e2 ';
+		number.valid = true;
+		number.obj.parentNode.setAttribute('data-content','');
+		number.obj.style.borderColor = '#c7d7e2 ';
 	}
 }
 function checkAddress(address){
 	if (address.value == 0){
 		address.valid = false;
 		// document.forms['delivery']['address'].focus();
-		document.forms['delivery']['address'].parentNode.setAttribute('data-content','Необходимо заполнить');
-		document.forms['delivery']['address'].style.borderColor = '#e4042a';
+		address.obj.parentNode.setAttribute('data-content','Необходимо заполнить');
+		address.obj.style.borderColor = '#e4042a';
 		
 	} else {
 		address.valid = true;
-		document.forms['delivery']['address'].parentNode.setAttribute('data-content','');
-		document.forms['delivery']['address'].style.borderColor = '#c7d7e2 ';
+		address.obj.parentNode.setAttribute('data-content','');
+		address.obj.style.borderColor = '#c7d7e2 ';
 	}
 }
 function checkDistance(distance){
@@ -114,35 +110,87 @@ function checkDistance(distance){
 		distance.valid = false;
 
 		// document.forms['delivery']['distance'].style.borderColor = '#e4042a';
+		document.getElementById('distance-styler').parentNode.setAttribute('data-content','Необходимо выбрать пункт');
 		document.getElementById('distance-styler').className += " valid-red";;
 		
 	} else {
 		distance.valid = true;
-
-		document.forms['delivery']['distance'].style.borderColor = '#c7d7e2 ';
+		document.getElementById('distance-styler').parentNode.setAttribute('data-content','');
+		document.getElementById('distance-styler').classList.remove('valid-red');
+	}
+}
+function checkMcad(fromMkad){
+	if (fromMkad.value == 0){
+		fromMkad.valid = false;
+		fromMkad.obj.parentNode.setAttribute('data-content','Необходимо заполнить');
+		fromMkad.obj.style.borderColor = '#e4042a';
+		
+	} else {
+		fromMkad.valid = true;
+		fromMkad.obj.parentNode.setAttribute('data-content','');
+		fromMkad.obj.style.borderColor = '#c7d7e2 ';
 	}
 }
 function FormField(obj){
 	this.obj = obj;
 	this.value = obj.value;
-	this.valid = false;
+	this.valid = true;
 }
 $('#delivery').submit(function(){
-	let isValid = false;
-	let name = new FormField(document.forms['delivery']['name']);
-	let address = new FormField(document.forms['delivery']['address']);
-	let distance = new FormField(document.forms['delivery']['distance']);
+	let isFormValid = false;
+	const number = new FormField(document.forms['delivery']['number']);
+	const address = new FormField(document.forms['delivery']['address']);
+	const distance = new FormField(document.forms['delivery']['distance']);
+	const fromMkad = new FormField(document.forms['delivery']['from_mkad']);
+	const methodDelivery = new FormField(document.forms['delivery']['method_delivery']);
 	checkAddress(address);
-	checkDistance(distance);
-	checkName(name);
-	// var isFormValid = true;
-	// if (checkAddress() === false && checkName() === false){
-	// 	isFormValid = false;
-	// }
-	// return isFormValid;
-	return false;
+	if (methodDelivery.value === 'pickup'){
+		
+	}	else {
+		checkDistance(distance);
+		checkMcad(fromMkad);
+	}
+	checkNumber(number);
+	const objects = {address,distance,fromMkad,number};
+	// console.log(objects.number.value);
+	// alert(objects.number.value);
+	let getFocus = true;
+	for ( let key in objects){
+		let i = objects[key];
+		if (i.valid == false){
+			getFocus = i.obj;
+			break;
+		} else {}
+	}
+	if (getFocus === true) {
+		isFormValid = true;
+	} else {
+		getFocus.focus();
+	}
+	checkStart();
+	return isFormValid;
 
 })
+
+function checkStart(){
+	function check(){
+		const number = new FormField(document.forms['delivery']['number']);
+		const address = new FormField(document.forms['delivery']['address']);
+		const distance = new FormField(document.forms['delivery']['distance']);
+		const fromMkad = new FormField(document.forms['delivery']['from_mkad']);
+		checkAddress(address);
+		checkDistance(distance);
+		checkMcad(fromMkad);
+		checkNumber(number);
+	}
+	$('.required').find('input').change(function(){
+			check()
+	})
+	$('.required').find('select').change(function(){
+			check()
+	})
+}
+
 
 document.forms['delivery']['address'].setAttribute('data-content','bar');
 
