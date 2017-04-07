@@ -214,20 +214,9 @@
 	<script src="js/jquery.formstyler.js"></script>
 	<script src="slick/slick.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/headhesive.min.js"></script>
 	<script src="js/main.js" ></script>
-	<script type="text/javascript">
-	$("input[name='delivery']").change(function(){
-		if ($("input[value='pickup']").prop("checked")){
-			$('.address').addClass('no-click')
-			$('.address').val('Москва')
-			$('.ask-distance-1, .ask-distance-2, .ask-floor').css('display','none')
-		} else {
-			$('.address').removeClass('no-click')
-			$('.address').val('')
-			$('.ask-distance-1, .ask-distance-2, .ask-floor').css('display','block')
-		}
-	})
-	</script>
+	
 
 </body>
 </html>

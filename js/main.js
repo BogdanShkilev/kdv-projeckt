@@ -78,12 +78,15 @@ $('.delate').click(function(){
 })
 
 
-
+/* Скрипт валидации формы
+функция проверки формы: принимает объект поля формы созданый конструктором FormField */
 function checkNumber(number){
 	if (number.value == 0){
+		// устанавливает поле валидации на ложь, далее на него будет передан фокус
 		number.valid = false;
-		// document.forms['delivery']['name'].focus();
+		// текст label:after
 		number.obj.parentNode.setAttribute('data-content','Необходимо заполнить');
+		// стили ошибки
 		number.obj.style.borderColor = '#e4042a';
 		isValid = false;
 	} else {
@@ -108,8 +111,6 @@ function checkAddress(address){
 function checkDistance(distance){
 	if (distance.value == 0){
 		distance.valid = false;
-
-		// document.forms['delivery']['distance'].style.borderColor = '#e4042a';
 		document.getElementById('distance-styler').parentNode.setAttribute('data-content','Необходимо выбрать пункт');
 		document.getElementById('distance-styler').className += " valid-red";;
 		
@@ -131,38 +132,48 @@ function checkMcad(fromMkad){
 		fromMkad.obj.style.borderColor = '#c7d7e2 ';
 	}
 }
+// конструктор полей формы
 function FormField(obj){
 	this.obj = obj;
 	this.value = obj.value;
 	this.valid = true;
 }
 $('#delivery').submit(function(){
+	// переменная отвечающая за отправку формы
 	var isFormValid = false;
+	// объекты
 	var number = new FormField(document.forms['delivery']['number']);
 	var address = new FormField(document.forms['delivery']['address']);
 	var distance = new FormField(document.forms['delivery']['distance']);
 	var fromMkad = new FormField(document.forms['delivery']['from_mkad']);
 	var methodDelivery = new FormField(document.forms['delivery']['method_delivery']);
+	// проверка полей изменение свойства valid в объекте
 	checkAddress(address);
+	// если выбран пункт самовывоз 2 поля не проверяються
 	if (!(methodDelivery.value === 'pickup')){
 		checkDistance(distance);
 		checkMcad(fromMkad);
 	}
 	checkNumber(number);
+	// создание объекта с полями всей формы, для перебора значений свойства valid
 	var objects = {address,distance,fromMkad,number};
 	var getFocus = true;
+	// ищет первый объект с свойством valid = false и присваевает объект в переменню отвечающую за передачу фокуса первому некоректоному объекту
 	for ( var key in objects){
 		var i = objects[key];
 		if (i.valid == false){
 			getFocus = i.obj;
 			break;
-		} else {}
+		}
 	}
+	// если объект был не передан то считаеться что ошибок небыло и значение аормы присваиваеться значение true и форма отправляеться
+	// иначе передаеться фокус на объект
 	if (getFocus === true) {
 		isFormValid = true;
 	} else {
 		getFocus.focus();
 	}
+	// запускаеться проверка формы при кадом изменении поля (убирает или удалят бордер и текст ошибки)
 	checkStart();
 	return isFormValid;
 
@@ -189,7 +200,18 @@ function checkStart(){
 			check()
 	})
 }
-
+// добавление и удаление полей формы если выбран самовывоз
+$("input[name='method_delivery']").change(function(){
+		if ($("input[value='pickup']").prop("checked")){
+			$('.address').attr('disabled','1')
+			$('.address').val('Москва')
+			$('.ask-distance-1, .ask-distance-2, .ask-floor').css('display','none')
+		} else {
+			$('.address').removeAttr('disabled','1')
+			$('.address').val('')
+			$('.ask-distance-1, .ask-distance-2, .ask-floor').css('display','block')
+		}
+	})
 
 
 
@@ -291,8 +313,9 @@ function resetManufacturerCountry(){
 var options = {
   offset: 450
 }
-var header = new Headhesive('.header');
-
+if($('header').hasClass('fixed-nav')){
+	var header = new Headhesive('.fixed-nav');
+} 
 
 // Ховер сердечек на странице result-element.html
 $('.heart-red').hover(
