@@ -192,7 +192,7 @@ function checkStart(){
 }
 
 
-document.forms['delivery']['address'].setAttribute('data-content','bar');
+
 
 $(document).ready(function() {
 	var elem = $(".zoom");
