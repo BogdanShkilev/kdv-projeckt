@@ -144,16 +144,12 @@ $('#delivery').submit(function(){
 	var fromMkad = new FormField(document.forms['delivery']['from_mkad']);
 	var methodDelivery = new FormField(document.forms['delivery']['method_delivery']);
 	checkAddress(address);
-	if (methodDelivery.value === 'pickup'){
-		
-	}	else {
+	if (!(methodDelivery.value === 'pickup')){
 		checkDistance(distance);
 		checkMcad(fromMkad);
 	}
 	checkNumber(number);
 	var objects = {address,distance,fromMkad,number};
-	// console.log(objects.number.value);
-	// alert(objects.number.value);
 	var getFocus = true;
 	for ( var key in objects){
 		var i = objects[key];
@@ -178,10 +174,13 @@ function checkStart(){
 		var address = new FormField(document.forms['delivery']['address']);
 		var distance = new FormField(document.forms['delivery']['distance']);
 		var fromMkad = new FormField(document.forms['delivery']['from_mkad']);
+		var methodDelivery = new FormField(document.forms['delivery']['method_delivery']);
 		checkAddress(address);
+	if (!(methodDelivery.value === 'pickup')){
 		checkDistance(distance);
 		checkMcad(fromMkad);
-		checkNumber(number);
+	}
+	checkNumber(number);
 	}
 	$('.required').find('input').change(function(){
 			check()
