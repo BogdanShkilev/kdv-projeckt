@@ -137,12 +137,12 @@ function FormField(obj){
 	this.valid = true;
 }
 $('#delivery').submit(function(){
-	let isFormValid = false;
-	const number = new FormField(document.forms['delivery']['number']);
-	const address = new FormField(document.forms['delivery']['address']);
-	const distance = new FormField(document.forms['delivery']['distance']);
-	const fromMkad = new FormField(document.forms['delivery']['from_mkad']);
-	const methodDelivery = new FormField(document.forms['delivery']['method_delivery']);
+	var isFormValid = false;
+	var number = new FormField(document.forms['delivery']['number']);
+	var address = new FormField(document.forms['delivery']['address']);
+	var distance = new FormField(document.forms['delivery']['distance']);
+	var fromMkad = new FormField(document.forms['delivery']['from_mkad']);
+	var methodDelivery = new FormField(document.forms['delivery']['method_delivery']);
 	checkAddress(address);
 	if (methodDelivery.value === 'pickup'){
 		
@@ -151,12 +151,12 @@ $('#delivery').submit(function(){
 		checkMcad(fromMkad);
 	}
 	checkNumber(number);
-	const objects = {address,distance,fromMkad,number};
+	var objects = {address,distance,fromMkad,number};
 	// console.log(objects.number.value);
 	// alert(objects.number.value);
-	let getFocus = true;
-	for ( let key in objects){
-		let i = objects[key];
+	var getFocus = true;
+	for ( var key in objects){
+		var i = objects[key];
 		if (i.valid == false){
 			getFocus = i.obj;
 			break;
@@ -174,10 +174,10 @@ $('#delivery').submit(function(){
 
 function checkStart(){
 	function check(){
-		const number = new FormField(document.forms['delivery']['number']);
-		const address = new FormField(document.forms['delivery']['address']);
-		const distance = new FormField(document.forms['delivery']['distance']);
-		const fromMkad = new FormField(document.forms['delivery']['from_mkad']);
+		var number = new FormField(document.forms['delivery']['number']);
+		var address = new FormField(document.forms['delivery']['address']);
+		var distance = new FormField(document.forms['delivery']['distance']);
+		var fromMkad = new FormField(document.forms['delivery']['from_mkad']);
 		checkAddress(address);
 		checkDistance(distance);
 		checkMcad(fromMkad);
