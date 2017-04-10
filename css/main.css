@@ -2082,11 +2082,18 @@ button.close:hover span {
   letter-spacing: 0.9px;
   margin-left: -26px;
 }
+.amount-wrap {
+  margin-bottom: 85px;
+}
 .cart .more-btn {
   float: right;
-  margin-right: 70px;
+  margin-right: 0;
+  padding: 10px;
   border-radius: 3px;
-  margin-top: 11px;
+  position: absolute;
+  top: 115%;
+  white-space: nowrap;
+  right: 0;
 }
 .cart .old-amount {
   position: relative;
@@ -2297,7 +2304,6 @@ button.close:hover span {
 
 /* request-confirmation page style */
 .confirmation {
-  font-weight: bolder;
   line-height: 1.5em;
 }
 .confirmation .row {

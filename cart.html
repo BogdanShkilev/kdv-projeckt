@@ -86,8 +86,9 @@
 		<main class="main cart">
 			<div class="container">
 			<h1 class="h1 h1-dlv">Корзина</h1>
+			<form action="request-delivery.html" method="post">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
 					<ul>
 						<li class="cart-item">
 							<div>
@@ -165,23 +166,18 @@
 						</li>
 					</ul>
 				</div>
-				<div class="row">
-						<div class="col-md-2"></div>
-						<div class="col-md-8">
-							<h2>Общая стоимость со скидкой </h2><strong class="amount"><b class="total" >2 345 098</b> <span class="discount">Общая cкидка 28 000 </span></strong>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-2"></div>
-						<div class="col-md-6">
-							<a href="#" class="more-btn">Оформить заказ ...</a>
+			</div>
+			<div class="row amount-wrap">
+						<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2"></div>
+						<div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+							<h2>Общая стоимость со скидкой </h2><strong class="amount"><b class="total" >2 345 098</b> <span class="discount">Общая cкидка 28 000 </span><button class="more-btn">Оформить заказ ...</button></strong>
 						</div>
 					</div>
 			</div>
-			</div>
+			</form>
 			<div class="container re-call">
 				<div class="row">
-					<div class="col-md-2"></div>
+					<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2"></div>
 					<div class="col-md-8">
 						<h4>Предварительный заказ</h4>
 						<p>Если вы не уверены в заказе или у вас есть вопросы - мы перезвоним и ответим на них</p>
@@ -242,6 +238,7 @@
 	<!-- scripts -->
 	<script src="js/jquery-3.1.1.min.js" ></script>
 	<script src="js/jquery.zoom.js"></script>
+	<script src='js/jquery.formstyler.js'></script>
 	<script src="slick/slick.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/headhesive.min.js"></script>
