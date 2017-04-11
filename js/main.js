@@ -83,16 +83,16 @@ function calculateСost() {
 		let amount = $(this).find('.amount')
 		if (typeof quantity === 'string'){
 			var amResult = calc(quantity,price,discount)
-			amount.text(amResult.newPrice)
+			amount.text(amResult.newPrice.toLocaleString('ru'))
 			totalDiscount += discount
 			total += amResult.newPrice	
 
 			if (amResult.oldPrice != 0){
-				$(this).find('.old-price').html(amResult.oldPrice + ' &#8381;')
+				$(this).find('.old-price').html(amResult.oldPrice.toLocaleString('ru') + ' &#8381;')
 			}
 		}
 	})
-	$('.total').text(total)
+	$('.total').text(total.toLocaleString('ru'))
 	// var quantity = $(this).val();
  //    alert('hello ' + quantity)
 }
