@@ -46,26 +46,51 @@ $(document).ready(function(){
 
 
 
+function calc(a,b,c){
+	let price = (a * b);
 
+	var priceObj = {
+			oldPrice: 0,
+			newPrice: ''
+		}
+	if (c === ''){
+		priceObj.newPrice = price;
+	} else {
+		priceObj.oldPrice = price;
+		priceObj.newPrice = price - c;
+	}
+	return priceObj;
+}
 // cart script 
+function checkIsNum(e){
+	let i = e.replace(' ', '')
+	return i
+}
 
 $( document ).ready(calculateСost())
 
 function calculateСost() {
-	var total = 0;
+	// Поле общей стоимости
+	let total = 0;
+	let totalDiscount = 0;
+	// Цикл всех товаров (подсчет стоимости в каждом товаре (переберает список ul))
 	$('.cart-item').each(function(index){
-		var discount = (parseFloat($(this).find('.discount i').text())) ? (parseFloat($(this).find('.discount i').text())) : 0;
-		// расчет по количества (введенного пользователем) и цены 
-		var quantity = parseFloat($(this).find('.quantity').val())
-		var price = parseFloat($(this).find('.price').text())
-		var totalThis = quantity * (price - discount);
-		$(this).find('.amount b').text(totalThis.toFixed(0))
+		let discount = $(this).find('.discount-val').text()
+		discount = checkIsNum(discount);
+		let quantity = $(this).find('.quantity').val()
+		quantity = checkIsNum(quantity)
+		let price = $(this).find('.price').text()
+		let amount = $(this).find('.amount')
+		if (typeof quantity === 'string'){
+			var amResult = calc(quantity,price,discount)
+			amount.text(amResult.newPrice)
+			totalDiscount += discount
+			total += amResult.newPrice	
 
-		// take value of amount price and add it to total
-		var amItem = $(this).find('.amount b').text()
-		amItem = amItem.replace(" ", '')
-		amItem = parseFloat(amItem)
-		total += amItem;
+			if (amResult.oldPrice != 0){
+				$(this).find('.old-price').html(amResult.oldPrice + ' &#8381;')
+			}
+		}
 	})
 	$('.total').text(total)
 	// var quantity = $(this).val();

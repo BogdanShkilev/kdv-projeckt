@@ -763,9 +763,6 @@ div.child {
 .search .row {
   margin: 20px 0;
 }
-.search .container {
-  float: left;
-}
 .search .row {
     max-width: 900px;
 }
@@ -2034,14 +2031,11 @@ button.close:hover span {
 }
 .cart strong {
   float: left;
-  padding: 5px 25px 5px 3px;
+  padding: 5px 3px;
   position: relative;
   font-size: 20px;
   margin-right: 10px;
   font-size: 29px;
-}
-.cart .amount {
-  background: url(../images/rub-icon.png) no-repeat right center;
 }
 .cart .discount {
   left: 3px;
