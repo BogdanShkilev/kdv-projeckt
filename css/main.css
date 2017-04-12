@@ -2368,6 +2368,10 @@ button.close:hover span {
   text-decoration: none;
   color: #000;
 }
+.news-list h2 {
+  display: block;
+  max-width: 500px;
+}
 .news-list h2 a {
   color: #e4042a;
   font-weight: bold;
@@ -2382,7 +2386,10 @@ button.close:hover span {
   margin-bottom: 33px;
   font-weight: normal;
 }
-.news-list i {
+.social-list {
+  margin-bottom: 50px;
+}
+.social-list i {
   display: block;
   margin-bottom: 16px;
 }
@@ -2416,4 +2423,31 @@ button.close:hover span {
 }
 .social-list .houzz-ru:after {
   background-position: -94px 0;
+}
+
+
+/* news-item page */
+.news-item .h1 {
+  font-weight: normal;
+  max-width: 800px;
+}
+.news-item p {
+  margin-bottom: 16px;
+  line-height: 1.5em;
+}
+.news-item img {
+  margin-bottom: 16px;
+  max-width: 850px;
+}
+.news-content {
+  margin-bottom: 70px;
+}
+.news-item .back-link {
+  color: #e4042a;
+  display: block;
+  margin-bottom: 47px;
+}
+.news-item a:hover {
+  text-decoration: none;
+  color: #000;
 }
