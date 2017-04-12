@@ -15,9 +15,9 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/media-1400.css">
-
-	
-
+	<link rel="stylesheet" type="text/css" href="css/jquery.formstyler.css">
+	<!-- Стили с цветами селектов -->
+	<link rel="stylesheet" type="text/css" href="css/color-palette.css">
 
 </head>
 <body>
@@ -48,7 +48,7 @@
 									<li><a href="#" class="red-link">&#8211; Для стен</a></li>
 									<li><a href="#" class="red-link">&#8211; Ступени</a></li> 
 									<li><a href="#" class="red-link">&#8211; Фасады</a></li>
-									<li><a href="search.html" class="red-link active-link-tips">&#8211; Расширенный подбор</a></li>
+									<li><a href="search.html" class="red-link active-link-tips no-click">&#8211; Расширенный подбор</a></li>
 								</ul>	
 							</div>
 							</form>
@@ -70,8 +70,8 @@
 								<li class="nav-list"><a href="catalog.html" class="nav-link">Каталог</a></li>
 								<li class="nav-list"><a href="#" class="nav-link">Акции</a></li>
 								<li class="nav-list"><a href="#" class="nav-link">3D дизайн</a></li>
-								<li class="nav-list"><a href="news-list.html" class="nav-link">Новости</a></li>
-								<li class="nav-list"><a onclick="event.preventDefault()" href="#" class="nav-link active-link">Оплата и доставка</a></li>
+								<li class="nav-list"><a href="news-list.html" class="nav-link no-click active-link">Новости</a></li>
+								<li class="nav-list"><a href="delivery.html" class="nav-link">Оплата и доставка</a></li>
 								<li class="nav-list"><a href="contacts.html" class="nav-link fix-after">Где купить</a></li>
 							</ul>
 						</div>
@@ -85,65 +85,70 @@
 				</div>
 			</div>
 		</header>
-		<!-- main -->
-		<main class="main">
-			<div class="container">
-				<h1 class="h1 h1-dlv">Оплата и доставка</h1>			
-				<div class="dlv-text">
-						<p class="dlv-paragraph">
-							Оплатить заказ можно банковской картой на сайте, наличными курьеру при доставке или предварительно <br> в любом <a href="#"><span class="red-text-dlv">нашем магазине</span></a>
-						</p>
-						<p class="dlv-paragraph">
-							Доставка возможна в пределах Москвы и области. Ее стоимость зависит от удаленности, веса заказа и срочности. <br> Также вы можете забрать заказ самостоятельно с одного из <a href="#"><span class="red-text-dlv">наших складов</span></a> - <span class="change-fw">бесплатно</span> 
-						</p>
-					</div>
-					<div class="map-dlv">
-						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=6jiUrn_U0WkKvjKdxzuCbgvPelNI9raG&amp;width=100%25&amp;height=550&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
-					
-					</div>
-					<div class="wrap-bable">
-						<div class="bable">
-							<a onclick="event.preventDefault()" class="close-bbl" href="#"></a>
-							<h2 class="h2">ул. Профсоюзная, д. 21</h2>
-							<p class="bbl-p">Ориентироачна стоимость</p>
-							<span class="bbl-p pull-left">доставки</span>
-							<form action="#">
-								<input class="bbl-input" type="text" name="" placeholder="20" id="" pattern="[0-9]{9}">
-							</form>
-							<span class="bbl-p">м<sup class="sup-text">2</sup></span>
-							<div>
-								<div class="bbl-few-block pull-left">
-								<span class="italic-text">2-3 дня</span>
-								<h4>1600 &#8381;</h4>
-							</div>
-							<div class="bbl-few-block pull-left">
-								<span class="italic-text">на завтра</span>
-								<h4>+ 1200 &#8381;</h4>
-							</div>
-							<div class="bbl-few-block fix-pdn-bbl pull-left">
-								<span class="italic-text">подьем на этаж</span>
-								<h4>+ 1000 &#8381;</h4>
-							</div>
-							</div>
-						</div>
 
-						</div>
-					<div class="price-dlv">
-						<span class="italic-text"><i>В течении 2-3 дней</i></span><span class="italic-text">На следующий день: +1200 &#8381;</span>
-						<ul class="price-ul">
-							<li>до 500 кг &nbsp;&nbsp;&nbsp; 1600 &#8381;</li>
-							<li>0,5 кг-1,5 т &nbsp; 2100 &#8381;</li>
-							<li>1,5-3 т &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2700 &#8381;</li>
+		<main class="main news-list">
+			<div class="container">
+				<h1 class="h1 h1-dlv">Новости</h1>
+				<div class="row">
+					<div class="col-md-12 col-ls-12 col-sm-12 col-xs-12">
+						<ul>
+							<li>
+								<a href="#">
+									<img src="" alt="">
+								</a>
+								<h2><a href="#"> BATIMAT RUSSIA 2016</h2></a>
+								<p>Осталось 6 дней до открытия Международной строительно-интерьерной выставки BATIMAT RUSSIA!</p>
+								<span>30 марта 2016</span>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/news-1.jpg" alt="">
+								</a>
+								<h2><a href="#">Новинки марта от фабрики Pamesa</a></h2>
+								<p>Испанская плитка Pamesa — серия элит — класса, готовая превратить вашу мечту в реальность</p>
+								<span>15 марта 2016</span>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/news-2.jpg" alt="">
+								</a>
+								<h2><a href="#">Журнал Seasons Projects</a></h2>
+								<p></p>
+								<span>01 марта 2016</span>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/news-3.jpg" alt="">
+								</a>
+								<h2><a href="#">Сегодня в моде плитка неправильной формы. Математики перебирают все варианты пятиугольных плиток!</a></h2>
+								<p>В мире математики сенсация. Открыт новый вид пятиугольников, которые покрывают плоскость без разрывов 
+								и без перекрытий. Казалось бы какое отношение это открытие имеет к дизайну интерьеров? Давайте узнаем.</p>
+								<span>17 августа 2015</span>
+							</li>
 						</ul>
-						<p class="dlv-text-pdn ">Внутри ТТК: + 500 &#8381;</p>
-						<p class="dlv-text-pdn add-more-pdn">Вне МКАД: + 40р &#8381;/км</p>
-						<p class="another-text-dlv">Подъем на этаж: 2 &#8381; за каждый килограм за один этаж, но не менее 1000 &#8381;. При наличии лифта стоимость подъема рассчитывается как разгрузка на второй этаж. </p>
-						<p class="another-text-dlv">Нестандартные случаи требуется заранее оговорить с нами по телефону +7 495 767-00-40</p>
 					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-ls-12 col-sm-12 col-xs-12">
+						<a href="#" class="more-btn">Предыдущие 10</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-ls-12 col-sm-12 col-xs-12">
+						<i>Больше новостей в наших социальных сетях:</i>
+						<ul class="social-list">
+							<li><a href="" class="facebook">facebook</a></li>
+							<li><a href="" class="instagram">instagram</a></li>
+							<li><a href="" class="vk">Вконтакте</a></li>
+							<li><a href="" class="houzz-ru">houzz.ru</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		
 		</main>
-		<!-- footer -->
+
+
+				<!-- footer -->
 		<footer class="footer">
 			<div class="container">
 				<div class="row">
@@ -194,6 +199,7 @@
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/headhesive.min.js"></script>
 	<script src="js/main.js" ></script>
+	<script src="js/jquery.formstyler.js"></script>
 
 </body>
 </html>

@@ -404,7 +404,8 @@ h3.h3.main-text-h3 {
 /* footer style */
 .footer div.container {
   background-color: #E6E7E8;
-  padding: 22px 20px; }
+  padding-top: 22px;
+  padding-bottom: 22px; }
 
 .second-footer-ul {
   padding-left: 30px; }
@@ -948,7 +949,7 @@ div.child {
   width: 33%;
 }
 .manufacturer .left-shift {
-  width: 40%;
+  width: 46%;
 }
 .manufacturer .jq-select-multiple.focused {
   border: none;
@@ -1141,16 +1142,21 @@ div.child {
 .search-options-2 b.active {
   color: #000;
 }
+.search-options-2 .design-elem {
+  display: inline-block;
+   font-size: 25px;
+  color: #7c7c7b;
+}
 .search-options-2 .count-elem {
   display: inline-block;
    font-size: 25px;
   color: #7c7c7b;
   padding-left: 15px;
 }
-.search-options-2 .count-elem.active {
+.search-options-2 .count-elem.active, .search-options-2 .design-elem.active {
   color: #000;
 }
-.search-options-2 .count-elem:hover {
+.search-options-2 .count-elem:hover, .search-options-2 .design-elem:hover {
   color: #000;
 }
 .search-options-2 .count-elem:focus {
@@ -1223,11 +1229,12 @@ div.child {
 }
 
 
-.headhesive b, .headhesive .count-elem {
+.headhesive .design-elem, .headhesive .count-elem {
   font-size: 16px;
 }
 .headhesive .order-wrap {
   padding: 0;
+  padding-bottom: 10px;
 }
 .headhesive .col-md-12 {
   width: 91%;
@@ -2334,4 +2341,79 @@ button.close:hover span {
   margin-bottom: 100px;
   padding: 8px 43px;
   font-weight: normal;
+}
+
+/* News-list page */
+.news-list li {
+  margin-bottom: 30px;
+  line-height: 1.5em;
+  max-width: 866px;
+}
+.news-list a {
+  color: #e4042a;
+  font-weight: bold;
+}
+.news-list img {
+  max-width: 400px;
+}
+.news-list a h2 {
+  display: block;
+  overflow: hidden;
+}
+.news-list a:hover {
+  text-decoration: none;
+  color: #000;
+}
+.news-list a:hover ~ h2 a {
+  text-decoration: none;
+  color: #000;
+}
+.news-list h2 a {
+  color: #e4042a;
+  font-weight: bold;
+}
+.news-list span {
+  font-style: italic;
+  font-size: 12px;
+}
+.news-list .more-btn {
+  margin-left: 0;
+  color: #fff;
+  margin-bottom: 33px;
+  font-weight: normal;
+}
+.news-list i {
+  display: block;
+  margin-bottom: 16px;
+}
+.social-list a {
+  color: #7c7c7b;
+  font-weight: normal;
+  padding-left: 30px;
+  position: relative;
+  text-align: bottom;
+}
+.social-list li {
+  float: left;
+  display: inline-block;
+  margin-right: 10px;
+}
+.social-list a:after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url(../images/social-sprite.jpg) no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.social-list .instagram:after {
+  background-position: -32px 0;
+}
+.social-list .vk:after {
+  background-position: -63px 0;
+}
+.social-list .houzz-ru:after {
+  background-position: -94px 0;
 }
