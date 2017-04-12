@@ -2447,7 +2447,61 @@ button.close:hover span {
   display: block;
   margin-bottom: 47px;
 }
+.news-item a.link, .news-item a.link:focus{
+  color: #e4042a;
+}
 .news-item a:hover {
   text-decoration: none;
   color: #000;
+}
+
+.pos-r {
+  position: relative;
+}
+.news-item ul {
+  margin-bottom: 20px;
+}
+.news-item li {
+  margin-left: 20px;
+  line-height: 1.5em;
+}
+.news-item .pos-r {
+  max-width: 830px;
+  max-height: 830px;
+  margin-bottom: 30px;
+}
+.news-item .pos-r span {
+  bottom: -4px;
+  position: absolute;
+  right: 12px;
+  font-size: 14px;
+  font-style: italic;
+}
+.news-item .social-list {
+  margin-bottom: 20px;
+}
+.news-item .social-list li {
+  float: none;
+  display: block;
+  margin-left: 0;
+  margin-bottom: 12px;
+}
+.details {
+  margin-bottom: 20px;
+}
+.details strong {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+}
+.details p {
+  margin-bottom: 10px;
+}
+.details span {
+  margin-bottom: 20px;
+  display: block;
+}
+.news-item .no-mar {
+  margin: 0;
+  margin-bottom: 4px;
 }
