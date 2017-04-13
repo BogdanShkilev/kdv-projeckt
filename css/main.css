@@ -940,10 +940,7 @@ div.child {
   margin-bottom: 20px;
   margin-right: 28px;
 }
-.manufacturer .jq-select-multiple {
-  border: none;
-  box-shadow: none;
-}
+
 .manufacturer div .col-md-3 {
   padding: 0;
   width: 33%;
@@ -951,79 +948,82 @@ div.child {
 .manufacturer .left-shift {
   width: 46%;
 }
-.manufacturer .jq-select-multiple.focused {
-  border: none;
-}
+
 .design-wrap input[type='button']{
   margin: 0 0 0 17px;
 }
-.manufacturer .jq-select-multiple {
-  border-radius: 0;
+#choos-manufacturer {
+  overflow: hidden;
+  padding: 0 19px;
+  position: absolute;
+  top: -7px;
+  width: 593px;
+  height: auto;
+  max-height: 0;
+  background: #fff;
+  box-shadow: 0 9px 8px 0 #ccc;
+  z-index: 100;
+  transition: max-height ease 1s;
 }
-.manufacturer .jq-select-multiple ul {
-  border-radius: 0;
+.manufacturer ul {
+  width: 33%;
+  float: left;
+  padding-top: 10px;
 }
-.manufacturer .jq-select-multiple li {
-  font-size: 12px;
-  color: #7c7c7b;
-  padding: 0 9px 0 0;
+#choos-manufacturer .jq-checkbox {
+  margin-left: -28px;
 }
-.manufacturer .col-md-2 {
-  padding: 0;
-}
-.manufacturer .jq-select-multiple li.selected {
-  background: #f4f6f7!important;
-  color: #101010;
-}
-.manufacturer span {
-  padding: 5px 0 7px;
-}
-.manufacturer span.active {
-  background: #e4042a;
+.manufacturer li{
+  margin-left: 22px;
+  padding-left: 28px;
+  width: 100%;
 }
 .manufacturer label {
-  padding: 6px 1px;
+  margin-bottom: 12px;
   font-size: 18px;
+}
+.manufacturer .manu-country {
   color: #e4042a;
-  border-bottom: 1px dotted #e82546;
-  display: inline-block;
-  padding: 0 0 1px;
-  margin: 0 7px 5px;
-  cursor: pointer;
+  margin-bottom: 16px;
 }
-.manufacturer .manufacturer-country:hover label {
-  color: #000;
-  border-color: #000;
+#choos-manufacturer .manu-country .jq-checkbox {
+  margin-left: 0;
 }
-.manufacturer span.active label {
+.search .manufacturer .more-btn {
+  margin: 0 13px 4px 7px;
+  padding: 11px 16px;
   color: #fff;
-  border-color: #fff;
+  background: #e4042a;
 }
-.manufacturer label .jq-checkbox {
-  cursor: default;
-  background: none;
-  border: none;
-  box-shadow: none;
-  width: 0;
-  margin: 0;
-  height: 0;
+.search .manufacturer .more-btn.cancel {
+  background: #929292;
+  border-color: #929292;
 }
-.manufacturer label .jq-checkbox__div {
-  display: none;
+.manufacturer .manufacturer-list {
+  padding: 0;
 }
+.manufacturer-list ul {
+  float: left;
+}
+.manufacturer-list ul li {
+  margin: 0 0 5px;
+  font-size: 12px;
+}
+
+
+
 .manufacturer .vertical-line {
   float: left;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
   border-left: 1px solid #c1c1c1;
 }
 .manufacturer .vertical-line input {
   margin: 0 0 0 20px;
 }
-.manufacturer .title {
-  background: none;
-}
+
 .search .format-wrap .row {
   margin: 0;
 }

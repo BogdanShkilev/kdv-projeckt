@@ -225,6 +225,76 @@ function checkStart(){
 			check()
 	})
 }
+// manufacturer script
+function openManuList(){
+	let obj = document.getElementById('choos-manufacturer');
+		obj.style.maxHeight = '600px';
+}
+function closeManuList(){
+	let obj = document.getElementById('choos-manufacturer');
+		obj.style.maxHeight = '0';
+}
+// cкрипт для связи родительского checbox и детей (страна - заводы)
+$('.f-rus').change(function(){
+	let rusVal = false;
+	$('.f-rus').each(function(){
+		if ($(this).find('input').prop('checked')){
+			if (rusVal == false){
+				rusVal = true;
+			}
+		} else {
+			
+		}
+	})
+	if (rusVal){
+		$('#fab-rus-styler').addClass('checked')
+		$('#fab-rus').prop('checked', true)
+	} else {
+		$('#fab-rus-styler').removeClass('checked')
+		$('#fab-rus').prop('checked', false)
+	}
+})
+// cкрипт для связи родительского checbox и детей (страна - заводы)
+$('.f-sp').change(function(){
+	let rusVal = false;
+	$('.f-sp').each(function(){
+		if ($(this).find('input').prop('checked')){
+			if (rusVal == false){
+				rusVal = true;
+			}
+		} else {
+			
+		}
+	})
+	if (rusVal){
+		$('#fab-spain-styler').addClass('checked')
+		$('#fab-spain').prop('checked', true)
+	} else {
+		$('#fab-spain-styler').removeClass('checked')
+		$('#fab-spain').prop('checked', false)
+	}
+})
+// cкрипт для связи родительского checbox и детей (страна - заводы)
+$('.f-it').change(function(){
+	let rusVal = false;
+	$('.f-it').each(function(){
+		if ($(this).find('input').prop('checked')){
+			if (rusVal == false){
+				rusVal = true;
+			}
+		} else {
+			
+		}
+	})
+	if (rusVal){
+		$('#fab-italy-styler').addClass('checked')
+		$('#fab-italy').prop('checked', true)
+	} else {
+		$('#fab-italy-styler').removeClass('checked')
+		$('#fab-italy').prop('checked', false)
+	}
+})
+
 // добавление и удаление полей формы если выбран самовывоз
 $("input[name='method_delivery']").change(function(){
 		if ($("input[value='pickup']").prop("checked")){
@@ -308,11 +378,7 @@ function deselectAllFormat(){
 	$(".format").find(".jq-checkbox").removeClass('checked');
 	$(".format").find("input").prop('checked', false)
 }
-// сброс заводов производителей
-function deselectAllSelectOption(){
-	$('.selectable-1').find("li").removeClass("selected");
-	$('.selectable-1').find("select").val('');  
-}
+
 
 function checkCheckBox(){
 	$('.manufacturer-country').find("input").change(function(){

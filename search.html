@@ -160,35 +160,76 @@
 						</div>
 					</div>
 					<div class="row manufacturer">
-						<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2"><span class="title">Производители</span></div>
-						<div class="col-md-5 col-sm-5 col-lg-5 col-xs-5 left-shift">
-							<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-								<span class="manufacturer-country"><label><input name="country-name" type="checkbox" value="russia">России</label></span>
-								<!-- <select class="col-md-12 selectable-1" name="russia" id="" multiple> -->
-								<!-- </select> -->
-							</div>
-							<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-								<span class="manufacturer-country"><label><input name="country-name" type="checkbox" value="spain">Испании</label></span>
-								<select class="col-md-12 col-sm-12 col-lg-12 col-xs-12 selectable-1" name="spain" id="" size="5" multiple>
-									<option value="Absolut Keramika">Absolut Keramika</option>
-									<option value="Del_Conca">Del Conca</option>
-									<option value="Porselanite_Dos">Porselanite Dos</option>
-									<option value="Stn_Ceramica">Stn Ceramica</option>
-								</select>
-							</div>
-							<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
-								<span class="manufacturer-country"><label><input name="country-name" type="checkbox" value="italy">Италии</label></span>
-								<select class="col-md-12 col-sm-12 col-lg-12 col-xs-12 selectable-1" name="italy" id="" size="5" multiple>
-									<option value="Brenero">Brenero</option>
-									<option value="Epoca_Ceramiche">Epoca Ceramiche</option>
-									<option value="Kronos_Ceramiche">Kronos Ceramiche</option>
-									<option value="Serenissima_Capri">Serenissima Capri</option>
-									<option value="Unicomsarcer">Unicomsarcer</option>
-								</select>
-							</div>
+						<div class="col-md-2 col-sm-2 col-lg-2 col-xs-2">
+							<span class="title">Производители</span>
 						</div>
-						<div class="vertical-line">
-							<input type="button" class="select-reset" value="изменить фабрики" onclick="deselectAllSelectOption();">
+						<div class="col-md-10">
+							<div class="col-md-7 col-sm-7 col-lg-7 col-xs-7">
+								<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+									<label class="manu-country"><input  name='manufacturer-country' type="checkbox" checked>России</label>
+								</div>
+								<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+									<label class="manu-country"><input  name='manufacturer-country' type="checkbox" checked>Испании</label>
+								</div>
+								<div class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+									<label class="manu-country"><input  name='manufacturer-country' type="checkbox" checked>Италии</label>
+								</div>
+								<div class="row">
+									<div class="col-md-12 manufacturer-list">
+										<ul>
+											<li>Все</li>
+										</ul>
+										<ul>
+											<li>Absolut Keramika</li>
+											<li>Del Conca</li>
+											<li>Porselanite Dos</li>
+											<li>Stn Ceramica</li>
+										</ul>
+										<ul>
+											<li>Brennero</li>
+											<li>Epoca Ceramiche</li>
+											<li>Kronos Ceramiche</li>
+											<li>Serenissima Capri</li>
+											<li>Unicomstarcer</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="vertical-line">
+								<input type="button" class="select-reset" value="изменитьфабрики" onclick="openManuList()">
+							</div>
+							<div id="choos-manufacturer">
+								<ul>
+									<label class="manu-country"><input name='manufacturer-country' id="fab-rus" type="checkbox">России</label>
+									<li><label class="f-rus"><input class="f-rus" name="fabrics" type="checkbox">Фабрика 1</label></li>
+									<li><label class="f-rus" class="f-rus"><input name="fabrics" type="checkbox">Фабрика 2</label></li>
+									<li><label class="f-rus"><input name="fabrics" type="checkbox">Фабрика 3</label></li>
+									<li><label class="f-rus"><input name="fabrics" type="checkbox">Фабрика 4</label></li>
+									<li><label class="f-rus"><input name="fabrics" type="checkbox">Фабрика 5</label></li>
+									<li><label class="f-rus"><input name="fabrics" type="checkbox">Фабрика 6</label></li>
+								</ul>
+								<ul>
+									<label class="manu-country"><input  name='manufacturer-country' id="fab-spain" type="checkbox">Испании</label>
+									<li><label class='f-sp'><input name="fabrics" type="checkbox">Absolut Keramika</label></li>
+									<li><label class='f-sp'><input name="fabrics" type="checkbox">Del Conca</label></li>
+									<li><label class='f-sp'><input name="fabrics" type="checkbox">Porselanite Dos</label></li>
+									<li><label class='f-sp'><input name="fabrics" type="checkbox">Stn Ceramica</label></li>
+								</ul>
+								<ul>
+									<label class="manu-country"><input  name='manufacturer-country' id="fab-italy" type="checkbox">Италии</label>
+									<li><label class='f-it'><input name="fabrics" type="checkbox">Brennero</label></li>
+									<li><label class='f-it'><input name="fabrics" type="checkbox">Epoca Ceramiche</label></li>
+									<li><label class='f-it'><input name="fabrics" type="checkbox">Kronos Ceramiche</label></li>
+									<li><label class='f-it'><input name="fabrics" type="checkbox">Serenissima Capri</label></li>
+									<li><label class='f-it'><input name="fabrics" type="checkbox">Unicomstarcer</label></li>
+								</ul>
+								<div class="row">
+									<div class="col-md-12">
+										<input type="button" value="Выбрать" class="more-btn confirm">
+										<input type="button" class="more-btn cancel"  onclick="closeManuList();" value="Отменить">
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="row surface">

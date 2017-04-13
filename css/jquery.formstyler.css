@@ -22,9 +22,9 @@
 	border-radius: 2px;
 	background: url(../images/tick.png) no-repeat;
 }
-.jq-checkbox.focused {
-	border: 1px solid #08C;
-}
+// .jq-checkbox.focused {
+// 	border: 1px solid #08C;
+// }
 .jq-checkbox.disabled {
 	opacity: .55;
 }
