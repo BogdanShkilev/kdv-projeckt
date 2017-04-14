@@ -176,16 +176,16 @@
 								</div>
 								<div class="row">
 									<div class="col-md-12 manufacturer-list">
-										<ul>
+										<ul id="russia-list">
 											<li>Все</li>
 										</ul>
-										<ul>
+										<ul id="spain-list">
 											<li>Absolut Keramika</li>
 											<li>Del Conca</li>
 											<li>Porselanite Dos</li>
 											<li>Stn Ceramica</li>
 										</ul>
-										<ul>
+										<ul id="italy-list">
 											<li>Brennero</li>
 											<li>Epoca Ceramiche</li>
 											<li>Kronos Ceramiche</li>
@@ -199,33 +199,33 @@
 								<input type="button" class="select-reset" value="изменитьфабрики" onclick="openManuList()">
 							</div>
 							<div id="choos-manufacturer">
-								<ul>
+								<ul id='russia-list-check'>
 									<label class="manu-country"><input name='manufacturer-country' id="fab-rus" type="checkbox">России</label>
-									<li><label class="f-rus"><input class="f-rus" name="fabrics" type="checkbox">Фабрика 1</label></li>
-									<li><label class="f-rus" class="f-rus"><input name="fabrics" type="checkbox">Фабрика 2</label></li>
-									<li><label class="f-rus"><input name="fabrics" type="checkbox">Фабрика 3</label></li>
-									<li><label class="f-rus"><input name="fabrics" type="checkbox">Фабрика 4</label></li>
-									<li><label class="f-rus"><input name="fabrics" type="checkbox">Фабрика 5</label></li>
-									<li><label class="f-rus"><input name="fabrics" type="checkbox">Фабрика 6</label></li>
+									<li><label class="f-rus"><input name="fabrics" value="Фабрика-1" type="checkbox">Фабрика 1</label></li>
+									<li><label class="f-rus"><input name="fabrics" value="Фабрика-2" type="checkbox">Фабрика 2</label></li>
+									<li><label class="f-rus"><input name="fabrics" value="Фабрика-3" type="checkbox">Фабрика 3</label></li>
+									<li><label class="f-rus"><input name="fabrics" value="Фабрика-4" type="checkbox">Фабрика 4</label></li>
+									<li><label class="f-rus"><input name="fabrics" value="Фабрика-5" type="checkbox">Фабрика 5</label></li>
+									<li><label class="f-rus"><input name="fabrics" value="Фабрика-6" type="checkbox">Фабрика 6</label></li>
 								</ul>
-								<ul>
+								<ul id="spain-list-check">
 									<label class="manu-country"><input  name='manufacturer-country' id="fab-spain" type="checkbox">Испании</label>
-									<li><label class='f-sp'><input name="fabrics" type="checkbox">Absolut Keramika</label></li>
-									<li><label class='f-sp'><input name="fabrics" type="checkbox">Del Conca</label></li>
-									<li><label class='f-sp'><input name="fabrics" type="checkbox">Porselanite Dos</label></li>
-									<li><label class='f-sp'><input name="fabrics" type="checkbox">Stn Ceramica</label></li>
+									<li><label class='f-sp'><input name="fabrics" value="Absolut Keramika" type="checkbox">Absolut Keramika</label></li>
+									<li><label class='f-sp'><input name="fabrics" value="Del Conca" type="checkbox">Del Conca</label></li>
+									<li><label class='f-sp'><input name="fabrics" value="Porselanite Dos" type="checkbox">Porselanite Dos</label></li>
+									<li><label class='f-sp'><input name="fabrics" value="Stn Ceramica" type="checkbox">Stn Ceramica</label></li>
 								</ul>
-								<ul>
+								<ul id="italy-list-check">
 									<label class="manu-country"><input  name='manufacturer-country' id="fab-italy" type="checkbox">Италии</label>
-									<li><label class='f-it'><input name="fabrics" type="checkbox">Brennero</label></li>
-									<li><label class='f-it'><input name="fabrics" type="checkbox">Epoca Ceramiche</label></li>
-									<li><label class='f-it'><input name="fabrics" type="checkbox">Kronos Ceramiche</label></li>
-									<li><label class='f-it'><input name="fabrics" type="checkbox">Serenissima Capri</label></li>
-									<li><label class='f-it'><input name="fabrics" type="checkbox">Unicomstarcer</label></li>
+									<li><label class='f-it'><input name="fabrics" value="Brennero" type="checkbox">Brennero</label></li>
+									<li><label class='f-it'><input name="fabrics" value="Epoca Ceramiche" type="checkbox">Epoca Ceramiche</label></li>
+									<li><label class='f-it'><input name="fabrics" value="Kronos Ceramiche" type="checkbox">Kronos Ceramiche</label></li>
+									<li><label class='f-it'><input name="fabrics" value="Serenissima Capri" type="checkbox">Serenissima Capri</label></li>
+									<li><label class='f-it'><input name="fabrics" value="Unicomstarcer" type="checkbox">Unicomstarcer</label></li>
 								</ul>
 								<div class="row">
 									<div class="col-md-12">
-										<input type="button" value="Выбрать" class="more-btn confirm">
+										<input type="button"  id='accept-changes-man' value="Выбрать" class="more-btn confirm">
 										<input type="button" class="more-btn cancel"  onclick="closeManuList();" value="Отменить">
 									</div>
 								</div>

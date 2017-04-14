@@ -235,64 +235,57 @@ function closeManuList(){
 		obj.style.maxHeight = '0';
 }
 // cкрипт для связи родительского checbox и детей (страна - заводы)
-$('.f-rus').change(function(){
-	let rusVal = false;
-	$('.f-rus').each(function(){
-		if ($(this).find('input').prop('checked')){
-			if (rusVal == false){
-				rusVal = true;
+// На вход принимает 1) Класс label с checkbox, 2) Родительский id (с названием страны)
+function relatChecbox(labelClass,perantCB){
+	$(labelClass).change(function(){
+		let Val = false;
+		$(labelClass).each(function(){
+			if ($(this).find('input').prop('checked')){
+				if (Val == false){
+					Val = true;
+				}
+			} else {
+				
 			}
+		})
+		if (Val){
+			$(perantCB + '-styler').addClass('checked')
+			$(perantCB).prop('checked', true)
 		} else {
-			
+			$(perantCB + '-styler').removeClass('checked')
+			$(perantCB).prop('checked', false)
 		}
 	})
-	if (rusVal){
-		$('#fab-rus-styler').addClass('checked')
-		$('#fab-rus').prop('checked', true)
-	} else {
-		$('#fab-rus-styler').removeClass('checked')
-		$('#fab-rus').prop('checked', false)
-	}
-})
-// cкрипт для связи родительского checbox и детей (страна - заводы)
-$('.f-sp').change(function(){
-	let rusVal = false;
-	$('.f-sp').each(function(){
-		if ($(this).find('input').prop('checked')){
-			if (rusVal == false){
-				rusVal = true;
-			}
-		} else {
-			
+}
+relatChecbox('.f-rus','#fab-rus')
+relatChecbox('.f-sp','#fab-spain')
+relatChecbox('.f-it','#fab-italy')
+
+// функция копирует значения выбраных элементов в список ul
+// Принимает на вход: 1)селектор обертки чекбоксов, 2) оббертка ul списка со списком, 
+// 3) имя массива где храняться выбраные фабрики
+function addFabricsToList(perId,wrap,arrName){
+	$(perId).find('input[name="fabrics"]').each(function(){
+		if ($(this).prop('checked')){
+			arrName.push($(this).val());
 		}
 	})
-	if (rusVal){
-		$('#fab-spain-styler').addClass('checked')
-		$('#fab-spain').prop('checked', true)
-	} else {
-		$('#fab-spain-styler').removeClass('checked')
-		$('#fab-spain').prop('checked', false)
+	for (let i = 0; i < arrName.length;i++){
+		$(wrap).append('<li>' + arrName[i] + '</li>')
 	}
-})
-// cкрипт для связи родительского checbox и детей (страна - заводы)
-$('.f-it').change(function(){
-	let rusVal = false;
-	$('.f-it').each(function(){
-		if ($(this).find('input').prop('checked')){
-			if (rusVal == false){
-				rusVal = true;
-			}
-		} else {
-			
-		}
-	})
-	if (rusVal){
-		$('#fab-italy-styler').addClass('checked')
-		$('#fab-italy').prop('checked', true)
-	} else {
-		$('#fab-italy-styler').removeClass('checked')
-		$('#fab-italy').prop('checked', false)
-	}
+}
+// на кнопку вешаеться событие копирования выбраных фабрик в списки
+$('#accept-changes-man').click(function(){
+	$('.manufacturer-list').find('li').remove();
+	let rus = [];
+	let sp = [];
+	let it = [];
+
+	addFabricsToList("#russia-list-check",'#russia-list',rus);
+	addFabricsToList("#spain-list-check",'#spain-list',sp);
+	addFabricsToList("#italy-list-check",'#italy-list',it);
+
+	closeManuList();
 })
 
 // добавление и удаление полей формы если выбран самовывоз
