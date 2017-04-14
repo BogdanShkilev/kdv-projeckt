@@ -274,6 +274,17 @@ function addFabricsToList(perId,wrap,arrName){
 		$(wrap).append('<li>' + arrName[i] + '</li>')
 	}
 }
+// связывает чекбокс в окне и на основной странице
+// принимат параметры 1) id чекбокса из формы, 2) id чекбокса куда копировать значение
+function relatePerChecbox(idChecked, idPush){
+	if ($(idChecked).prop('checked')){
+		$(idPush).prop('checked', true)
+		$(idPush + '-styler').addClass('checked')
+	} else {
+		$(idPush).prop('checked', false)
+		$(idPush + '-styler').removeClass('checked')
+	}
+}
 // на кнопку вешаеться событие копирования выбраных фабрик в списки
 $('#accept-changes-man').click(function(){
 	$('.manufacturer-list').find('li').remove();
@@ -284,6 +295,10 @@ $('#accept-changes-man').click(function(){
 	addFabricsToList("#russia-list-check",'#russia-list',rus);
 	addFabricsToList("#spain-list-check",'#spain-list',sp);
 	addFabricsToList("#italy-list-check",'#italy-list',it);
+
+	relatePerChecbox("#fab-rus",'#fab-rus-par')
+	relatePerChecbox("#fab-spain",'#fab-spain-par')
+	relatePerChecbox("#fab-italy",'#fab-italy-par')
 
 	closeManuList();
 })

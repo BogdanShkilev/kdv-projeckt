@@ -940,7 +940,9 @@ div.child {
   margin-bottom: 20px;
   margin-right: 28px;
 }
-
+.manufacturer .col-md-10 {
+  padding-left: 0;
+}
 .manufacturer div .col-md-3 {
   padding: 0;
   width: 33%;
