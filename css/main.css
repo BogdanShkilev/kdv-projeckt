@@ -1834,6 +1834,76 @@ button.close:hover span {
 .modal-content h5{
   margin-bottom: 15px;
 }
+.add-wrap {
+  position: relative;
+}
+.add-to-cart-block {
+  position: absolute;
+  top: 0;
+  background: #fff;
+  padding: 0 8px 0 27px;
+  box-shadow: 0 1px 6px 0;
+  width: 260px;
+  // height: 0;
+}
+.add-to-cart-block .close {
+  width: 18px;
+  height: 18px;
+  margin-top: 7px;
+  background: url(../images/modal-close.png) no-repeat right 0;
+  background-size: 70%;
+  opacity: 1;
+}
+.add-to-cart-block .close:hover {
+  background-image: url(../images/modal-close-black.png);
+  opacity: 1;
+}
+.add-to-cart-block strong {
+  width: 100%;
+  display: block;
+  padding-top: 28px;
+  margin-bottom: 18px;
+}
+.add-to-cart-block input {
+  width: 63px;
+  padding: 12px 4px;
+  border-color: #83a8bc #9fc5dc #9fc5dc;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 8px 22px -24px #000 inset;
+  float: left;
+  margin-top: -2px;
+  margin-right: 5px;
+}
+.add-to-cart-block .count-result {
+  float: none;
+  text-align: right;
+}
+.add-to-cart-block p {
+  margin-bottom: 19px;
+}
+.add-to-cart-block .row {
+  margin-bottom: 27px;
+}
+.add-to-cart-block .more-btn {
+  margin: 0 11px 0 0;
+  padding: 10px 9px;
+}
+.add-to-cart-block i{
+  width: 100%;
+  display: block;
+  float: left;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.add-to-cart-block span {
+  font-size: 13px;
+}
+.add-to-cart-block .heart-red {
+  right: auto;
+  margin-left: 6px;
+  margin-top: 5px;
+}
 .modal-content .modal-header {
   padding-bottom: 0;
   padding-top: 5px;
