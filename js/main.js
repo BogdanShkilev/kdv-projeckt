@@ -234,6 +234,26 @@ function closeManuList(){
 	let obj = document.getElementById('choos-manufacturer');
 		obj.style.maxHeight = '0';
 }
+
+// модальное окно, открытие и закрытие окна добавление товара в карзину
+$('.add-to-cart').click(function(){
+	$(this).siblings('.add-to-cart-block').css('max-height','800px')
+})
+$('.add-to-cart-block').find('.close').click(function(){
+	$(this).closest('.add-to-cart-block').css('max-height', '0')
+})
+// Канкулятор количества плитки, задан на изменение значения плитки
+$('.quantity').change(function(){
+	let values = $(this).closest('.modal-content').find('.tile-size').text();
+ 	values = values.split('×');
+	values = (+values[0] / 100) * (+values[1] / 100);
+	let quantity = $(this).val().replace(',', '.');
+	let result = Math.round(quantity / values);
+	$(this).siblings('.count-result').val(result);
+})
+
+
+
 // cкрипт для связи родительского checbox и детей (страна - заводы)
 // На вход принимает 1) Класс label с checkbox, 2) Родительский id (с названием страны)
 function relatChecbox(labelClass,perantCB){
