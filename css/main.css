@@ -2007,6 +2007,7 @@ button.close:hover span {
 
 .drift-demo-trigger {
   cursor: move;
+  width: 100%;
 }
 .tab-content > .tab-pane {}
 .wrapper {
