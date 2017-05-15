@@ -972,7 +972,6 @@ div.child {
 .manufacturer ul {
   width: 33%;
   float: left;
-  padding-top: 10px;
 }
 #choos-manufacturer .jq-checkbox {
   margin-left: -28px;
@@ -988,7 +987,7 @@ div.child {
 }
 .manufacturer .manu-country {
   color: #e4042a;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 #choos-manufacturer .manu-country .jq-checkbox {
   margin-left: 0;
