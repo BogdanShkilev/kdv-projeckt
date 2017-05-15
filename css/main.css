@@ -92,7 +92,9 @@ input.nav-input {
   .tips-block p {
     padding: 0 12px; }
   .tips-block ul li a {
-    padding: 0 12px; }
+    padding: 0 12px;
+    display: block;
+    width: 100%; }
   .tips-block ul li:hover {
     color: #000;
     background: #F4F6F7; }
@@ -973,7 +975,6 @@ div.child {
 .manufacturer ul {
   width: 33%;
   float: left;
-  padding-top: 10px;
 }
 #choos-manufacturer .jq-checkbox {
   margin-left: -28px;
@@ -989,7 +990,7 @@ div.child {
 }
 .manufacturer .manu-country {
   color: #e4042a;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 #choos-manufacturer .manu-country .jq-checkbox {
   margin-left: 0;
@@ -1174,6 +1175,9 @@ div.child {
   margin: 0 4px -1px 0;
   background: url(../images/order-four.png) no-repeat;
 }
+.sort-two-item:hover {
+  background: url(../images/order-four-active.png) no-repeat;
+}
 .sort-two-item.active {
   background: url(../images/order-four-active.png) no-repeat;
 }
@@ -1183,6 +1187,9 @@ div.child {
   height: 15px;
   margin: 0 4px -1px 0;
   background: url(../images/order-one.png) no-repeat;
+}
+.sort-one-item:hover {
+  background: url(../images/order-one-active.png) no-repeat;
 }
 .sort-one-item.active {
   display: inline-block;
