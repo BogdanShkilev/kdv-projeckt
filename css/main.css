@@ -993,6 +993,7 @@ div.child {
 .manufacturer .manu-country {
   color: #e4042a;
   margin-bottom: 15px;
+  padding-top: 1px;
 }
 #choos-manufacturer .manu-country .jq-checkbox {
   margin-left: 0;
