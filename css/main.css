@@ -92,7 +92,9 @@ input.nav-input {
   .tips-block p {
     padding: 0 12px; }
   .tips-block ul li a {
-    padding: 0 12px; }
+    padding: 0 12px;
+    display: block;
+    width: 100%; }
   .tips-block ul li:hover {
     color: #000;
     background: #F4F6F7; }
