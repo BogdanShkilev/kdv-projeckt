@@ -874,6 +874,9 @@ div.child {
 }
 .appointment label:hover {
   border-color: #1183c6;
+  position: relative!important;
+  z-index: 100;
+  color: #000;
 }
 .search .top-reset {
   margin: 25px 0 0;
