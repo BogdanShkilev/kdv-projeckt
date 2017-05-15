@@ -1172,6 +1172,9 @@ div.child {
   margin: 0 4px -1px 0;
   background: url(../images/order-four.png) no-repeat;
 }
+.sort-two-item:hover {
+  background: url(../images/order-four-active.png) no-repeat;
+}
 .sort-two-item.active {
   background: url(../images/order-four-active.png) no-repeat;
 }
@@ -1181,6 +1184,9 @@ div.child {
   height: 15px;
   margin: 0 4px -1px 0;
   background: url(../images/order-one.png) no-repeat;
+}
+.sort-one-item:hover {
+  background: url(../images/order-one-active.png) no-repeat;
 }
 .sort-one-item.active {
   display: inline-block;
