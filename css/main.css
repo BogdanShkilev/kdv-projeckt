@@ -876,7 +876,7 @@ div.child {
 }
 .appointment label:hover {
   border-color: #1183c6;
-  position: relative!important;
+  position: relative;
   z-index: 100;
   color: #000;
 }
@@ -1856,6 +1856,7 @@ button.close:hover span {
   width: 260px;
   max-height: 0;
   overflow: hidden;
+  z-index: 30;
 }
 .add-to-cart-block .close {
   width: 18px;
@@ -1969,9 +1970,8 @@ button.close:hover span {
   left: -50px;
 }
 .modal-dialog button.slick-next {
-  width: 70px;
   right: 19px;
-  width: 50px;
+  width: 31px;
 }
 .modal-dialog button.slick-prev:before {
   background-image: url(../images/slider-arrow-red.png);
@@ -1982,7 +1982,7 @@ button.close:hover span {
 .modal-dialog button.slick-next::before {
   background-image: url(../images/slider-arrow-red.png);
   height: 73px;
-  width: 55px;
+  width: 30px;
 }
 .modal-dialog button.slick-disabled {
   opacity: 0;
