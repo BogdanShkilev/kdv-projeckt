@@ -1710,7 +1710,7 @@ border-color: #e7f2f9;
   font-size: 16px;
 }
 .item-page .nav-tabs > li > a {
-  border-right: 0;
+  border: 0;
   color: #c20021;;
 }
 .item-page .nav-tabs > li.active > a {
@@ -1725,8 +1725,22 @@ border-color: #e7f2f9;
   color: #000;
   border-color: rgba(255,255,255,0);
 }
+.nav-tabs li:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 50%;
+  top: 22%;
+  right: 0;
+  background: #7c7c7b;
+}
+.nav-tabs li:last-child:after{
+  display: none;
+}
 .item-page .nav-tabs {
-  border: none;
+  border: 0;
+  margin-bottom: 10px
 }
 .item-page .tile-item img {
   width: auto;
