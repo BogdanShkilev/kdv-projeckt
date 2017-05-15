@@ -577,7 +577,7 @@ a span.red-text-dlv {
 div.child {
   margin-right: -18px;
   height: 900px;
-  margin-bottom: 10px;
+  margin-bottom: -3px;
   overflow: auto; }
 
 .parent {
@@ -679,11 +679,13 @@ div.child {
     color: #000; }
 
 .map-contact {
-  margin-bottom: 90px;
+  margin-bottom: 15px;
   display: block;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
-          align-items: stretch; }
+          align-items: stretch;
+  overflow: hidden;
+   }
 .map-contact .nav-map {
   width: 328px;
 
@@ -1437,7 +1439,7 @@ div.child {
   display: inline-block;
   overflow: hidden;
   float: left;
-  margin-bottom: 3px;
+  margin-bottom: 15px;
   color: #e4042a;
 }
 .catalog-page-2 .row {
