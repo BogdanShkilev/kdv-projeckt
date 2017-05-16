@@ -1119,7 +1119,7 @@ div.child {
   font-size: 16px;
 }
 .search-options label:hover {
-  color: #000;
+  color: #1183c6;
   border-color: #aaaaaa;
 }
 .search-options .d-flex {
@@ -1847,6 +1847,7 @@ border-color: #e7f2f9;
 .modal-dialog.big {
   width: 96%;
   min-width: 960px;
+  max-width: 1024px;
 }
 .modal-content button.close {
   opacity: 1;
