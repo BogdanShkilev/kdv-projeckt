@@ -14,6 +14,9 @@ h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
 body {
   overflow-x: hidden;
 }
+.text-center {
+  text-align: center;
+}
 .space-between {
   justify-content: space-between;
 }
@@ -1608,6 +1611,7 @@ border-color: #e7f2f9;
   border-radius: 2px;
   color: #fff;
   margin-bottom: 45px;
+  cursor: default;
 }
 .add-to-cart:hover {
   color: #000;
@@ -1714,7 +1718,9 @@ border-color: #e7f2f9;
 }
 .item-page .nav-tabs > li > a {
   border: 0;
-  color: #c20021;;
+  color: #c20021;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 .item-page .nav-tabs > li.active > a {
   color: #7c7c7b;
@@ -1743,7 +1749,8 @@ border-color: #e7f2f9;
 }
 .item-page .nav-tabs {
   border: 0;
-  margin-bottom: 10px
+  margin-bottom: 5px;
+  display: inline-block;
 }
 .item-page .tile-item img {
   width: auto;
@@ -1834,6 +1841,8 @@ border-color: #e7f2f9;
 /* modal */
 .modal-dialog .modal-content {
   border-radius: 0;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .modal-dialog.big {
   width: 96%;
@@ -1980,11 +1989,12 @@ button.close:hover span {
 }
 .modal-dialog .slick-prev, .modal-dialog .slick-next {
   top: 38%;
-  box-shadow: 0 0 45px 17px #fff;
+  box-shadow: -30px 0 45px 23px #fff;
 }
 .modal-dialog button.slick-prev {
   width: 50px;
   left: -50px;
+  box-shadow: 10px 17px 34px 18px #fff
 }
 .modal-dialog button.slick-next {
   right: 19px;
